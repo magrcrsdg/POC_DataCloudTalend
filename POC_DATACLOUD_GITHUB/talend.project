@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
-  <TalendProperties:Project xmi:id="_OdLv4Z5YEe6xNrgxKzl2pg" label="POC-DataCloud-GitHub" description="POC Data Cloud" language="java" technicalLabel="POC_DATACLOUD_GITHUB" author="_OdLv4p5YEe6xNrgxKzl2pg" productVersion="Talend Cloud Data Management Platform-8.0.1.20231017_1026-patch" url="{&quot;commitLogPattern&quot;:&quot;{0}&quot;,&quot;location&quot;:&quot;https://github.com/magrcrsdg/POC_DataCloudTalend.git&quot;,&quot;settings&quot;:&quot;000&quot;,&quot;storage&quot;:&quot;git&quot;}" type="DQ" itemsRelationVersion="1.3" bigData="false">
+  <TalendProperties:Project xmi:id="_OdLv4Z5YEe6xNrgxKzl2pg" label="POC-DataCloud-GitHub" description="POC Data Cloud" language="java" technicalLabel="POC_DATACLOUD_GITHUB" author="_aLZsYZOVEe6afozMduoyhg" productVersion="Talend Cloud Data Management Platform-8.0.1.20231017_1026-patch" url="{&quot;commitLogPattern&quot;:&quot;{0}&quot;,&quot;location&quot;:&quot;https://github.com/magrcrsdg/POC_DataCloudTalend.git&quot;,&quot;settings&quot;:&quot;000&quot;,&quot;storage&quot;:&quot;git&quot;}" type="DQ" itemsRelationVersion="1.3" bigData="false">
     <migrationTask xmi:id="_OeG88J5YEe6xNrgxKzl2pg" id="org.talend.repository.model.migration.CheckProductVersionMigrationTask" breaks="7.1.0" version="7.1.1"/>
   </TalendProperties:Project>
-  <TalendProperties:User xmi:id="_OdLv4p5YEe6xNrgxKzl2pg" login="agustinizquierdo@eval13642.talend.com" firstName="Agustín" lastName="Izquierdo_Esperón" type="DQ"/>
-  <TalendProperties:User xmi:id="_PR5KUJ5YEe6xNrgxKzl2pg" login="marti.grau@eval13642.talend.com" firstName="Marti" lastName="Grau" type="DQ"/>
+  <TalendProperties:User xmi:id="_aLZsYZOVEe6afozMduoyhg" login="agustinizquierdo@eval13642.talend.com" firstName="Agustín" lastName="Izquierdo_Esperón" type="DQ"/>
+  <TalendProperties:User xmi:id="_a04uQJOVEe6afozMduoyhg" login="marti.grau@eval13642.talend.com" firstName="Marti" lastName="Grau" type="DQ"/>
   <TalendProperties:User xmi:id="_lRY2UKsjEe6F-5bgAmQOYg" login="miquel.torrecilla@eval13642.talend.com" firstName="Miquel" lastName="Torrecilla" type="DQ"/>
 </xmi:XMI>
