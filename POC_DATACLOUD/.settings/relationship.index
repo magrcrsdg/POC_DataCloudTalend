@@ -1,0 +1,12 @@
+[ {
+  "baseItem" : {
+    "id" : "_Otk6cLBuEe6YYJKXyxxKAg",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_UIe6YLBiEe6YYJKXyxxKAg--FilterRow",
+    "version" : "Latest",
+    "type" : "sqlPattern"
+  } ]
+} ]
