@@ -4,9 +4,20 @@
     "version" : "0.1",
     "type" : "job"
   },
+  "relatedItems" : [ ]
+}, {
+  "baseItem" : {
+    "id" : "_sVU-QLVXEe6adtHqxHJfjA",
+    "version" : "0.1",
+    "type" : "job"
+  },
   "relatedItems" : [ {
-    "id" : "_UIe6YLBiEe6YYJKXyxxKAg--FilterRow",
+    "id" : "_8Z7TMLCJEe6qSuF81liuCg",
     "version" : "Latest",
-    "type" : "sqlPattern"
+    "type" : "property"
+  }, {
+    "id" : "_8Z7TMLCJEe6qSuF81liuCg - ODS_ITEM",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 } ]
