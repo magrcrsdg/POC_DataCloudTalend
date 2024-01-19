@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>POC_DATACLOUD</name>
-	<comment></comment>
-	<projects>
-	</projects>
-	<buildSpec>
-	</buildSpec>
-	<natures>
-		<nature>org.talend.core.talendnature</nature>
-	</natures>
+   <name>POC_DATACLOUD</name>
+   <comment></comment>
+   <projects></projects>
+   <buildSpec></buildSpec>
+   <natures>
+      <nature>org.talend.core.talendnature</nature>
+   </natures>
+   <linkedResources>
+      <link>
+         <name>org.eclipse.jdt.USER_LIBRARY/snowflake-jdbc-3.13.8</name>
+         <type>1</type>
+         <locationURI>USER_LIBRARY/C:/Users/miquel.torrecilla/Desktop/Campofrio/Connections/jar_files</locationURI>
+      </link>
+   </linkedResources>
 </projectDescription>
