@@ -108,7 +108,7 @@
     <routinesParameter id="_51HUILbLEe6bUq7R4o9rXA" name="TalendString"/>
     <routinesParameter id="_51Oo4LbLEe6bUq7R4o9rXA" name="TalendStringUtil"/>
   </parameters>
-  <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="-50" offsetLabelY="-32" posX="160" posY="96">
+  <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_HprTsLCLEe6qSuF81liuCg"/>
@@ -124,16 +124,16 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;QEC&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;QEC_USR_READ&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:mZkgCUce1l+7LclFxvGDbESG2nz92/GuFZqP1Y4FNYabocGp/RTDwQ=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Up0fOYZYdhYipiQmub3/uIdG6cFdIXJ8cl/3PShTMUGP/PFAQry1Nw=="/>
     <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_HprTsLCLEe6qSuF81liuCg - MARA"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;MARA&quot;"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_HprTsLCLEe6qSuF81liuCg - AUFK"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;AUFK&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#10;  SAPSR3.MARA.MANDT, &#10;  SAPSR3.MARA.MATNR, &#10;  SAPSR3.MARA.MHDHB&#10;FROM SAPSR3.MARA&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#10;  SAPSR3.AUFK.MANDT, &#10;  SAPSR3.AUFK.AUFNR, &#10;  SAPSR3.AUFK.AUART&#10;FROM SAPSR3.AUFK&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -150,9 +150,9 @@
     <elementParameter field="TABLE" name="TRIM_COLUMN">
       <elementValue elementRef="SCHEMA_COLUMN" value="MANDT"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MATNR"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="AUFNR"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MHDHB"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="AUART"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="NO_NULL_VALUES" value="false"/>
@@ -160,22 +160,24 @@
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="MARA" name="tDBInput_1">
+    <metadata connector="FLOW" label="AUFK" name="tDBInput_1">
       <column comment="" defaultValue="'000'" key="true" length="9" name="MANDT" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" defaultValue="' '" key="true" length="54" name="MATNR" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+      <column comment="" defaultValue="' '" key="true" length="36" name="AUFNR" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="150" name="MHDHB" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="' '" key="false" length="12" name="AUART" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="96">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_JfFPQLkUEe6bUq7R4o9rXA-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_VxROELkeEe6bUq7R4o9rXA-tMap_1-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -186,29 +188,33 @@
     <elementParameter field="TEXT" name="LABEL" value="Add LOAD_DATE"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata name="outputMARA">
+    <metadata name="outputAUFK">
       <column comment="" defaultValue="'000'" key="true" length="9" name="MANDT" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="-1" name="MATNR" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="MHDHB" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="' '" key="true" length="36" name="AUFNR" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="' '" key="false" length="12" name="AUART" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables name="Var" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="TalendDate.getCurrentDate() " name="var1" type="id_String"/>
       </varTables>
-      <outputTables name="outputMARA" sizeState="INTERMEDIATE">
+      <outputTables name="outputAUFK" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row1.MANDT " name="MANDT" type="id_String"/>
-        <mapperTableEntries expression="row1.MATNR " name="MATNR" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.MHDHB " name="MHDHB" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="Var.var1 " name="LOAD_DATE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.AUFNR " name="AUFNR" type="id_String"/>
+        <mapperTableEntries expression="row1.AUART " name="AUART" type="id_String"/>
+        <mapperTableEntries expression="Var.var1 " name="LOAD_DATE" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
         <mapperTableEntries name="MANDT" type="id_String"/>
-        <mapperTableEntries name="MATNR" type="id_String"/>
-        <mapperTableEntries name="MHDHB" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUFNR" type="id_String"/>
+        <mapperTableEntries name="AUART" type="id_String"/>
       </inputTables>
     </nodeData>
   </node>
@@ -221,13 +227,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5e2ee11b-0f8e-4dde-a88a-899fbfdac5e8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TccMj857mplgzDL4Wp0vzhiQFb9K6NVzZEV/m3Ymff+DiLI+ISJ43YbC0OITxfQtBJtYppMkw3tN&#13;
-YEfGRvCZOQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_713ea13d-e763-4c88-be37-e802c26b5459"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>P2nYeQoDV+M1zm2mev0NkLIjFwVPWGYet9GqZp16hucrtLOZKG9Qqo6TegvItXfpHdVsjudg+dqE&#13;
-Daf9AjMDuA==</DigestValue></Reference></SignedInfo><SignatureValue>YcTEj1TOQ1r7wfYOfB5/w5ilYMkkK5A+5vCyXn/Vn1hw1xNmkAodeMPa3fffkhtRkGONb7yH/alX&#13;
-HYcG/lnC0D/7l9bbuB86jCjZexl9I4u5vPrd052x0BZYH3Ec3IV2bsXnRAdrF1lXV8TXC+0SVszO&#13;
-rubHMLRW4gOG4vkGbxKB73KUTnrMHjHsdhMlRSfseJP1gG/7QyyQC4FebQjLmuZWxwRTzw8X9Fu3&#13;
-Aj0DJ6dlo3zeNLU02vEN3xvvT229gVOxu4pt1xc0VQmcelPXl4RF/S17PDBNl6Bb67s9fNzHvKB5&#13;
-mzxSmEsYRMIh90fLDZaVhLgf8tscX6EmHFRKYQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0830b547-2fec-49ae-9b4b-52a946879fa1"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zKMYJ994m9p8z/sV82jl1MRD82W4g2GYTB+MfCQmGB2XnzLt3UHUlkniOmnzj8fFnBuuxnORcTGH&#13;
+LWqhy8MUTg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0abfaef2-0071-4db5-a944-caf2969187a2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>AM6ysf5G5b4ZVdwkmgnAXWzhfXBqp27w1eO4/WhDctWOamp+i9tGdhs9tlEDSFmaMYGL24yjpmFY&#13;
+MKgVuqDkdA==</DigestValue></Reference></SignedInfo><SignatureValue>W1sFVRwGLd/uPXfWyoE7piJAel4gjGtv4qA7HWE9CZYyc4b8L3C/ym/bQ6Dr0m5GpQSOJDxkJp9O&#13;
+DJRxwPKGq+7JXkG6CE5as/yDxzBzHjGVB8w+JQD2cV3PVOVHkuRGHIPwu4ATFOuvvY6lIFuw31oQ&#13;
+PvLKLEoQOpItV8Dcv+ZfaA9Tqx68jP6zRz5tA1lGFsshs9Q02MjEf5cl1JCvlc4Inax5gzTC3ANY&#13;
+0mLnBC4dbTOkcd6U7kwUvIZwBzTXEDrhK82PlhBppu7n7VYFyKy+oySg5jwvxtLi7dYgxjHGOJKu&#13;
+GguO2mcKKUB73c77hS/L0k8evhIah4dOa30dYA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -249,4 +255,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_713ea13d-e763-4c88-be37-e802c26b5459" Target="#_5e2ee11b-0f8e-4dde-a88a-899fbfdac5e8"><Timestamp>2024-01-22 12:09:09</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0abfaef2-0071-4db5-a944-caf2969187a2" Target="#_0830b547-2fec-49ae-9b4b-52a946879fa1"><Timestamp>2024-01-22 12:09:07</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
