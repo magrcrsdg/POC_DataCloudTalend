@@ -1,0 +1,36 @@
+package routines;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+public class HashUtils {
+
+    /**
+     * Generates an MD5 hash for the given input string.
+     *
+     * @param input The input string to be hashed.
+     * @return The MD5 hash as a hexadecimal string.
+     * @throws RuntimeException If the MD5 algorithm is not available.
+     */
+    public static String generateMD5(String input) {
+        try {
+            // Create an instance of the MD5 message digest algorithm.
+            MessageDigest md = MessageDigest.getInstance("MD5");
+
+            // Calculate the MD5 hash for the input string.
+            byte[] messageDigest = md.digest(input.getBytes());
+
+            // Convert the byte array to a hexadecimal string.
+            StringBuilder hexString = new StringBuilder();
+            for (byte b : messageDigest) {
+                hexString.append(String.format("%02X", b));
+            }
+
+            // Return the MD5 hash as a hexadecimal string.
+            return hexString.toString();
+        } catch (NoSuchAlgorithmException e) {
+            // Throw a runtime exception if the MD5 algorithm is not available.
+            throw new RuntimeException("MD5 algorithm not available", e);
+        }
+    }
+}

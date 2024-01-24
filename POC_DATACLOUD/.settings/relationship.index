@@ -5,11 +5,46 @@
     "type" : "job"
   },
   "relatedItems" : [ {
+    "id" : "built-in",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
     "id" : "_HprTsLCLEe6qSuF81liuCg",
     "version" : "Latest",
     "type" : "property"
   }, {
+    "id" : "_OvDMwLrEEe6H2tT7rm3hlw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
     "id" : "_HprTsLCLEe6qSuF81liuCg - EKPO",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_OvDMwLrEEe6H2tT7rm3hlw - PROCESS_CONTROL",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw - FACT_EKPO",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_J4QRcLoKEe6H2tT7rm3hlw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw - DIM_MARA",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - DIM_MARA",
     "version" : "Latest",
     "type" : "schema"
   } ]
@@ -24,7 +59,42 @@
     "version" : "Latest",
     "type" : "property"
   }, {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
     "id" : "_HprTsLCLEe6qSuF81liuCg - MARA",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_NB8Q4LqnEe6H2tT7rm3hlw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_8Z7TMLCJEe6qSuF81liuCg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_OvDMwLrEEe6H2tT7rm3hlw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "HashUtils",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "_8Z7TMLCJEe6qSuF81liuCg - ODS_CMN_MATERIAL_VALUATION_EXT",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - ODS_CMN_MATERIAL_VALUATION_EXT",
     "version" : "Latest",
     "type" : "schema"
   } ]
@@ -37,6 +107,29 @@
   "relatedItems" : [ ]
 }, {
   "baseItem" : {
+    "id" : "_PBHUcLkUEe6bUq7R4o9rXA",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_HprTsLCLEe6qSuF81liuCg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_OvDMwLrEEe6H2tT7rm3hlw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_HprTsLCLEe6qSuF81liuCg - ZZZE_MOV_COST",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_VxROELkeEe6bUq7R4o9rXA",
     "version" : "0.1",
     "type" : "job"
@@ -46,7 +139,34 @@
     "version" : "Latest",
     "type" : "property"
   }, {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
     "id" : "_HprTsLCLEe6qSuF81liuCg - AUFK",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_m6k5YLkTEe6bUq7R4o9rXA",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_HprTsLCLEe6qSuF81liuCg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_OvDMwLrEEe6H2tT7rm3hlw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_HprTsLCLEe6qSuF81liuCg - MSEG",
     "version" : "Latest",
     "type" : "schema"
   } ]
@@ -62,6 +182,33 @@
     "type" : "property"
   }, {
     "id" : "_8Z7TMLCJEe6qSuF81liuCg - ODS_ITEM",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_wsqegLkTEe6bUq7R4o9rXA",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "built-in",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "_HprTsLCLEe6qSuF81liuCg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_OvDMwLrEEe6H2tT7rm3hlw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_HprTsLCLEe6qSuF81liuCg - MKPF",
     "version" : "Latest",
     "type" : "schema"
   } ]
