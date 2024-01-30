@@ -2,9 +2,13 @@
 <recyclebin:RecycleBin xmlns:recyclebin="http://www.talend.org/recyclebin">
   <deletedFolders>process/STG/ORACLE</deletedFolders>
   <deletedItems id="_V4AsQLk_Ee6bDNtISHemVg" path="" type="JDBC"/>
+  <deletedItems id="_FHWAcL6aEe6VvpxUd_Akig" path="" type="METADATA_CONNECTIONS"/>
   <deletedItems id="_rS1Q0LnIEe6Qju78O6nonw" path="" type="METADATA_CONNECTIONS"/>
   <deletedItems id="_Otk6cLBuEe6YYJKXyxxKAg" path="" type="PROCESS"/>
   <deletedItems id="_sVU-QLVXEe6adtHqxHJfjA" path="" type="PROCESS"/>
+  <deletedItems id="_Y2h0ALt9Ee6oN5WCLRuMWg" path="ODS/ORACLE" type="PROCESS"/>
+  <deletedItems id="_bSKG8LuTEe6oN5WCLRuMWg" path="ODS/ORACLE" type="PROCESS"/>
+  <deletedItems id="_ANsF4LnkEe6H2tT7rm3hlw" path="STG" type="PROCESS"/>
   <deletedItems id="_EvQJoLlBEe6bDNtISHemVg" path="STG" type="PROCESS"/>
   <deletedItems id="_FqIW8LkUEe6bUq7R4o9rXA" path="STG/SAP" type="PROCESS"/>
   <deletedItems id="_oXdNYLnfEe6H2tT7rm3hlw" path="" type="snowflake"/>
