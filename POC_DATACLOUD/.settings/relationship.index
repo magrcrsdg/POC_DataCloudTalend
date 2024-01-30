@@ -1,5 +1,39 @@
 [ {
   "baseItem" : {
+    "id" : "_-A6R8L-ZEe6fYIbtfrMGCw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "POC_DATACLOUD:_4ehncL-ZEe6fYIbtfrMGCw",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "POC_DATACLOUD:_6advsL-ZEe6fYIbtfrMGCw",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw",
+    "version" : "Latest",
+    "type" : "property"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_-CFrwL-bEe6fYIbtfrMGCw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw - DIM_SUPPLIER",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - DIM_SUPPLIER",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_-F1asLtmEe6oN5WCLRuMWg",
     "version" : "0.1",
     "type" : "job"
@@ -49,6 +83,21 @@
     "type" : "schema"
   }, {
     "id" : "_qxbG4LoKEe6H2tT7rm3hlw - FACT_MSEG",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_0ieu0L98Ee6fYIbtfrMGCw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw - DIM_CURRENCY",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - DIM_CURRENCY",
     "version" : "Latest",
     "type" : "schema"
   } ]
@@ -131,6 +180,17 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_4ehncL-ZEe6fYIbtfrMGCw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - DIM_SKU",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_55qy0LxDEe6e8vVwfCtsOw",
     "version" : "0.1",
     "type" : "job"
@@ -143,6 +203,25 @@
     "id" : "_qxbG4LoKEe6H2tT7rm3hlw - FACT_EKPO",
     "version" : "Latest",
     "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_5MM64L-bEe6fYIbtfrMGCw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "POC_DATACLOUD:_-CFrwL-bEe6fYIbtfrMGCw",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "POC_DATACLOUD:_8Ox7EL-bEe6fYIbtfrMGCw",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw",
+    "version" : "Latest",
+    "type" : "property"
   } ]
 }, {
   "baseItem" : {
@@ -176,6 +255,21 @@
     "type" : "schema"
   }, {
     "id" : "_oW7-ELnhEe6H2tT7rm3hlw - FACT_EKPO",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_6advsL-ZEe6fYIbtfrMGCw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw - DIM_SKU",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - DIM_SKU",
     "version" : "Latest",
     "type" : "schema"
   } ]
@@ -258,6 +352,21 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_8Ox7EL-bEe6fYIbtfrMGCw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw - DIM_SUPPLIER",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - DIM_SUPPLIER",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_8T-SELxDEe6e8vVwfCtsOw",
     "version" : "0.1",
     "type" : "job"
@@ -285,6 +394,25 @@
     "id" : "_qxbG4LoKEe6H2tT7rm3hlw - DIM_MARA",
     "version" : "Latest",
     "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_E82ioL-VEe6fYIbtfrMGCw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "POC_DATACLOUD:_0ieu0L98Ee6fYIbtfrMGCw",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "POC_DATACLOUD:_zXHH4L98Ee6fYIbtfrMGCw",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw",
+    "version" : "Latest",
+    "type" : "property"
   } ]
 }, {
   "baseItem" : {
@@ -610,6 +738,33 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_ZOO3gL-dEe6fYIbtfrMGCw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "POC_DATACLOUD:_-A6R8L-ZEe6fYIbtfrMGCw",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "POC_DATACLOUD:_5MM64L-bEe6fYIbtfrMGCw",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "POC_DATACLOUD:_E82ioL-VEe6fYIbtfrMGCw",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "POC_DATACLOUD:_xMQloL-XEe6fYIbtfrMGCw",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw",
+    "version" : "Latest",
+    "type" : "property"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_aHVIILoKEe6H2tT7rm3hlw",
     "version" : "0.1",
     "type" : "job"
@@ -892,6 +1047,21 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_qf5bUL-XEe6fYIbtfrMGCw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw - DIM_MATERIAL",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - DIM_MATERIAL",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_sVU-QLVXEe6adtHqxHJfjA",
     "version" : "0.1",
     "type" : "job"
@@ -919,6 +1089,21 @@
     "id" : "POC_DATACLOUD:_w9p38LtwEe6oN5WCLRuMWg",
     "version" : "Latest",
     "type" : "job"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_tCtWUL-XEe6fYIbtfrMGCw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw - DIM_MATERIAL",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - DIM_MATERIAL",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
@@ -1038,6 +1223,25 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_xMQloL-XEe6fYIbtfrMGCw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "POC_DATACLOUD:_qf5bUL-XEe6fYIbtfrMGCw",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "POC_DATACLOUD:_tCtWUL-XEe6fYIbtfrMGCw",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw",
+    "version" : "Latest",
+    "type" : "property"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_yuHLELxDEe6e8vVwfCtsOw",
     "version" : "0.1",
     "type" : "job"
@@ -1071,6 +1275,21 @@
     "type" : "schema"
   }, {
     "id" : "_oW7-ELnhEe6H2tT7rm3hlw - DIM_CURRENCY",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_zXHH4L98Ee6fYIbtfrMGCw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw - DIM_CURRENCY",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - DIM_CURRENCY",
     "version" : "Latest",
     "type" : "schema"
   } ]

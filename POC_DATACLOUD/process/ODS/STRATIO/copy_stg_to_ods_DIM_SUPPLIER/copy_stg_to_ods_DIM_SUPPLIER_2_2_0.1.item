@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendDBMap="http://www.talend.org/dbmap" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+  <context confirmationNeeded="false" hide="false" name="Default"/>
+  <parameters>
+    <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value=""/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:d+DI5ZmGkQYOsGfGhXlI41GdRs4WAsYj4n22j0Yo"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Talend-Studio-20231027_1100-V8.0.1/workspace/.metadata&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" show="false" value="tJDBCOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_12"/>
+    <elementParameter field="TEXT" name="URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DATASOURCE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:uTcekWF/RE6eCx3Qk/44bXdDFf+6HomgORgTMUUW"/>
+    <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
+    <routinesParameter id="_j7rloLnfEe6H2tT7rm3hlw" name="SQLike"/>
+    <routinesParameter id="_j8rrMLnfEe6H2tT7rm3hlw" name="DataOperation"/>
+    <routinesParameter id="_j801ILnfEe6H2tT7rm3hlw" name="Mathematical"/>
+    <routinesParameter id="_j88J4LnfEe6H2tT7rm3hlw" name="Numeric"/>
+    <routinesParameter id="_j9FT0LnfEe6H2tT7rm3hlw" name="Relational"/>
+    <routinesParameter id="_j9QS8LnfEe6H2tT7rm3hlw" name="StringHandling"/>
+    <routinesParameter id="_j9YOwLnfEe6H2tT7rm3hlw" name="TalendDataGenerator"/>
+    <routinesParameter id="_j9fjgLnfEe6H2tT7rm3hlw" name="TalendDate"/>
+    <routinesParameter id="_j9otcLnfEe6H2tT7rm3hlw" name="TalendString"/>
+    <routinesParameter id="_j9wpQLnfEe6H2tT7rm3hlw" name="TalendStringUtil"/>
+  </parameters>
+  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_2"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_oW7-ELnhEe6H2tT7rm3hlw - DIM_SUPPLIER"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;DIM_SUPPLIER&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;STG&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="DIM_SUPPLIER_STG"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="DIM_SUPPLIER" name="tELTInput_2">
+      <column comment="" key="false" length="38" name="IOC_MDM_SUPPLIER_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_MDM_SUPPLIER_ID"/>
+      </column>
+      <column comment="" key="false" length="38" name="IOC_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_ID"/>
+      </column>
+      <column comment="" key="false" length="20" name="IOC_SUPPLIER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_SUPPLIER_ID"/>
+      </column>
+      <column comment="" key="false" length="38" name="MDM_SUPPLIER_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MDM_SUPPLIER_ID"/>
+      </column>
+      <column comment="" key="false" length="38" name="ST_ACTIVE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ST_ACTIVE"/>
+      </column>
+      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LOAD_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tELTMap" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTMap_1"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;jdbc:snowflake://https://zk95112.west-europe.azure.snowflakecomputing.com/?warehouse=WH_TALEND&amp;db=DB_CAMPOFRIO&amp;schema=STG&amp;role=TALEND_COMPUTE&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR">
+      <elementValue elementRef="JAR_NAME" value="mvn:net.snowflake/snowflake-jdbc/3.13.30/jar"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;net.snowflake.client.jdbc.SnowflakeDriver&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;TALEND&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:sdM1FHQPsth3V5SoeAvdDSte7mAhvGT9UNnlV9f7EjglvkJIV90QSts+WlSzSw=="/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_-CFrwL-bEe6fYIbtfrMGCw-tELTMap_1-PREVIEW.bmp"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="CHECK" name="DRY_RUN" value="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LABEL" value="Detect new records"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="ACTIVE_DATABASE_DELIMITED_IDENTIFIERS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVE_ADD_QUOTES_IN_TABLE_NAME" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_ALIAS_IN_OUTPUT_TABLE" show="false" value="false"/>
+    <metadata connector="TABLE" label="DIM_SUPPLIER" name="table2">
+      <column comment="" key="false" length="38" name="IOC_MDM_SUPPLIER_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_MDM_SUPPLIER_ID"/>
+      </column>
+      <column comment="" key="false" length="38" name="IOC_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_ID"/>
+      </column>
+      <column comment="" key="false" length="20" name="IOC_SUPPLIER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_SUPPLIER_ID"/>
+      </column>
+      <column comment="" key="false" length="38" name="MDM_SUPPLIER_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MDM_SUPPLIER_ID"/>
+      </column>
+      <column comment="" key="false" length="38" name="ST_ACTIVE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ST_ACTIVE"/>
+      </column>
+      <column comment="" key="true" length="150" name="PK_DIM_SUPPLIER" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PK_DIM_SUPPLIER"/>
+      </column>
+      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LOAD_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+    <nodeData xsi:type="TalendDBMap:DBMapData">
+      <InputTables alias="A" joinType="NO_JOIN" name="A" tableName="STG.DIM_MARA">
+        <DBMapperTableEntries name="IOC_MDM_SUPPLIER_ID"/>
+        <DBMapperTableEntries name="IOC_ID"/>
+        <DBMapperTableEntries name="IOC_SUPPLIER_ID"/>
+        <DBMapperTableEntries name="MDM_SUPPLIER_ID"/>
+        <DBMapperTableEntries name="ST_ACTIVE"/>
+        <DBMapperTableEntries name="LOAD_DATE"/>
+      </InputTables>
+      <OutputTables name="table2" tableName="DIM_SUPPLIER">
+        <DBMapperTableEntries expression="A.IOC_MDM_SUPPLIER_ID" name="IOC_MDM_SUPPLIER_ID"/>
+        <DBMapperTableEntries expression="A.IOC_ID" name="IOC_ID"/>
+        <DBMapperTableEntries expression="A.IOC_SUPPLIER_ID" name="IOC_SUPPLIER_ID"/>
+        <DBMapperTableEntries expression="A.MDM_SUPPLIER_ID" name="MDM_SUPPLIER_ID"/>
+        <DBMapperTableEntries expression="A.ST_ACTIVE" name="ST_ACTIVE"/>
+        <DBMapperTableEntries expression="hash(A.IOC_MDM_SUPPLIER_ID)" name="PK_DIM_SUPPLIER"/>
+        <DBMapperTableEntries expression="current_date()" name="LOAD_DATE"/>
+      </OutputTables>
+    </nodeData>
+  </node>
+  <node componentName="tELTOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTOutput_1"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="CREATE_TABLE_TYPE" show="false" value="SET"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_qxbG4LoKEe6H2tT7rm3hlw - DIM_SUPPLIER"/>
+    <elementParameter field="CHECK" name="USE_WHERE_CONDITIONS_TABLE" show="false" value="false"/>
+    <elementParameter field="MEMO" name="WHERE_CLAUSE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="WHERE conditions table&#10;(for UPDATE and DELETE only)"/>
+    <elementParameter field="TABLE" name="WHERE_CONDITIONS_TABLE" show="false"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;DIM_SUPPLIER&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;ODS&quot;"/>
+    <elementParameter field="CHECK" name="IS_TABLE_NAME_VARIABLE" value="false"/>
+    <elementParameter field="CHECK" name="USE_DIFFERENT_TABLE" value="false"/>
+    <elementParameter field="TEXT" name="DIFFERENT_TABLE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PARTITION" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="CHECK" name="USE_UPDATE_STATEMENT" show="false" value="false"/>
+    <elementParameter field="TABLE" name="SET_COLUMN" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="IOC_MDM_SUPPLIER_ID"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="IOC_ID"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="IOC_SUPPLIER_ID"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MDM_SUPPLIER_ID"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ST_ACTIVE"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PK_DIM_SUPPLIER"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_DATE"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="Insert new rows"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="DIM_SUPPLIER" name="tELTOutput_1">
+      <column comment="" key="false" length="38" name="IOC_MDM_SUPPLIER_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_MDM_SUPPLIER_ID"/>
+      </column>
+      <column comment="" key="false" length="38" name="IOC_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_ID"/>
+      </column>
+      <column comment="" key="false" length="20" name="IOC_SUPPLIER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_SUPPLIER_ID"/>
+      </column>
+      <column comment="" key="false" length="38" name="MDM_SUPPLIER_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MDM_SUPPLIER_ID"/>
+      </column>
+      <column comment="" key="false" length="38" name="ST_ACTIVE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ST_ACTIVE"/>
+      </column>
+      <column comment="" key="true" length="150" name="PK_DIM_SUPPLIER" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PK_DIM_SUPPLIER"/>
+      </column>
+      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LOAD_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+  </node>
+  <connection connectorName="TABLE" label="STG.DIM_MARA" lineStyle="9" metaname="tELTInput_2" offsetLabelX="0" offsetLabelY="0" source="tELTInput_2" target="tELTMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_2"/>
+  </connection>
+  <connection connectorName="TABLE" label="DIM_SUPPLIER" lineStyle="9" metaname="table2" offsetLabelX="0" offsetLabelY="0" source="tELTMap_1" target="tELTOutput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table2"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3c071e3f-6420-445d-b300-653890778811"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>/7LGxmk9NFQOdNg/V8ia+iFXd4PSnHN4TaqhiP9nnRvHbf2vxKM3B2TAu9Ccyeq+v14OriypV/lM&#13;
+XzJcGDXlFQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ad30596a-e87f-4a08-a413-64a0c0372b1f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ufkMNYMb/00A/S7zumN42h9ay/lvJ+Z9nYyU8qKnX35yrtSmaCz4FsVpJnThTGZq6r3Uwj0Pesfw&#13;
+ZJ4DiuY9dg==</DigestValue></Reference></SignedInfo><SignatureValue>T6Z4Uc+SI1bxplPOkHI3pkjph86yJ42NIrQkurclrrtZVMUSFfhcbx74mHuz33/hEY30n5sMhCcm&#13;
+p4SGLhuLe1vYnVAFIFBMUoZKc2oWGyYi/nllkGQQE6OuvuTnj6ioysJmSLV+IegPTn2e4QWudUpR&#13;
+gUUxTfHLXK6AeMp4uq5VAYeGTkdAs+Q9XIYCZs9h/N/Kir59R/9iCKiNUoeVeBJa9YyLUvfBKN3h&#13;
+mXW1Vq/AuwHIDxQ/qfvUUCSN3cZhuirSA1qlslP8DxtGmCwLsn5oS4kQFfypT+pZEa4W3xRyD7Dy&#13;
+JTKJW896aoB43UNLpQ2z5nHbGgaiNVnMQFVzWA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh&#13;
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB&#13;
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2&#13;
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl&#13;
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx&#13;
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B&#13;
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ&#13;
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF&#13;
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG&#13;
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM&#13;
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA&#13;
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw&#13;
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/&#13;
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG&#13;
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13;
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ad30596a-e87f-4a08-a413-64a0c0372b1f" Target="#_3c071e3f-6420-445d-b300-653890778811"><Timestamp>2024-01-30 18:30:25</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
