@@ -111,28 +111,25 @@
   <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_1"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_qxbG4LoKEe6H2tT7rm3hlw - DIM_SKU"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_oW7-ELnhEe6H2tT7rm3hlw - DIM_SKU"/>
     <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;DIM_SKU&quot;"/>
     <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;STG&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
     <elementParameter field="TEXT" name="LABEL" value="DIM_SKU_STG"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="TABLE" label="STG.DIM_SKU" name="table1">
+    <metadata connector="TABLE" label="DIM_SKU" name="table1">
       <column comment="" key="false" length="38" name="IOC_MDM_SKU_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_MDM_SKU_ID"/>
       </column>
       <column comment="" key="false" length="38" name="IOC_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_ID"/>
       </column>
-      <column comment="" key="false" length="20" name="IOC_SKU_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="25" name="IOC_SKU_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_SKU_ID"/>
       </column>
       <column comment="" key="false" length="38" name="ST_ACTIVE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="ST_ACTIVE"/>
-      </column>
-      <column comment="" key="true" length="150" name="PK_DIM_SKU" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PK_DIM_SKU"/>
       </column>
       <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
         <additionalField key="di.date.date" value="true"/>
@@ -173,15 +170,14 @@
     </metadata>
     <nodeData xsi:type="TalendDBMap:DBMapData">
       <InputTables alias="A" joinType="NO_JOIN" name="A" tableName="STG.DIM_SKU">
-        <DBMapperTableEntries name="IOC_MDM_SKU_ID"/>
+        <DBMapperTableEntries join="true" name="IOC_MDM_SKU_ID"/>
         <DBMapperTableEntries name="IOC_ID"/>
         <DBMapperTableEntries name="IOC_SKU_ID"/>
         <DBMapperTableEntries name="ST_ACTIVE"/>
-        <DBMapperTableEntries name="PK_DIM_SKU"/>
         <DBMapperTableEntries name="LOAD_DATE"/>
       </InputTables>
       <InputTables alias="B" joinType="LEFT_OUTER_JOIN" name="B" tableName="ODS.DIM_SKU">
-        <DBMapperTableEntries name="IOC_MDM_SKU_ID"/>
+        <DBMapperTableEntries expression="A.IOC_MDM_SKU_ID " join="true" name="IOC_MDM_SKU_ID" operator="="/>
         <DBMapperTableEntries name="IOC_ID"/>
         <DBMapperTableEntries name="IOC_SKU_ID"/>
         <DBMapperTableEntries name="ST_ACTIVE"/>
@@ -204,23 +200,23 @@
     <elementParameter field="TEXT" name="LABEL" value="DIM_SKU_ODS"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="TABLE" label="ODS.DIM_SKU" name="table2">
-      <column comment="" key="false" length="38" name="IOC_MDM_SKU_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+    <metadata connector="TABLE" label="DIM_SKU" name="table2">
+      <column comment="" key="false" length="38" name="IOC_MDM_SKU_ID" nullable="true" originalLength="-1" pattern="" precision="0" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_MDM_SKU_ID"/>
       </column>
-      <column comment="" key="false" length="38" name="IOC_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="38" name="IOC_ID" nullable="true" originalLength="-1" pattern="" precision="0" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_ID"/>
       </column>
-      <column comment="" key="false" length="20" name="IOC_SKU_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="25" name="IOC_SKU_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_SKU_ID"/>
       </column>
-      <column comment="" key="false" length="38" name="ST_ACTIVE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="38" name="ST_ACTIVE" nullable="true" originalLength="-1" pattern="" precision="0" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="ST_ACTIVE"/>
       </column>
-      <column comment="" key="true" length="150" name="PK_DIM_SKU" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="true" length="150" name="PK_DIM_SKU" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="PK_DIM_SKU"/>
       </column>
-      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" type="id_Date" usefulColumn="true">
         <additionalField key="di.date.date" value="true"/>
         <additionalField key="AVRO_TECHNICAL_KEY" value="LOAD_DATE"/>
         <additionalField key="di.column.logicalType" value="date"/>
@@ -271,13 +267,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4d56d099-608f-4890-817b-53e15fd5bc39"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>p5R+Xxli62CbEO0BN8+dNxD6hcA05aWo09X+yanUenzN9ftgjQItdRLgfMtq1SVJh0LUSm/RsDps&#13;
-mnayneYnHg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_35b3daa1-b099-49ff-aaf6-f1dab5454042"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VqvoGLHe3C4VEjJTRsF3kSZrwfqD4iN9fm9KJGOXbJs6r9rz+7ugIC4Q9in64U5J94quljMGWy1q&#13;
-8lJFLlHEeQ==</DigestValue></Reference></SignedInfo><SignatureValue>If06SVTgeiHOB2PTzzVFBs5+uoxrZyoejLlytONAzC+O5S8XhpaGvxqWykMkBhRon4omOLUttDa+&#13;
-C4ZCeuQwFsRGKlmw39fqBNjj61ZF9BwaoTZAr5DSVFeS0qq10DM7l+WVBceleqcLyDc4w66fGghG&#13;
-fEWABV7eNrxVy9qP/XVEZpwyHoRZvTGdY1HXxpVQKh4xK6cBnujpuiXlcMcFIJ87L7MiX8Kb+xNN&#13;
-9WdesYLIajOJkeXzRQOEfAHbgZaqBPNPm5qxeCR92OQq7LxUy3vnaUSzkJl+soZIJneocL3DLTNm&#13;
-SUjBm7blD3HD2qaR2uXkEGa2jVj1Md5/fpt/jA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_501a3835-e0b7-4ae4-ab04-8f5def6bb0b2"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>CSxP5KYDY/kG3TM56S599YglPcahDFI3JcboLCyihwpIHRWuqa9tvf+157+QGL1UzfIqq5T1oT12&#13;
+PqCqXLHYCQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6004fbfb-b11a-472e-9f68-53becae1173c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JuwO6QPhH6OcFnvVz5BJQ0mtYTqDDT4D6MMGkOcEYrNlUHqoAfTubpkNTnSy1k3azcaWZUsroiof&#13;
+1Bf07HJBUA==</DigestValue></Reference></SignedInfo><SignatureValue>FTGfnprh9tlqafKlcIORQqIZNcRaDYki0ECBsEYkZLndI1RlEhIrCnJkvtwbY15fwjGmJnPKWlju&#13;
+xNIAId4TP5MzuN5Ws/ZtJjXHn6UZcsV0gsOlHNzWxOBiDGszVC2DpvAp+QSKBzVrWxnfMOXf/htk&#13;
+zgHKfe0vSoNCrlOJzVTGxkpw/X1pS+46W8jRCQPkENHu8kL+NPNjDXbfFZyOz6Iq9NQPUBNlzTT1&#13;
+PWNIva1miilEHeEX7b5m/aTYC8veUK2xaR1eHSVfWHLfr2IUSg5BqLkKdBDXqMbLDFmvrTfDzyxA&#13;
+/qierRtIEC9KNrwxz5xmZFhXBvJKtd9UXZs/aA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -299,4 +295,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_35b3daa1-b099-49ff-aaf6-f1dab5454042" Target="#_4d56d099-608f-4890-817b-53e15fd5bc39"><Timestamp>2024-01-30 18:33:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6004fbfb-b11a-472e-9f68-53becae1173c" Target="#_501a3835-e0b7-4ae4-ab04-8f5def6bb0b2"><Timestamp>2024-01-31 10:58:39</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
