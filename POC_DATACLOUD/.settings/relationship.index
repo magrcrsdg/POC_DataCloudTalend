@@ -275,6 +275,21 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_6vCLEMBVEe6fYIbtfrMGCw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw - DIM_CURRENCY",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - DIM_CURRENCY",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_7bMi4Lw2Ee6jl_HxQBZtkw",
     "version" : "0.1",
     "type" : "job"
@@ -394,6 +409,25 @@
     "id" : "_qxbG4LoKEe6H2tT7rm3hlw - FACT_ZZZE_MOV_COST",
     "version" : "Latest",
     "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_C4sI4MBNEe6fYIbtfrMGCw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_1OwocLoKEe6H2tT7rm3hlw - FACT_MOV_COST",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - FACT_ZZZE_MOV_COST",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_KWOasL9LEe6fYIbtfrMGCw--Commit",
+    "version" : "Latest",
+    "type" : "sqlPattern"
   } ]
 }, {
   "baseItem" : {
