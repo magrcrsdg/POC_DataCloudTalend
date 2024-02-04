@@ -424,10 +424,6 @@
     "id" : "_qxbG4LoKEe6H2tT7rm3hlw - FACT_ZZZE_MOV_COST",
     "version" : "Latest",
     "type" : "schema"
-  }, {
-    "id" : "_KWOasL9LEe6fYIbtfrMGCw--Commit",
-    "version" : "Latest",
-    "type" : "sqlPattern"
   } ]
 }, {
   "baseItem" : {
@@ -1144,6 +1140,37 @@
     "id" : "_oW7-ELnhEe6H2tT7rm3hlw",
     "version" : "Latest",
     "type" : "property"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_oanWMMHOEe664rUUWQVKwg",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_1OwocLoKEe6H2tT7rm3hlw - FACT_WASTE_DECLAR",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - DIM_AUFK",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - DIM_MARA",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - FACT_EKPO",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - FACT_MKPF",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - FACT_MSEG",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
