@@ -367,6 +367,45 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_7sk5YMTfEe6IPK7Wz-r8Qw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "built-in",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "_8Z7TMLCJEe6qSuF81liuCg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_OvDMwLrEEe6H2tT7rm3hlw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "HashUtils",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "_8Z7TMLCJEe6qSuF81liuCg - ODS_EXCHANGE_RATES",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_OvDMwLrEEe6H2tT7rm3hlw - PROCESS_CONTROL",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - ODS_EXCHANGE_RATE",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_8Ox7EL-bEe6fYIbtfrMGCw",
     "version" : "0.1",
     "type" : "job"
@@ -515,6 +554,10 @@
     "type" : "job"
   },
   "relatedItems" : [ {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw - FACT_MSEG",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
     "id" : "_qxbG4LoKEe6H2tT7rm3hlw - FACT_MSEG",
     "version" : "Latest",
     "type" : "schema"
@@ -787,6 +830,69 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "__Bj9cMQJEe6vWvBLe90mpQ",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_1OwocLoKEe6H2tT7rm3hlw - FACT_DELIVERY_LINE_AGG",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_1OwocLoKEe6H2tT7rm3hlw - FACT_SUPPLY_WASTE",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_1OwocLoKEe6H2tT7rm3hlw - FACT_WASTE_DECLAR",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - DIM_CURRENCY",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - DIM_MATERIAL",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - DIM_SKU",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - DIM_SUPPLIER",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - DWL_DATE",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - DWL_PLANT_PEAK",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - ODS_CMN_MATERIAL_VALUATION_EXT",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - ODS_ITEM",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - ODS_OTC_SO_HEADER",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - ODS_SUPPLY_MATLOC",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - ODS_UNIT_CONVERSION",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_aHVIILoKEe6H2tT7rm3hlw",
     "version" : "0.1",
     "type" : "job"
@@ -840,6 +946,21 @@
     "type" : "schema"
   }, {
     "id" : "_qxbG4LoKEe6H2tT7rm3hlw - DWL_BATCH",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_aoWw4MTnEe6IPK7Wz-r8Qw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_1OwocLoKEe6H2tT7rm3hlw - FACT_SUPPLY_WASTE",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_1OwocLoKEe6H2tT7rm3hlw - FACT_SUPPLY_WASTE_AGG_TOT",
     "version" : "Latest",
     "type" : "schema"
   } ]
@@ -1143,6 +1264,21 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_nUzAoMQeEe6vWvBLe90mpQ",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_1OwocLoKEe6H2tT7rm3hlw - FACT_DELIVERY_LINE_AGG",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - ODS_OTC_DELIVERY_LINE",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_oanWMMHOEe664rUUWQVKwg",
     "version" : "0.1",
     "type" : "job"
@@ -1171,6 +1307,29 @@
     "id" : "_qxbG4LoKEe6H2tT7rm3hlw - FACT_MSEG",
     "version" : "Latest",
     "type" : "schema"
+  }, {
+    "id" : "_qxbG4LoKEe6H2tT7rm3hlw - ODS_EXCHANGE_RATE",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_pf1dUMT5Ee6IPK7Wz-r8Qw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "POC_DATACLOUD:__Bj9cMQJEe6vWvBLe90mpQ",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "POC_DATACLOUD:_aoWw4MTnEe6IPK7Wz-r8Qw",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "_1OwocLoKEe6H2tT7rm3hlw",
+    "version" : "Latest",
+    "type" : "property"
   } ]
 }, {
   "baseItem" : {

@@ -1,0 +1,1882 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendDBMap="http://www.talend.org/dbmap" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+  <context confirmationNeeded="false" hide="false" name="Default"/>
+  <parameters>
+    <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="544"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="480"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value=""/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:d+DI5ZmGkQYOsGfGhXlI41GdRs4WAsYj4n22j0Yo"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Talend-Studio-20231027_1100-V8.0.1/workspace/.metadata&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" show="false" value="tJDBCOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_12"/>
+    <elementParameter field="TEXT" name="URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DATASOURCE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:uTcekWF/RE6eCx3Qk/44bXdDFf+6HomgORgTMUUW"/>
+    <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
+    <routinesParameter id="_KRgSwL9LEe6fYIbtfrMGCw" name="SQLike"/>
+    <routinesParameter id="_KSg_YL9LEe6fYIbtfrMGCw" name="DataOperation"/>
+    <routinesParameter id="_KSslkL9LEe6fYIbtfrMGCw" name="Mathematical"/>
+    <routinesParameter id="_KS3ksL9LEe6fYIbtfrMGCw" name="Numeric"/>
+    <routinesParameter id="_KTCj0L9LEe6fYIbtfrMGCw" name="Relational"/>
+    <routinesParameter id="_KTR0YL9LEe6fYIbtfrMGCw" name="StringHandling"/>
+    <routinesParameter id="_KTeBoL9LEe6fYIbtfrMGCw" name="TalendDataGenerator"/>
+    <routinesParameter id="_KTpAwL9LEe6fYIbtfrMGCw" name="TalendDate"/>
+    <routinesParameter id="_KT11EL9LEe6fYIbtfrMGCw" name="TalendString"/>
+    <routinesParameter id="_KUANIL9LEe6fYIbtfrMGCw" name="TalendStringUtil"/>
+  </parameters>
+  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-480" posY="-256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_1"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_1OwocLoKEe6H2tT7rm3hlw - FACT_WASTE_DECLAR"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;FACT_WASTE_DECLAR&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;DWH&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="&quot;FACT_WASTE_DECLAR&quot;"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="FACT_WASTE_DECLAR" name="table1">
+      <column comment="" key="false" length="30" name="DOCUMENT_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DOCUMENT_NUMBER"/>
+      </column>
+      <column comment="" key="false" length="12" name="DOCUMENT_YEAR" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DOCUMENT_YEAR"/>
+      </column>
+      <column comment="" key="false" length="12" name="DOCUMENT_POSITION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DOCUMENT_POSITION"/>
+      </column>
+      <column comment="" key="false" length="36" name="ORDER_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_NUMBER"/>
+      </column>
+      <column comment="" key="false" length="24" name="DATE_POSITION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_POSITION"/>
+      </column>
+      <column comment="" key="false" length="9" name="MOVEMENT_TYPE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MOVEMENT_TYPE"/>
+      </column>
+      <column comment="" key="false" length="54" name="MATERIAL_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MATERIAL_NUMBER"/>
+      </column>
+      <column comment="" key="false" length="12" name="PLANT" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PLANT"/>
+      </column>
+      <column comment="" key="false" length="13" name="QUANTITY" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="QUANTITY"/>
+      </column>
+      <column comment="" key="false" length="12" name="UNIT_MEASURE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="UNIT_MEASURE"/>
+      </column>
+      <column comment="" key="false" length="13" name="QUANTITY_UNIT" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="QUANTITY_UNIT"/>
+      </column>
+      <column comment="" key="false" length="9" name="UNIT_MEASURE_UNIT" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="UNIT_MEASURE_UNIT"/>
+      </column>
+      <column comment="" key="false" length="13" name="MATERIAL_COST" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MATERIAL_COST"/>
+      </column>
+      <column comment="" key="false" length="15" name="CURRENCY_CODE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CURRENCY_CODE"/>
+      </column>
+      <column comment="" key="false" length="12" name="STORAGE_LOCATION_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="STORAGE_LOCATION_ID"/>
+      </column>
+      <column comment="" key="false" length="30" name="BATCH_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="BATCH_ID"/>
+      </column>
+      <column comment="" key="false" length="13" name="QUANTITY_ENTRY" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="QUANTITY_ENTRY"/>
+      </column>
+      <column comment="" key="false" length="9" name="UNIT_MEASURE_ENTRY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="UNIT_MEASURE_ENTRY"/>
+      </column>
+      <column comment="" key="false" length="36" name="SHIP_TO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SHIP_TO"/>
+      </column>
+      <column comment="" key="false" length="30" name="SOLD_TO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SOLD_TO"/>
+      </column>
+      <column comment="" key="false" length="13" name="DELIVERY_COST" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DELIVERY_COST"/>
+      </column>
+      <column comment="" key="false" length="30" name="COMPANY_CODE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="COMPANY_CODE"/>
+      </column>
+      <column comment="" key="false" length="30" name="PURCHASE_ORDER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PURCHASE_ORDER"/>
+      </column>
+      <column comment="" key="false" length="12" name="REASON_CODE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="REASON_CODE"/>
+      </column>
+      <column comment="" key="false" length="3" name="SIGNS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SIGNS"/>
+      </column>
+      <column comment="" key="false" length="30" name="VENDOR" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="VENDOR"/>
+      </column>
+      <column comment="" key="false" length="36" name="SAP_USER_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SAP_USER_NAME"/>
+      </column>
+      <column comment="" key="false" length="30" name="COST_CENTER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="COST_CENTER"/>
+      </column>
+      <column comment="" key="false" length="30" name="GL_ACCT" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="GL_ACCT"/>
+      </column>
+      <column comment="" key="false" length="12" name="VALUE_STRING" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="VALUE_STRING"/>
+      </column>
+      <column comment="" key="false" length="1" name="SW_PURCHASE_ORDER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SW_PURCHASE_ORDER"/>
+      </column>
+      <column comment="" key="false" length="15" name="SAP_ITEM" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SAP_ITEM"/>
+      </column>
+      <column comment="" key="false" length="3" name="SPECIAL_STOCK" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SPECIAL_STOCK"/>
+      </column>
+      <column comment="" key="false" length="3" name="ITEM_CATEGORY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ITEM_CATEGORY"/>
+      </column>
+      <column comment="" key="false" length="150" name="COMMENTS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="COMMENTS"/>
+      </column>
+      <column comment="" key="false" length="12" name="ORDER_TYPE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_TYPE_ID"/>
+      </column>
+      <column comment="" key="false" length="48" name="REFERENCE_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="REFERENCE_NUMBER"/>
+      </column>
+      <column comment="" key="false" length="4" name="IND_SHELF_LIFE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IND_SHELF_LIFE"/>
+      </column>
+      <column comment="" key="false" length="6" name="IOC_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_ID"/>
+      </column>
+      <column comment="" key="false" length="13" name="MATERIAL_COST_LC" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MATERIAL_COST_LC"/>
+      </column>
+      <column comment="" key="false" length="13" name="MATERIAL_COST_GC" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MATERIAL_COST_GC"/>
+      </column>
+      <column comment="" key="false" length="13" name="DELIVERY_COST_LC" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DELIVERY_COST_LC"/>
+      </column>
+      <column comment="" key="false" length="13" name="DELIVERY_COST_GC" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DELIVERY_COST_GC"/>
+      </column>
+      <column comment="" key="false" length="15" name="CURRENCY_CODE_LC" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CURRENCY_CODE_LC"/>
+      </column>
+      <column comment="" key="false" length="15" name="CURRENCY_CODE_GC" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CURRENCY_CODE_GC"/>
+      </column>
+      <column comment="" key="false" length="9" name="F_EXCHANGE_RATE_GC" nullable="true" originalLength="-1" pattern="" precision="5" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_EXCHANGE_RATE_GC"/>
+      </column>
+      <column comment="" key="false" length="-1" name="T_INS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="T_INS"/>
+        <additionalField key="di.date.timestamp" value="true"/>
+        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
+      </column>
+      <column comment="" key="false" length="-1" name="T_UPD" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="T_UPD"/>
+        <additionalField key="di.date.timestamp" value="true"/>
+        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
+      </column>
+      <column comment="" key="true" length="150" name="PK_FACT_WASTE_DECLAR" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PK_FACT_WASTE_DECLAR"/>
+      </column>
+      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LOAD_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tELTMap" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="-256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTMap_1"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;jdbc:snowflake://https://zk95112.west-europe.azure.snowflakecomputing.com/?warehouse=WH_TALEND&amp;db=DB_CAMPOFRIO&amp;schema=STG&amp;role=TALEND_COMPUTE&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR">
+      <elementValue elementRef="JAR_NAME" value="mvn:net.snowflake/snowflake-jdbc/3.13.30/jar"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;net.snowflake.client.jdbc.SnowflakeDriver&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;TALEND&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:5+7vUvNIwmiam7ym8TwRwmdHNRpNTVkWBunwMcl374Qf3NxwG2jObYUdccptMQ=="/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="__Bj9cMQJEe6vWvBLe90mpQ-tELTMap_1-PREVIEW.bmp"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="CHECK" name="DRY_RUN" value="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LABEL" value="DWH transformations"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="ACTIVE_DATABASE_DELIMITED_IDENTIFIERS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVE_ADD_QUOTES_IN_TABLE_NAME" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_ALIAS_IN_OUTPUT_TABLE" show="false" value="false"/>
+    <metadata connector="TABLE" label="FACT_SUPPLY_WASTE" name="table5">
+      <column comment="" key="true" length="150" name="PK_FACT_SUPPLY_WASTE" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PK_FACT_SUPPLY_WASTE"/>
+      </column>
+    </metadata>
+    <metadata connector="TABLE" label="FACT_SUPPLY_WASTE" name="table3">
+      <column comment="" key="false" length="30" name="DOCUMENT_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DOCUMENT_NUMBER"/>
+      </column>
+      <column comment="" key="false" length="12" name="DOCUMENT_YEAR" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DOCUMENT_YEAR"/>
+      </column>
+      <column comment="" key="false" length="12" name="DOCUMENT_POSITION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DOCUMENT_POSITION"/>
+      </column>
+      <column comment="" key="false" length="12" name="ORDER_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_NUMBER"/>
+      </column>
+      <column comment="" key="false" length="24" name="DATE_POSITION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_POSITION"/>
+      </column>
+      <column comment="" key="false" length="9" name="MOVEMENT_TYPE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MOVEMENT_TYPE_ID"/>
+      </column>
+      <column comment="" key="false" length="9" name="MATERIAL_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MATERIAL_ID"/>
+      </column>
+      <column comment="" key="false" length="4" name="PLANT_PEAK_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PLANT_PEAK_ID"/>
+      </column>
+      <column comment="" key="false" length="22" name="F_QUANTITY" nullable="true" originalLength="-1" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_QUANTITY"/>
+      </column>
+      <column comment="" key="false" length="3" name="BASE_UNIT_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="BASE_UNIT_ID"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_QUANTITY_PARALLEL" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_QUANTITY_PARALLEL"/>
+      </column>
+      <column comment="" key="false" length="3" name="PARALLEL_UNIT_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PARALLEL_UNIT_ID"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_MATERIAL_COST" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_MATERIAL_COST"/>
+      </column>
+      <column comment="" key="false" length="6" name="CURRENCY_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CURRENCY_ID"/>
+      </column>
+      <column comment="" key="false" length="12" name="STORAGE_LOCATION_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="STORAGE_LOCATION_ID"/>
+      </column>
+      <column comment="" key="false" length="30" name="BATCH_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="BATCH_ID"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_QUANTITY_ENTRY" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_QUANTITY_ENTRY"/>
+      </column>
+      <column comment="" key="false" length="3" name="ENTRY_UNIT_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ENTRY_UNIT_ID"/>
+      </column>
+      <column comment="" key="false" length="36" name="SHIP_TO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SHIP_TO"/>
+      </column>
+      <column comment="" key="false" length="30" name="SOLD_TO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SOLD_TO"/>
+      </column>
+      <column comment="" key="false" length="13" name="DELIVERY_COST" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DELIVERY_COST"/>
+      </column>
+      <column comment="" key="false" length="6" name="COMPANY_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="COMPANY_ID"/>
+      </column>
+      <column comment="" key="false" length="-1" name="TIMESTAMP" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="TIMESTAMP"/>
+        <additionalField key="di.date.timestamp" value="true"/>
+        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_QUANTITY_KG" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_QUANTITY_KG"/>
+      </column>
+      <column comment="" key="false" length="12" name="REASON_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="REASON_ID"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_MATERIAL_COST_2" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_MATERIAL_COST_2"/>
+      </column>
+      <column comment="" key="false" length="1" name="SW_PURCHASE_ORDER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SW_PURCHASE_ORDER"/>
+      </column>
+      <column comment="" key="false" length="6" name="SUPPLIER_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SUPPLIER_ID"/>
+      </column>
+      <column comment="" key="false" length="10" name="PO_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PO_NUMBER"/>
+      </column>
+      <column comment="" key="false" length="36" name="SAP_USER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SAP_USER"/>
+      </column>
+      <column comment="" key="false" length="30" name="COST_CENTER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="COST_CENTER"/>
+      </column>
+      <column comment="" key="false" length="30" name="G_L_ACCT" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="G_L_ACCT"/>
+      </column>
+      <column comment="" key="false" length="12" name="VALUE_STRING" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="VALUE_STRING"/>
+      </column>
+      <column comment="" key="false" length="15" name="SAP_ITEM" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SAP_ITEM"/>
+      </column>
+      <column comment="" key="false" length="3" name="SPECIAL_STOCK" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SPECIAL_STOCK"/>
+      </column>
+      <column comment="" key="false" length="3" name="ITEM_CATEGORY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ITEM_CATEGORY"/>
+      </column>
+      <column comment="" key="false" length="150" name="COMMENTS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="COMMENTS"/>
+      </column>
+      <column comment="" key="false" length="3" name="DRP_PLANNER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DRP_PLANNER_ID"/>
+      </column>
+      <column comment="" key="false" length="3" name="SNP_PLANNER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SNP_PLANNER_ID"/>
+      </column>
+      <column comment="" key="false" length="12" name="ORDER_TYPE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_TYPE_ID"/>
+      </column>
+      <column comment="" key="false" length="6" name="MONTH_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MONTH_ID"/>
+      </column>
+      <column comment="" key="false" length="9" name="SKU_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SKU_ID"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_MOV_ACTUAL_PRICE" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_MOV_ACTUAL_PRICE"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_QUANTITY_VU" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_QUANTITY_VU"/>
+      </column>
+      <column comment="" key="false" length="48" name="REFERENCE_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="REFERENCE_NUMBER"/>
+      </column>
+      <column comment="" key="false" length="4" name="IND_SHELF_LIFE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IND_SHELF_LIFE"/>
+      </column>
+      <column comment="" key="false" length="20" name="SO_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SO_NUMBER"/>
+      </column>
+      <column comment="" key="false" length="4" name="SALES_ORDER_TYPE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SALES_ORDER_TYPE_ID"/>
+      </column>
+      <column comment="" key="false" length="6" name="IOC_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_ID"/>
+      </column>
+      <column comment="" key="false" length="-1" name="DATE_ID" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_ID"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_MATERIAL_COST_LC" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_MATERIAL_COST_LC"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_MATERIAL_COST_GC" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_MATERIAL_COST_GC"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_DELIVERY_COST_LC" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_DELIVERY_COST_LC"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_DELIVERY_COST_GC" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_DELIVERY_COST_GC"/>
+      </column>
+      <column comment="" key="false" length="6" name="CURRENCY_ID_LC" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CURRENCY_ID_LC"/>
+      </column>
+      <column comment="" key="false" length="6" name="CURRENCY_ID_GC" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CURRENCY_ID_GC"/>
+      </column>
+      <column comment="" key="false" length="9" name="F_EXCHANGE_RATE_GC" nullable="true" originalLength="-1" pattern="" precision="5" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_EXCHANGE_RATE_GC"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_MOV_ACTUAL_PRICE_LC" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_MOV_ACTUAL_PRICE_LC"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_MOV_ACTUAL_PRICE_GC" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_MOV_ACTUAL_PRICE_GC"/>
+      </column>
+      <column comment="" key="true" length="150" name="PK_FACT_SUPPLY_WASTE" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PK_FACT_SUPPLY_WASTE"/>
+      </column>
+      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LOAD_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+    <nodeData xsi:type="TalendDBMap:DBMapData">
+      <InputTables alias="WASTE_DECLAR" joinType="NO_JOIN" name="WASTE_DECLAR" tableName="DWH.FACT_WASTE_DECLAR">
+        <DBMapperTableEntries name="DOCUMENT_NUMBER"/>
+        <DBMapperTableEntries name="DOCUMENT_YEAR"/>
+        <DBMapperTableEntries name="DOCUMENT_POSITION"/>
+        <DBMapperTableEntries name="ORDER_NUMBER"/>
+        <DBMapperTableEntries join="true" name="DATE_POSITION"/>
+        <DBMapperTableEntries name="MOVEMENT_TYPE"/>
+        <DBMapperTableEntries join="true" name="MATERIAL_NUMBER"/>
+        <DBMapperTableEntries join="true" name="PLANT"/>
+        <DBMapperTableEntries name="QUANTITY"/>
+        <DBMapperTableEntries name="UNIT_MEASURE"/>
+        <DBMapperTableEntries name="QUANTITY_UNIT"/>
+        <DBMapperTableEntries name="UNIT_MEASURE_UNIT"/>
+        <DBMapperTableEntries name="MATERIAL_COST"/>
+        <DBMapperTableEntries name="CURRENCY_CODE"/>
+        <DBMapperTableEntries name="STORAGE_LOCATION_ID"/>
+        <DBMapperTableEntries name="BATCH_ID"/>
+        <DBMapperTableEntries name="QUANTITY_ENTRY"/>
+        <DBMapperTableEntries name="UNIT_MEASURE_ENTRY"/>
+        <DBMapperTableEntries name="SHIP_TO"/>
+        <DBMapperTableEntries name="SOLD_TO"/>
+        <DBMapperTableEntries name="DELIVERY_COST"/>
+        <DBMapperTableEntries name="COMPANY_CODE"/>
+        <DBMapperTableEntries name="PURCHASE_ORDER"/>
+        <DBMapperTableEntries name="REASON_CODE"/>
+        <DBMapperTableEntries name="SIGNS"/>
+        <DBMapperTableEntries name="VENDOR"/>
+        <DBMapperTableEntries name="SAP_USER_NAME"/>
+        <DBMapperTableEntries name="COST_CENTER"/>
+        <DBMapperTableEntries name="GL_ACCT"/>
+        <DBMapperTableEntries name="VALUE_STRING"/>
+        <DBMapperTableEntries name="SW_PURCHASE_ORDER"/>
+        <DBMapperTableEntries name="SAP_ITEM"/>
+        <DBMapperTableEntries name="SPECIAL_STOCK"/>
+        <DBMapperTableEntries name="ITEM_CATEGORY"/>
+        <DBMapperTableEntries name="COMMENTS"/>
+        <DBMapperTableEntries name="ORDER_TYPE_ID"/>
+        <DBMapperTableEntries name="REFERENCE_NUMBER"/>
+        <DBMapperTableEntries name="IND_SHELF_LIFE"/>
+        <DBMapperTableEntries name="IOC_ID"/>
+        <DBMapperTableEntries name="MATERIAL_COST_LC"/>
+        <DBMapperTableEntries name="MATERIAL_COST_GC"/>
+        <DBMapperTableEntries name="DELIVERY_COST_LC"/>
+        <DBMapperTableEntries name="DELIVERY_COST_GC"/>
+        <DBMapperTableEntries name="CURRENCY_CODE_LC"/>
+        <DBMapperTableEntries name="CURRENCY_CODE_GC"/>
+        <DBMapperTableEntries name="F_EXCHANGE_RATE_GC"/>
+        <DBMapperTableEntries name="T_INS"/>
+        <DBMapperTableEntries name="T_UPD"/>
+        <DBMapperTableEntries name="PK_FACT_WASTE_DECLAR"/>
+        <DBMapperTableEntries name="LOAD_DATE"/>
+      </InputTables>
+      <InputTables alias="MAT_VAL_EXT" joinType="LEFT_OUTER_JOIN" name="MAT_VAL_EXT" tableName="ODS.ODS_CMN_MATERIAL_VALUATION_EXT">
+        <DBMapperTableEntries expression="WASTE_DECLAR.MATERIAL_NUMBER" join="true" name="ITEM_ID" operator="="/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.PLANT" join="true" name="VALUATION_AREA_ID" operator="="/>
+        <DBMapperTableEntries expression="" name="VALUATION_TYPE_ID" operator=""/>
+        <DBMapperTableEntries expression="TO_NUMBER(left(TO_CHAR(WASTE_DECLAR.DATE_POSITION),6)) " join="true" name="PERIOD_ID" operator="="/>
+        <DBMapperTableEntries expression="" name="EX_RATE_LC_GC" operator=""/>
+        <DBMapperTableEntries name="REAL_PRICE_LC"/>
+        <DBMapperTableEntries name="PRICE_UNIT"/>
+        <DBMapperTableEntries name="PK_ODS_CMN_MATERIAL_VALUATION_EXT"/>
+        <DBMapperTableEntries name="LOAD_DATE"/>
+      </InputTables>
+      <InputTables alias="ITEM" joinType="LEFT_OUTER_JOIN" name="ITEM" tableName="ODS.ODS_ITEM">
+        <DBMapperTableEntries expression="WASTE_DECLAR.MATERIAL_NUMBER" join="true" name="ITEM_ID" operator="="/>
+        <DBMapperTableEntries name="BASE_UNIT_MEASURE"/>
+        <DBMapperTableEntries name="VALUATION_UNIT_MEASURE"/>
+        <DBMapperTableEntries name="TIMESTAMP"/>
+        <DBMapperTableEntries name="CREATED_DATE_ON"/>
+        <DBMapperTableEntries name="CHANGED_ON"/>
+        <DBMapperTableEntries name="PK_ODS_ITEM"/>
+        <DBMapperTableEntries name="LOAD_DATE"/>
+      </InputTables>
+      <InputTables alias="UNIT_CONV" joinType="LEFT_OUTER_JOIN" name="UNIT_CONV" tableName="ODS.ODS_UNIT_CONVERSION">
+        <DBMapperTableEntries expression="WASTE_DECLAR.MATERIAL_NUMBER" join="true" name="ITEM_ID" operator="="/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.UNIT_MEASURE " join="true" name="UNIT_FROM" operator="="/>
+        <DBMapperTableEntries expression="'KG'" name="UNIT_TO" operator="="/>
+        <DBMapperTableEntries expression="" name="CONVERSION_BA" operator=""/>
+        <DBMapperTableEntries name="CONVERSION_AB"/>
+        <DBMapperTableEntries name="TIMESTAMP"/>
+        <DBMapperTableEntries name="EAN_EDI_UNIT"/>
+        <DBMapperTableEntries name="PK_ODS_UNIT_CONVERSION"/>
+        <DBMapperTableEntries name="LOAD_DATE"/>
+      </InputTables>
+      <InputTables alias="UNIT_CONV_BU_TO_VU" joinType="LEFT_OUTER_JOIN" name="UNIT_CONV_BU_TO_VU" tableName="ODS.ODS_UNIT_CONVERSION">
+        <DBMapperTableEntries expression="ITEM.ITEM_ID" join="true" name="ITEM_ID" operator="="/>
+        <DBMapperTableEntries expression="ITEM.BASE_UNIT_MEASURE" join="true" name="UNIT_FROM" operator="="/>
+        <DBMapperTableEntries expression="ITEM.VALUATION_UNIT_MEASURE " join="true" name="UNIT_TO" operator="="/>
+        <DBMapperTableEntries name="CONVERSION_BA"/>
+        <DBMapperTableEntries name="CONVERSION_AB"/>
+        <DBMapperTableEntries name="TIMESTAMP"/>
+        <DBMapperTableEntries name="EAN_EDI_UNIT"/>
+        <DBMapperTableEntries name="PK_ODS_UNIT_CONVERSION"/>
+        <DBMapperTableEntries name="LOAD_DATE"/>
+      </InputTables>
+      <InputTables alias="SUPPLY_MATLOC" joinType="LEFT_OUTER_JOIN" name="SUPPLY_MATLOC" tableName="ODS.ODS_SUPPLY_MATLOC">
+        <DBMapperTableEntries expression="WASTE_DECLAR.MATERIAL_NUMBER" name="MATNR" operator="="/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.PLANT" join="true" name="LOCNO" operator="="/>
+        <DBMapperTableEntries expression="" name="MATID" operator=""/>
+        <DBMapperTableEntries expression="" name="LOCID" operator=""/>
+        <DBMapperTableEntries name="PLANNER_PPS"/>
+        <DBMapperTableEntries name="PLANNER_SNP"/>
+        <DBMapperTableEntries name="PLANNER_DEMAND"/>
+        <DBMapperTableEntries name="PLANNER_TRANS"/>
+        <DBMapperTableEntries name="TIMESTAMP"/>
+        <DBMapperTableEntries name="PK_ODS_SUPPLY_MATLOC"/>
+        <DBMapperTableEntries name="LOAD_DATE"/>
+      </InputTables>
+      <InputTables alias="DELIVERY_LINE" joinType="LEFT_OUTER_JOIN" name="DELIVERY_LINE" tableName="DWH.FACT_DELIVERY_LINE_AGG">
+        <DBMapperTableEntries expression="WASTE_DECLAR.REFERENCE_NUMBER" join="true" name="DELIVERY" operator="="/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.MATERIAL_NUMBER" join="true" name="ITEM_ID" operator="="/>
+        <DBMapperTableEntries expression="" name="SALES_ORDER" operator=""/>
+        <DBMapperTableEntries name="PK_FACT_DELIVERY_LINE_AGG"/>
+        <DBMapperTableEntries name="LOAD_DATE"/>
+      </InputTables>
+      <InputTables alias="SO_HEADER" joinType="LEFT_OUTER_JOIN" name="SO_HEADER" tableName="ODS.ODS_OTC_SO_HEADER">
+        <DBMapperTableEntries expression="DELIVERY_LINE.SALES_ORDER " join="true" name="SALES_ORDER" operator="="/>
+        <DBMapperTableEntries name="DOCUMENT_TYPE_ID"/>
+        <DBMapperTableEntries name="CREATED_DATE"/>
+        <DBMapperTableEntries name="CREATED_TIME"/>
+        <DBMapperTableEntries name="DOCUMENT_DATE"/>
+        <DBMapperTableEntries name="CHANGED_DATE"/>
+        <DBMapperTableEntries name="PK_ODS_OTC_SO_HEADER"/>
+        <DBMapperTableEntries name="LOAD_DATE"/>
+      </InputTables>
+      <InputTables alias="SKU" joinType="LEFT_OUTER_JOIN" name="SKU" tableName="ODS.DIM_SKU">
+        <DBMapperTableEntries name="IOC_MDM_SKU_ID"/>
+        <DBMapperTableEntries name="IOC_ID"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.MATERIAL_NUMBER" join="true" name="IOC_SKU_ID" operator="="/>
+        <DBMapperTableEntries expression="" name="ST_ACTIVE" operator=""/>
+        <DBMapperTableEntries name="PK_DIM_SKU"/>
+        <DBMapperTableEntries name="LOAD_DATE"/>
+      </InputTables>
+      <InputTables alias="SUPPLIER" joinType="LEFT_OUTER_JOIN" name="SUPPLIER" tableName="ODS.DIM_SUPPLIER">
+        <DBMapperTableEntries expression="" name="IOC_MDM_SUPPLIER_ID" operator=""/>
+        <DBMapperTableEntries expression="" name="IOC_ID" operator=""/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.VENDOR" join="true" name="IOC_SUPPLIER_ID" operator="="/>
+        <DBMapperTableEntries name="MDM_SUPPLIER_ID"/>
+        <DBMapperTableEntries expression="" name="ST_ACTIVE" operator=""/>
+        <DBMapperTableEntries name="PK_DIM_SUPPLIER"/>
+        <DBMapperTableEntries name="LOAD_DATE"/>
+      </InputTables>
+      <InputTables alias="CURRENCY" joinType="LEFT_OUTER_JOIN" name="CURRENCY" tableName="ODS.DIM_CURRENCY">
+        <DBMapperTableEntries name="IOC_MDM_CURRENCY_ID"/>
+        <DBMapperTableEntries name="IOC_ID"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.CURRENCY_CODE " join="true" name="IOC_CURRENCY_ID" operator="="/>
+        <DBMapperTableEntries expression="" name="MDM_CURRENCY_ID" operator=""/>
+        <DBMapperTableEntries name="ST_ACTIVE"/>
+        <DBMapperTableEntries name="PK_DIM_CURRENCY"/>
+        <DBMapperTableEntries name="LOAD_DATE"/>
+      </InputTables>
+      <InputTables alias="CURRENCY_LC" joinType="LEFT_OUTER_JOIN" name="CURRENCY_LC" tableName="ODS.DIM_CURRENCY">
+        <DBMapperTableEntries name="IOC_MDM_CURRENCY_ID"/>
+        <DBMapperTableEntries name="IOC_ID"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.CURRENCY_CODE " join="true" name="IOC_CURRENCY_ID" operator="="/>
+        <DBMapperTableEntries name="MDM_CURRENCY_ID"/>
+        <DBMapperTableEntries name="ST_ACTIVE"/>
+        <DBMapperTableEntries name="PK_DIM_CURRENCY"/>
+        <DBMapperTableEntries name="LOAD_DATE"/>
+      </InputTables>
+      <InputTables alias="CURRENCY_GC" joinType="LEFT_OUTER_JOIN" name="CURRENCY_GC" tableName="ODS.DIM_CURRENCY">
+        <DBMapperTableEntries name="IOC_MDM_CURRENCY_ID"/>
+        <DBMapperTableEntries name="IOC_ID"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.CURRENCY_CODE " join="true" name="IOC_CURRENCY_ID" operator="="/>
+        <DBMapperTableEntries name="MDM_CURRENCY_ID"/>
+        <DBMapperTableEntries name="ST_ACTIVE"/>
+        <DBMapperTableEntries name="PK_DIM_CURRENCY"/>
+        <DBMapperTableEntries name="LOAD_DATE"/>
+      </InputTables>
+      <InputTables alias="MAT" joinType="LEFT_OUTER_JOIN" name="MAT" tableName="ODS.DIM_MATERIAL">
+        <DBMapperTableEntries name="IOC_MDM_MATERIAL_ID"/>
+        <DBMapperTableEntries name="IOC_ID"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.MATERIAL_NUMBER" join="true" name="IOC_MATERIAL_ID" operator="="/>
+        <DBMapperTableEntries name="MDM_MATERIAL_ID"/>
+        <DBMapperTableEntries name="ST_ACTIVE"/>
+        <DBMapperTableEntries name="PK_DIM_MATERIAL"/>
+        <DBMapperTableEntries name="LOAD_DATE"/>
+      </InputTables>
+      <InputTables alias="PLANT_PEAK" joinType="LEFT_OUTER_JOIN" name="PLANT_PEAK" tableName="ODS.DWL_PLANT_PEAK">
+        <DBMapperTableEntries expression="WASTE_DECLAR.PLANT" join="true" name="PLANT_PEAK_ID" operator="="/>
+        <DBMapperTableEntries name="TIMESTAMP"/>
+        <DBMapperTableEntries name="COMPANY_ID"/>
+        <DBMapperTableEntries name="PK_DWL_PLANT_PEAK"/>
+        <DBMapperTableEntries name="LOAD_DATE"/>
+      </InputTables>
+      <InputTables alias="DATE" joinType="LEFT_OUTER_JOIN" name="DATE" tableName="ODS.DWL_DATE">
+        <DBMapperTableEntries expression="TO_DATE(WASTE_DECLAR.DATE_POSITION, 'YYYYMMDD') " join="true" name="DATE_ID" operator="="/>
+        <DBMapperTableEntries name="MONTH_ID"/>
+        <DBMapperTableEntries expression="" name="PK_DWL_DATE" operator=""/>
+        <DBMapperTableEntries name="LOAD_DATE"/>
+      </InputTables>
+      <InputTables alias="SUPPLY_WASTE" joinType="LEFT_OUTER_JOIN" name="SUPPLY_WASTE" tableName="DWH.FACT_SUPPLY_WASTE">
+        <DBMapperTableEntries expression="WASTE_DECLAR.DOCUMENT_NUMBER" join="true" name="DOCUMENT_NUMBER" operator="="/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.DOCUMENT_YEAR" join="true" name="DOCUMENT_YEAR" operator="="/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.DOCUMENT_POSITION" join="true" name="DOCUMENT_POSITION" operator="="/>
+        <DBMapperTableEntries expression="PLANT_PEAK.COMPANY_ID" join="true" name="COMPANY_ID" operator="="/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.SAP_ITEM" join="true" name="SAP_ITEM" operator="="/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.IOC_ID" join="true" name="IOC_ID" operator="="/>
+        <DBMapperTableEntries name="PK_FACT_SUPPLY_WASTE"/>
+      </InputTables>
+      <OutputTables name="table5" tableName="FACT_SUPPLY_WASTE">
+        <DBMapperTableEntries expression="SUPPLY_WASTE.PK_FACT_SUPPLY_WASTE " name="PK_FACT_SUPPLY_WASTE"/>
+        <FilterEntries expression="SUPPLY_WASTE.PK_FACT_SUPPLY_WASTE IS NOT NULL" filterKind="WHERE_FILTER" name="newFilter5"/>
+      </OutputTables>
+      <OutputTables name="table3" tableName="FACT_SUPPLY_WASTE">
+        <DBMapperTableEntries expression="WASTE_DECLAR.DOCUMENT_NUMBER" name="DOCUMENT_NUMBER"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.DOCUMENT_YEAR" name="DOCUMENT_YEAR"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.DOCUMENT_POSITION" name="DOCUMENT_POSITION"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.ORDER_NUMBER" name="ORDER_NUMBER"/>
+        <DBMapperTableEntries expression="TO_DATE(WASTE_DECLAR.DATE_POSITION, 'YYYYMMDD') " name="DATE_POSITION"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.MOVEMENT_TYPE" name="MOVEMENT_TYPE_ID"/>
+        <DBMapperTableEntries expression="MAT.MDM_MATERIAL_ID" name="MATERIAL_ID"/>
+        <DBMapperTableEntries expression="TRIM(WASTE_DECLAR.PLANT)" name="PLANT_PEAK_ID"/>
+        <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then WASTE_DECLAR.QUANTITY  * (-1)&#13;&#10;Else WASTE_DECLAR.QUANTITY&#13;&#10;End " name="F_QUANTITY"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.UNIT_MEASURE" name="BASE_UNIT_ID"/>
+        <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then WASTE_DECLAR.QUANTITY_UNIT  * (-1)&#13;&#10;Else WASTE_DECLAR.QUANTITY_UNIT&#13;&#10;End " name="F_QUANTITY_PARALLEL"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.UNIT_MEASURE_UNIT" name="PARALLEL_UNIT_ID"/>
+        <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then WASTE_DECLAR.MATERIAL_COST   * (-1)&#13;&#10;Else WASTE_DECLAR.MATERIAL_COST &#13;&#10;End " name="F_MATERIAL_COST"/>
+        <DBMapperTableEntries expression="CURRENCY.MDM_CURRENCY_ID" name="CURRENCY_ID"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.STORAGE_LOCATION_ID" name="STORAGE_LOCATION_ID"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.BATCH_ID" name="BATCH_ID"/>
+        <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then WASTE_DECLAR.QUANTITY_ENTRY  * (-1)&#13;&#10;Else WASTE_DECLAR.QUANTITY_ENTRY&#13;&#10;End " name="F_QUANTITY_ENTRY"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.UNIT_MEASURE_ENTRY" name="ENTRY_UNIT_ID"/>
+        <DBMapperTableEntries expression="Case&#13;&#10;When WASTE_DECLAR.SHIP_TO=' ' Then '0'&#13;&#10;Else  COALESCE(NULLIF(TRIM(WASTE_DECLAR.SHIP_TO), ''), '0')&#13;&#10;End " name="SHIP_TO"/>
+        <DBMapperTableEntries expression="Case&#13;&#10;When WASTE_DECLAR.SOLD_TO=' ' Then '0'&#13;&#10;Else  COALESCE(NULLIF(TRIM(WASTE_DECLAR.SOLD_TO), ''), '0')&#13;&#10;End " name="SOLD_TO"/>
+        <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then WASTE_DECLAR.DELIVERY_COST   * (-1)&#13;&#10;Else WASTE_DECLAR.DELIVERY_COST &#13;&#10;End " name="DELIVERY_COST"/>
+        <DBMapperTableEntries expression="PLANT_PEAK.COMPANY_ID" name="COMPANY_ID"/>
+        <DBMapperTableEntries expression="ITEM.TIMESTAMP" name="TIMESTAMP"/>
+        <DBMapperTableEntries expression="COALESCE(&#13;&#10;    CASE&#13;&#10;      WHEN WASTE_DECLAR.UNIT_MEASURE = 'KG' THEN&#13;&#10;        CASE&#13;&#10;          WHEN WASTE_DECLAR.SIGNS = 'S' THEN WASTE_DECLAR.QUANTITY * (-1)&#13;&#10;          ELSE WASTE_DECLAR.QUANTITY&#13;&#10;        END&#13;&#10;      ELSE&#13;&#10;        CASE&#13;&#10;          WHEN WASTE_DECLAR.UNIT_MEASURE_UNIT = 'KG' THEN&#13;&#10;            CASE&#13;&#10;              WHEN WASTE_DECLAR.SIGNS = 'S' THEN WASTE_DECLAR.QUANTITY_UNIT * (-1)&#13;&#10;              ELSE WASTE_DECLAR.QUANTITY_UNIT&#13;&#10;            END&#13;&#10;          ELSE&#13;&#10;            CASE&#13;&#10;              WHEN WASTE_DECLAR.SIGNS = 'S' THEN WASTE_DECLAR.QUANTITY * (-1)&#13;&#10;              ELSE WASTE_DECLAR.QUANTITY&#13;&#10;            END * COALESCE(UNIT_CONV.CONVERSION_BA, 0)&#13;&#10;        END&#13;&#10;    END,&#13;&#10;    0&#13;&#10;  ) " name="F_QUANTITY_KG"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.REASON_CODE" name="REASON_ID"/>
+        <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'H' Then WASTE_DECLAR.MATERIAL_COST   * (-1)&#13;&#10;Else WASTE_DECLAR.MATERIAL_COST &#13;&#10;End " name="F_MATERIAL_COST_2"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.SW_PURCHASE_ORDER" name="SW_PURCHASE_ORDER"/>
+        <DBMapperTableEntries expression="COALESCE(NULLIF(TRIM(SUPPLIER.MDM_SUPPLIER_ID), ''), '0') " name="SUPPLIER_ID"/>
+        <DBMapperTableEntries expression="CASE&#13;&#10;    WHEN COALESCE(IFNULL(TRIM(WASTE_DECLAR.PURCHASE_ORDER), '0'), '0') = '0' THEN '0'&#13;&#10;    ELSE PLANT_PEAK.COMPANY_ID || '/' || WASTE_DECLAR.PURCHASE_ORDER&#13;&#10;END " name="PO_NUMBER"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.SAP_USER_NAME" name="SAP_USER"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.COST_CENTER" name="COST_CENTER"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.GL_ACCT" name="G_L_ACCT"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.VALUE_STRING" name="VALUE_STRING"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.SAP_ITEM" name="SAP_ITEM"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.SPECIAL_STOCK" name="SPECIAL_STOCK"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.ITEM_CATEGORY" name="ITEM_CATEGORY"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.COMMENTS" name="COMMENTS"/>
+        <DBMapperTableEntries expression="COALESCE(NULLIF(TRIM(SUPPLY_MATLOC.PLANNER_PPS), ''), '0') " name="DRP_PLANNER_ID"/>
+        <DBMapperTableEntries expression="COALESCE(NULLIF(TRIM(SUPPLY_MATLOC.PLANNER_SNP), ''), '0') " name="SNP_PLANNER_ID"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.ORDER_TYPE_ID" name="ORDER_TYPE_ID"/>
+        <DBMapperTableEntries expression="DATE.MONTH_ID" name="MONTH_ID"/>
+        <DBMapperTableEntries expression="SKU.IOC_MDM_SKU_ID " name="SKU_ID"/>
+        <DBMapperTableEntries expression="MAT_VAL_EXT.REAL_PRICE_LC / NULLIF(MAT_VAL_EXT.PRICE_UNIT, 0) " name="F_MOV_ACTUAL_PRICE"/>
+        <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then WASTE_DECLAR.QUANTITY  * (-1)&#13;&#10;Else WASTE_DECLAR.QUANTITY&#13;&#10;End) * COALESCE(UNIT_CONV_BU_TO_VU.CONVERSION_BA, 0) " name="F_QUANTITY_VU"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.REFERENCE_NUMBER" name="REFERENCE_NUMBER"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.IND_SHELF_LIFE" name="IND_SHELF_LIFE"/>
+        <DBMapperTableEntries expression="SO_HEADER.SALES_ORDER" name="SO_NUMBER"/>
+        <DBMapperTableEntries expression="SO_HEADER.DOCUMENT_TYPE_ID" name="SALES_ORDER_TYPE_ID"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.IOC_ID" name="IOC_ID"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.DATE_POSITION" name="DATE_ID"/>
+        <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then WASTE_DECLAR.MATERIAL_COST_LC   * (-1)&#13;&#10;Else WASTE_DECLAR.MATERIAL_COST_LC &#13;&#10;End " name="F_MATERIAL_COST_LC"/>
+        <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then WASTE_DECLAR.MATERIAL_COST_GC   * (-1)&#13;&#10;Else WASTE_DECLAR.MATERIAL_COST_GC &#13;&#10;End " name="F_MATERIAL_COST_GC"/>
+        <DBMapperTableEntries expression="case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then WASTE_DECLAR.DELIVERY_COST_LC   * (-1)&#13;&#10;Else WASTE_DECLAR.DELIVERY_COST_LC&#13;&#10;End " name="F_DELIVERY_COST_LC"/>
+        <DBMapperTableEntries expression="case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then WASTE_DECLAR.DELIVERY_COST_GC   * (-1)&#13;&#10;Else WASTE_DECLAR.DELIVERY_COST_GC&#13;&#10;End " name="F_DELIVERY_COST_GC"/>
+        <DBMapperTableEntries expression="CURRENCY_LC.MDM_CURRENCY_ID" name="CURRENCY_ID_LC"/>
+        <DBMapperTableEntries expression="CURRENCY_GC.MDM_CURRENCY_ID" name="CURRENCY_ID_GC"/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.F_EXCHANGE_RATE_GC" name="F_EXCHANGE_RATE_GC"/>
+        <DBMapperTableEntries expression="MAT_VAL_EXT.REAL_PRICE_LC / MAT_VAL_EXT.PRICE_UNIT " name="F_MOV_ACTUAL_PRICE_LC"/>
+        <DBMapperTableEntries expression="CASE &#13;&#10;WHEN MAT_VAL_EXT.EX_RATE_LC_GC = 0 THEN 0&#13;&#10;WHEN MAT_VAL_EXT.EX_RATE_LC_GC &lt; 0 THEN MAT_VAL_EXT.REAL_PRICE_LC / abs(MAT_VAL_EXT.EX_RATE_LC_GC)&#13;&#10;ELSE MAT_VAL_EXT.REAL_PRICE_LC *  MAT_VAL_EXT.EX_RATE_LC_GC&#13;&#10;END&#13;&#10;/&#13;&#10;NULLIF(MAT_VAL_EXT.PRICE_UNIT, 0) " name="F_MOV_ACTUAL_PRICE_GC"/>
+        <DBMapperTableEntries expression="HASH(&#13;&#10;  TO_VARIANT(WASTE_DECLAR.DOCUMENT_NUMBER) ||&#13;&#10;  TO_VARIANT(WASTE_DECLAR.DOCUMENT_YEAR)  ||&#13;&#10;  TO_VARIANT(WASTE_DECLAR.DOCUMENT_POSITION) ||&#13;&#10;  TO_VARIANT(PLANT_PEAK.COMPANY_ID) ||&#13;&#10;  TO_VARIANT(WASTE_DECLAR.SAP_ITEM) ||&#13;&#10;  TO_VARIANT(WASTE_DECLAR.IOC_ID) &#13;&#10;) " name="PK_FACT_SUPPLY_WASTE"/>
+        <DBMapperTableEntries expression="current_date()" name="LOAD_DATE"/>
+      </OutputTables>
+    </nodeData>
+  </node>
+  <node componentName="tELTOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="992" posY="-256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTOutput_1"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="CREATE_TABLE_TYPE" show="false" value="SET"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_1OwocLoKEe6H2tT7rm3hlw - FACT_SUPPLY_WASTE"/>
+    <elementParameter field="CHECK" name="USE_WHERE_CONDITIONS_TABLE" show="false" value="false"/>
+    <elementParameter field="MEMO" name="WHERE_CLAUSE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="WHERE conditions table&#10;(for UPDATE and DELETE only)"/>
+    <elementParameter field="TABLE" name="WHERE_CONDITIONS_TABLE" show="false"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;FACT_SUPPLY_WASTE&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;DWH&quot;"/>
+    <elementParameter field="CHECK" name="IS_TABLE_NAME_VARIABLE" value="false"/>
+    <elementParameter field="CHECK" name="USE_DIFFERENT_TABLE" value="false"/>
+    <elementParameter field="TEXT" name="DIFFERENT_TABLE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PARTITION" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="CHECK" name="USE_UPDATE_STATEMENT" show="false" value="false"/>
+    <elementParameter field="TABLE" name="SET_COLUMN" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="DOCUMENT_NUMBER"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DOCUMENT_YEAR"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DOCUMENT_POSITION"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ORDER_NUMBER"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DATE_POSITION"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MOVEMENT_TYPE_ID"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MATERIAL_ID"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PLANT_PEAK_ID"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="F_QUANTITY"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BASE_UNIT_ID"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="F_QUANTITY_PARALLEL"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PARALLEL_UNIT_ID"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="F_MATERIAL_COST"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CURRENCY_ID"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STORAGE_LOCATION_ID"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BATCH_ID"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="F_QUANTITY_ENTRY"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ENTRY_UNIT_ID"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SHIP_TO"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SOLD_TO"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DELIVERY_COST"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COMPANY_ID"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TIMESTAMP"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="F_QUANTITY_KG"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="REASON_ID"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="F_MATERIAL_COST_2"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SW_PURCHASE_ORDER"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SUPPLIER_ID"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PO_NUMBER"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SAP_USER"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COST_CENTER"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="G_L_ACCT"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VALUE_STRING"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SAP_ITEM"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SPECIAL_STOCK"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ITEM_CATEGORY"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COMMENTS"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DRP_PLANNER_ID"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SNP_PLANNER_ID"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ORDER_TYPE_ID"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MONTH_ID"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SKU_ID"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="F_MOV_ACTUAL_PRICE"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="F_QUANTITY_VU"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="REFERENCE_NUMBER"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="IND_SHELF_LIFE"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SO_NUMBER"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SALES_ORDER_TYPE_ID"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="IOC_ID"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DATE_ID"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="F_MATERIAL_COST_LC"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="F_MATERIAL_COST_GC"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="F_DELIVERY_COST_LC"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="F_DELIVERY_COST_GC"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CURRENCY_ID_LC"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CURRENCY_ID_GC"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="F_EXCHANGE_RATE_GC"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="F_MOV_ACTUAL_PRICE_LC"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="F_MOV_ACTUAL_PRICE_GC"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PK_FACT_SUPPLY_WASTE"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_DATE"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="Insert new records"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="FACT_SUPPLY_WASTE" name="tELTOutput_1">
+      <column comment="" key="false" length="30" name="DOCUMENT_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DOCUMENT_NUMBER"/>
+      </column>
+      <column comment="" key="false" length="12" name="DOCUMENT_YEAR" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DOCUMENT_YEAR"/>
+      </column>
+      <column comment="" key="false" length="12" name="DOCUMENT_POSITION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DOCUMENT_POSITION"/>
+      </column>
+      <column comment="" key="false" length="12" name="ORDER_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_NUMBER"/>
+      </column>
+      <column comment="" key="false" length="24" name="DATE_POSITION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_POSITION"/>
+      </column>
+      <column comment="" key="false" length="9" name="MOVEMENT_TYPE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MOVEMENT_TYPE_ID"/>
+      </column>
+      <column comment="" key="false" length="9" name="MATERIAL_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MATERIAL_ID"/>
+      </column>
+      <column comment="" key="false" length="4" name="PLANT_PEAK_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PLANT_PEAK_ID"/>
+      </column>
+      <column comment="" key="false" length="22" name="F_QUANTITY" nullable="true" originalLength="-1" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_QUANTITY"/>
+      </column>
+      <column comment="" key="false" length="3" name="BASE_UNIT_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="BASE_UNIT_ID"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_QUANTITY_PARALLEL" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_QUANTITY_PARALLEL"/>
+      </column>
+      <column comment="" key="false" length="3" name="PARALLEL_UNIT_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PARALLEL_UNIT_ID"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_MATERIAL_COST" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_MATERIAL_COST"/>
+      </column>
+      <column comment="" key="false" length="6" name="CURRENCY_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CURRENCY_ID"/>
+      </column>
+      <column comment="" key="false" length="12" name="STORAGE_LOCATION_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="STORAGE_LOCATION_ID"/>
+      </column>
+      <column comment="" key="false" length="30" name="BATCH_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="BATCH_ID"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_QUANTITY_ENTRY" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_QUANTITY_ENTRY"/>
+      </column>
+      <column comment="" key="false" length="3" name="ENTRY_UNIT_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ENTRY_UNIT_ID"/>
+      </column>
+      <column comment="" key="false" length="36" name="SHIP_TO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SHIP_TO"/>
+      </column>
+      <column comment="" key="false" length="30" name="SOLD_TO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SOLD_TO"/>
+      </column>
+      <column comment="" key="false" length="13" name="DELIVERY_COST" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DELIVERY_COST"/>
+      </column>
+      <column comment="" key="false" length="6" name="COMPANY_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="COMPANY_ID"/>
+      </column>
+      <column comment="" key="false" length="-1" name="TIMESTAMP" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="TIMESTAMP"/>
+        <additionalField key="di.date.timestamp" value="true"/>
+        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_QUANTITY_KG" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_QUANTITY_KG"/>
+      </column>
+      <column comment="" key="false" length="12" name="REASON_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="REASON_ID"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_MATERIAL_COST_2" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_MATERIAL_COST_2"/>
+      </column>
+      <column comment="" key="false" length="1" name="SW_PURCHASE_ORDER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SW_PURCHASE_ORDER"/>
+      </column>
+      <column comment="" key="false" length="6" name="SUPPLIER_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SUPPLIER_ID"/>
+      </column>
+      <column comment="" key="false" length="10" name="PO_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PO_NUMBER"/>
+      </column>
+      <column comment="" key="false" length="36" name="SAP_USER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SAP_USER"/>
+      </column>
+      <column comment="" key="false" length="30" name="COST_CENTER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="COST_CENTER"/>
+      </column>
+      <column comment="" key="false" length="30" name="G_L_ACCT" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="G_L_ACCT"/>
+      </column>
+      <column comment="" key="false" length="12" name="VALUE_STRING" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="VALUE_STRING"/>
+      </column>
+      <column comment="" key="false" length="15" name="SAP_ITEM" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SAP_ITEM"/>
+      </column>
+      <column comment="" key="false" length="3" name="SPECIAL_STOCK" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SPECIAL_STOCK"/>
+      </column>
+      <column comment="" key="false" length="3" name="ITEM_CATEGORY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ITEM_CATEGORY"/>
+      </column>
+      <column comment="" key="false" length="150" name="COMMENTS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="COMMENTS"/>
+      </column>
+      <column comment="" key="false" length="3" name="DRP_PLANNER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DRP_PLANNER_ID"/>
+      </column>
+      <column comment="" key="false" length="3" name="SNP_PLANNER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SNP_PLANNER_ID"/>
+      </column>
+      <column comment="" key="false" length="12" name="ORDER_TYPE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_TYPE_ID"/>
+      </column>
+      <column comment="" key="false" length="6" name="MONTH_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MONTH_ID"/>
+      </column>
+      <column comment="" key="false" length="9" name="SKU_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SKU_ID"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_MOV_ACTUAL_PRICE" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_MOV_ACTUAL_PRICE"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_QUANTITY_VU" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_QUANTITY_VU"/>
+      </column>
+      <column comment="" key="false" length="48" name="REFERENCE_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="REFERENCE_NUMBER"/>
+      </column>
+      <column comment="" key="false" length="4" name="IND_SHELF_LIFE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IND_SHELF_LIFE"/>
+      </column>
+      <column comment="" key="false" length="20" name="SO_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SO_NUMBER"/>
+      </column>
+      <column comment="" key="false" length="4" name="SALES_ORDER_TYPE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SALES_ORDER_TYPE_ID"/>
+      </column>
+      <column comment="" key="false" length="6" name="IOC_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_ID"/>
+      </column>
+      <column comment="" key="false" length="-1" name="DATE_ID" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_ID"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_MATERIAL_COST_LC" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_MATERIAL_COST_LC"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_MATERIAL_COST_GC" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_MATERIAL_COST_GC"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_DELIVERY_COST_LC" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_DELIVERY_COST_LC"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_DELIVERY_COST_GC" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_DELIVERY_COST_GC"/>
+      </column>
+      <column comment="" key="false" length="6" name="CURRENCY_ID_LC" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CURRENCY_ID_LC"/>
+      </column>
+      <column comment="" key="false" length="6" name="CURRENCY_ID_GC" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CURRENCY_ID_GC"/>
+      </column>
+      <column comment="" key="false" length="9" name="F_EXCHANGE_RATE_GC" nullable="true" originalLength="-1" pattern="" precision="5" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_EXCHANGE_RATE_GC"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_MOV_ACTUAL_PRICE_LC" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_MOV_ACTUAL_PRICE_LC"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_MOV_ACTUAL_PRICE_GC" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_MOV_ACTUAL_PRICE_GC"/>
+      </column>
+      <column comment="" key="true" length="150" name="PK_FACT_SUPPLY_WASTE" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PK_FACT_SUPPLY_WASTE"/>
+      </column>
+      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LOAD_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-384" posY="-160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_2"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_qxbG4LoKEe6H2tT7rm3hlw - ODS_CMN_MATERIAL_VALUATION_EXT"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;ODS_CMN_MATERIAL_VALUATION_EXT&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;ODS&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="&quot;ODS_CMN_MATERIAL_VALUATION_EXT&quot;"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="ODS_CMN_MATERIAL_VALUATION_EXT" name="table1">
+      <column comment="" key="false" length="18" name="ITEM_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ITEM_ID"/>
+      </column>
+      <column comment="" key="false" length="4" name="VALUATION_AREA_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="VALUATION_AREA_ID"/>
+      </column>
+      <column comment="" key="false" length="10" name="VALUATION_TYPE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="VALUATION_TYPE_ID"/>
+      </column>
+      <column comment="" key="false" length="6" name="PERIOD_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INTEGER" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PERIOD_ID"/>
+      </column>
+      <column comment="" key="false" length="9" name="EX_RATE_LC_GC" nullable="true" originalLength="-1" pattern="" precision="5" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="EX_RATE_LC_GC"/>
+      </column>
+      <column comment="" key="false" length="13" name="REAL_PRICE_LC" nullable="true" originalLength="-1" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="REAL_PRICE_LC"/>
+      </column>
+      <column comment="" key="false" length="5" name="PRICE_UNIT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INTEGER" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PRICE_UNIT"/>
+      </column>
+      <column comment="" key="true" length="100" name="PK_ODS_CMN_MATERIAL_VALUATION_EXT" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PK_ODS_CMN_MATERIAL_VALUATION_EXT"/>
+      </column>
+      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LOAD_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-320" posY="-64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_3"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_qxbG4LoKEe6H2tT7rm3hlw - ODS_ITEM"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;ODS_ITEM&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;ODS&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="&quot;ODS_ITEM&quot;"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="ODS_ITEM" name="table1">
+      <column comment="" key="false" length="18" name="ITEM_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ITEM_ID"/>
+      </column>
+      <column comment="" key="false" length="3" name="BASE_UNIT_MEASURE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="BASE_UNIT_MEASURE"/>
+      </column>
+      <column comment="" key="false" length="3" name="VALUATION_UNIT_MEASURE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="VALUATION_UNIT_MEASURE"/>
+      </column>
+      <column comment="" key="false" length="-1" name="TIMESTAMP" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="TIMESTAMP"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="-1" name="CREATED_DATE_ON" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CREATED_DATE_ON"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="-1" name="CHANGED_ON" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CHANGED_ON"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="true" length="100" name="PK_ODS_ITEM" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PK_ODS_ITEM"/>
+      </column>
+      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LOAD_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-256" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_4"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_qxbG4LoKEe6H2tT7rm3hlw - ODS_UNIT_CONVERSION"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;ODS_UNIT_CONVERSION&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;ODS&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="&quot;ODS_UNIT_CONVERSION&quot;"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="ODS_UNIT_CONVERSION" name="table1">
+      <column comment="" key="false" length="18" name="ITEM_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ITEM_ID"/>
+      </column>
+      <column comment="" key="false" length="20" name="UNIT_FROM" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="UNIT_FROM"/>
+      </column>
+      <column comment="" key="false" length="20" name="UNIT_TO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="UNIT_TO"/>
+      </column>
+      <column comment="" key="false" length="10" name="CONVERSION_BA" nullable="true" originalLength="-1" pattern="" precision="5" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CONVERSION_BA"/>
+      </column>
+      <column comment="" key="false" length="10" name="CONVERSION_AB" nullable="true" originalLength="-1" pattern="" precision="5" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CONVERSION_AB"/>
+      </column>
+      <column comment="" key="false" length="-1" name="TIMESTAMP" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="TIMESTAMP"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="54" name="EAN_EDI_UNIT" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="EAN_EDI_UNIT"/>
+      </column>
+      <column comment="" key="true" length="100" name="PK_ODS_UNIT_CONVERSION" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PK_ODS_UNIT_CONVERSION"/>
+      </column>
+      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LOAD_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-192" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_13"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_qxbG4LoKEe6H2tT7rm3hlw - ODS_SUPPLY_MATLOC"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;ODS_SUPPLY_MATLOC&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;ODS&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="&quot;ODS_SUPPLY_MATLOC&quot;"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="ODS.ODS_SUPPLY_MATLOC" name="table1">
+      <column comment="" key="false" length="120" name="MATNR" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MATNR"/>
+      </column>
+      <column comment="" key="false" length="60" name="LOCNO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LOCNO"/>
+      </column>
+      <column comment="" key="false" length="66" name="MATID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MATID"/>
+      </column>
+      <column comment="" key="false" length="66" name="LOCID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LOCID"/>
+      </column>
+      <column comment="" key="false" length="9" name="PLANNER_PPS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PLANNER_PPS"/>
+      </column>
+      <column comment="" key="false" length="9" name="PLANNER_SNP" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PLANNER_SNP"/>
+      </column>
+      <column comment="" key="false" length="9" name="PLANNER_DEMAND" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PLANNER_DEMAND"/>
+      </column>
+      <column comment="" key="false" length="9" name="PLANNER_TRANS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PLANNER_TRANS"/>
+      </column>
+      <column comment="" key="false" length="-1" name="TIMESTAMP" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="TIMESTAMP"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="true" length="100" name="PK_ODS_SUPPLY_MATLOC" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PK_ODS_SUPPLY_MATLOC"/>
+      </column>
+      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LOAD_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-128" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_14"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_1OwocLoKEe6H2tT7rm3hlw - FACT_DELIVERY_LINE_AGG"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;FACT_DELIVERY_LINE_AGG&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;DWH&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="FACT_DELIVERY_LINE_AGG"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="FACT_DELIVERY_LINE_AGG" name="table2">
+      <column comment="" key="false" length="10" name="DELIVERY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DELIVERY"/>
+      </column>
+      <column comment="" key="false" length="18" name="ITEM_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ITEM_ID"/>
+      </column>
+      <column comment="" key="false" length="10" name="SALES_ORDER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SALES_ORDER"/>
+      </column>
+      <column comment="" key="true" length="150" name="PK_FACT_DELIVERY_LINE_AGG" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PK_FACT_DELIVERY_LINE_AGG"/>
+      </column>
+      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LOAD_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-64" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_6"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_qxbG4LoKEe6H2tT7rm3hlw - ODS_OTC_SO_HEADER"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;ODS_OTC_SO_HEADER&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;ODS&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="&quot;ODS_OTC_SO_HEADER&quot;"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="ODS_OTC_SO_HEADER" name="table2">
+      <column comment="" key="false" length="10" name="SALES_ORDER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SALES_ORDER"/>
+      </column>
+      <column comment="" key="false" length="4" name="DOCUMENT_TYPE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DOCUMENT_TYPE_ID"/>
+      </column>
+      <column comment="" key="false" length="-1" name="CREATED_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CREATED_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="-1" name="CREATED_TIME" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CREATED_TIME"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="-1" name="DOCUMENT_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DOCUMENT_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="-1" name="CHANGED_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CHANGED_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="true" length="100" name="PK_ODS_OTC_SO_HEADER" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PK_ODS_OTC_SO_HEADER"/>
+      </column>
+      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LOAD_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="0" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_7"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_qxbG4LoKEe6H2tT7rm3hlw - DIM_SKU"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;DIM_SKU&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;ODS&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="&quot;DIM_SKU&quot;"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="DIM_SKU" name="table2">
+      <column comment="" key="false" length="38" name="IOC_MDM_SKU_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_MDM_SKU_ID"/>
+      </column>
+      <column comment="" key="false" length="38" name="IOC_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_ID"/>
+      </column>
+      <column comment="" key="false" length="25" name="IOC_SKU_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_SKU_ID"/>
+      </column>
+      <column comment="" key="false" length="38" name="ST_ACTIVE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ST_ACTIVE"/>
+      </column>
+      <column comment="" key="true" length="150" name="PK_DIM_SKU" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PK_DIM_SKU"/>
+      </column>
+      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LOAD_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="512">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_8"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_qxbG4LoKEe6H2tT7rm3hlw - DIM_SUPPLIER"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;DIM_SUPPLIER&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;ODS&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="&quot;DIM_SUPPLIER&quot;"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="DIM_SUPPLIER" name="table2">
+      <column comment="" key="false" length="38" name="IOC_MDM_SUPPLIER_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_MDM_SUPPLIER_ID"/>
+      </column>
+      <column comment="" key="false" length="38" name="IOC_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_ID"/>
+      </column>
+      <column comment="" key="false" length="20" name="IOC_SUPPLIER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_SUPPLIER_ID"/>
+      </column>
+      <column comment="" key="false" length="38" name="MDM_SUPPLIER_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MDM_SUPPLIER_ID"/>
+      </column>
+      <column comment="" key="false" length="38" name="ST_ACTIVE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ST_ACTIVE"/>
+      </column>
+      <column comment="" key="true" length="150" name="PK_DIM_SUPPLIER" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PK_DIM_SUPPLIER"/>
+      </column>
+      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LOAD_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="608">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_9"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_qxbG4LoKEe6H2tT7rm3hlw - DIM_CURRENCY"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;DIM_CURRENCY&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;ODS&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="&quot;DIM_CURRENCY&quot;"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="DIM_CURRENCY" name="table2">
+      <column comment="" key="false" length="38" name="IOC_MDM_CURRENCY_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_MDM_CURRENCY_ID"/>
+      </column>
+      <column comment="" key="false" length="38" name="IOC_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_ID"/>
+      </column>
+      <column comment="" key="false" length="20" name="IOC_CURRENCY_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_CURRENCY_ID"/>
+      </column>
+      <column comment="" key="false" length="38" name="MDM_CURRENCY_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MDM_CURRENCY_ID"/>
+      </column>
+      <column comment="" key="false" length="38" name="ST_ACTIVE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ST_ACTIVE"/>
+      </column>
+      <column comment="" key="true" length="150" name="PK_DIM_CURRENCY" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PK_DIM_CURRENCY"/>
+      </column>
+      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LOAD_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="704">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_10"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_qxbG4LoKEe6H2tT7rm3hlw - DIM_MATERIAL"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;DIM_MATERIAL&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;ODS&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="&quot;DIM_MATERIAL&quot;"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="DIM_MATERIAL" name="table2">
+      <column comment="" key="false" length="38" name="IOC_MDM_MATERIAL_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_MDM_MATERIAL_ID"/>
+      </column>
+      <column comment="" key="false" length="38" name="IOC_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_ID"/>
+      </column>
+      <column comment="" key="false" length="20" name="IOC_MATERIAL_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_MATERIAL_ID"/>
+      </column>
+      <column comment="" key="false" length="38" name="MDM_MATERIAL_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MDM_MATERIAL_ID"/>
+      </column>
+      <column comment="" key="false" length="38" name="ST_ACTIVE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ST_ACTIVE"/>
+      </column>
+      <column comment="" key="true" length="150" name="PK_DIM_MATERIAL" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PK_DIM_MATERIAL"/>
+      </column>
+      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LOAD_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="800">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_11"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_qxbG4LoKEe6H2tT7rm3hlw - DWL_PLANT_PEAK"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;DWL_PLANT_PEAK&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;ODS&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="&quot;DWL_PLANT_PEAK&quot;"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="DWL_PLANT_PEAK" name="table2">
+      <column comment="" key="false" length="4" name="PLANT_PEAK_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PLANT_PEAK_ID"/>
+      </column>
+      <column comment="" key="false" length="-1" name="TIMESTAMP" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="TIMESTAMP"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="6" name="COMPANY_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INTEGER" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="COMPANY_ID"/>
+      </column>
+      <column comment="" key="true" length="100" name="PK_DWL_PLANT_PEAK" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PK_DWL_PLANT_PEAK"/>
+      </column>
+      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LOAD_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="896">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_12"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_qxbG4LoKEe6H2tT7rm3hlw - DWL_DATE"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;DWL_DATE&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;ODS&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="&quot;DWL_DATE&quot;"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="DWL_DATE" name="table2">
+      <column comment="" key="false" length="-1" name="DATE_ID" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_ID"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="-1" name="MONTH_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MONTH_ID"/>
+      </column>
+      <column comment="" key="true" length="100" name="PK_DWL_DATE" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PK_DWL_DATE"/>
+      </column>
+      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LOAD_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tELTOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="992" posY="-416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTOutput_2"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="CREATE_TABLE_TYPE" show="false" value="SET"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="DELETE"/>
+    <elementParameter field="CHECK" name="USE_WHERE_CONDITIONS_TABLE" value="false"/>
+    <elementParameter field="MEMO" name="WHERE_CLAUSE" value="&quot;1=1&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="WHERE conditions table&#10;(for UPDATE and DELETE only)"/>
+    <elementParameter field="TABLE" name="WHERE_CONDITIONS_TABLE" show="false"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;FACT_SUPPLY_WASTE&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;DWH&quot;"/>
+    <elementParameter field="CHECK" name="IS_TABLE_NAME_VARIABLE" value="false"/>
+    <elementParameter field="CHECK" name="USE_DIFFERENT_TABLE" value="false"/>
+    <elementParameter field="TEXT" name="DIFFERENT_TABLE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PARTITION" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="CHECK" name="USE_UPDATE_STATEMENT" show="false" value="false"/>
+    <elementParameter field="TABLE" name="SET_COLUMN" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="PK_FACT_SUPPLY_WASTE"/>
+      <elementValue elementRef="UPDATE_COLUMN" value="true"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="Delete old records"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="FACT_SUPPLY_WASTE" name="table2">
+      <column comment="" key="true" length="150" name="PK_FACT_SUPPLY_WASTE" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PK_FACT_SUPPLY_WASTE"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-480" posY="-384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_15"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_1OwocLoKEe6H2tT7rm3hlw - FACT_SUPPLY_WASTE"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;FACT_SUPPLY_WASTE&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;DWH&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="&quot;FACT_SUPPLY_WASTE&quot;"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="FACT_SUPPLY_WASTE" name="table6">
+      <column comment="" key="false" length="30" name="DOCUMENT_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DOCUMENT_NUMBER"/>
+      </column>
+      <column comment="" key="false" length="12" name="DOCUMENT_YEAR" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DOCUMENT_YEAR"/>
+      </column>
+      <column comment="" key="false" length="12" name="DOCUMENT_POSITION" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DOCUMENT_POSITION"/>
+      </column>
+      <column comment="" key="false" length="6" name="COMPANY_ID" nullable="true" originalLength="-1" pattern="" precision="0" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="COMPANY_ID"/>
+      </column>
+      <column comment="" key="false" length="15" name="SAP_ITEM" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SAP_ITEM"/>
+      </column>
+      <column comment="" key="false" length="6" name="IOC_ID" nullable="true" originalLength="-1" pattern="" precision="0" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IOC_ID"/>
+      </column>
+      <column comment="" key="true" length="150" name="PK_FACT_SUPPLY_WASTE" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PK_FACT_SUPPLY_WASTE"/>
+      </column>
+      <column comment="" key="false" length="12" name="ORDER_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_NUMBER"/>
+      </column>
+      <column comment="" key="false" length="24" name="DATE_POSITION" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_POSITION"/>
+      </column>
+      <column comment="" key="false" length="9" name="MOVEMENT_TYPE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MOVEMENT_TYPE_ID"/>
+      </column>
+      <column comment="" key="false" length="9" name="MATERIAL_ID" nullable="true" originalLength="-1" pattern="" precision="0" type="id_Integer" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MATERIAL_ID"/>
+      </column>
+      <column comment="" key="false" length="4" name="PLANT_PEAK_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PLANT_PEAK_ID"/>
+      </column>
+      <column comment="" key="false" length="22" name="F_QUANTITY" nullable="true" originalLength="-1" pattern="" precision="4" type="id_BigDecimal" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_QUANTITY"/>
+      </column>
+      <column comment="" key="false" length="3" name="BASE_UNIT_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="BASE_UNIT_ID"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_QUANTITY_PARALLEL" nullable="true" originalLength="-1" pattern="" precision="3" type="id_BigDecimal" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_QUANTITY_PARALLEL"/>
+      </column>
+      <column comment="" key="false" length="3" name="PARALLEL_UNIT_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PARALLEL_UNIT_ID"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_MATERIAL_COST" nullable="true" originalLength="-1" pattern="" precision="3" type="id_BigDecimal" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_MATERIAL_COST"/>
+      </column>
+      <column comment="" key="false" length="6" name="CURRENCY_ID" nullable="true" originalLength="-1" pattern="" precision="0" type="id_Integer" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CURRENCY_ID"/>
+      </column>
+      <column comment="" key="false" length="12" name="STORAGE_LOCATION_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="STORAGE_LOCATION_ID"/>
+      </column>
+      <column comment="" key="false" length="30" name="BATCH_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="BATCH_ID"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_QUANTITY_ENTRY" nullable="true" originalLength="-1" pattern="" precision="3" type="id_BigDecimal" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_QUANTITY_ENTRY"/>
+      </column>
+      <column comment="" key="false" length="3" name="ENTRY_UNIT_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ENTRY_UNIT_ID"/>
+      </column>
+      <column comment="" key="false" length="36" name="SHIP_TO" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SHIP_TO"/>
+      </column>
+      <column comment="" key="false" length="30" name="SOLD_TO" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SOLD_TO"/>
+      </column>
+      <column comment="" key="false" length="13" name="DELIVERY_COST" nullable="true" originalLength="-1" pattern="" precision="3" type="id_BigDecimal" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DELIVERY_COST"/>
+      </column>
+      <column comment="" key="false" length="-1" name="TIMESTAMP" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="TIMESTAMP"/>
+        <additionalField key="di.date.timestamp" value="true"/>
+        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_QUANTITY_KG" nullable="true" originalLength="-1" pattern="" precision="3" type="id_BigDecimal" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_QUANTITY_KG"/>
+      </column>
+      <column comment="" key="false" length="12" name="REASON_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="REASON_ID"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_MATERIAL_COST_2" nullable="true" originalLength="-1" pattern="" precision="3" type="id_BigDecimal" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_MATERIAL_COST_2"/>
+      </column>
+      <column comment="" key="false" length="1" name="SW_PURCHASE_ORDER" nullable="true" originalLength="-1" pattern="" precision="0" type="id_Integer" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SW_PURCHASE_ORDER"/>
+      </column>
+      <column comment="" key="false" length="6" name="SUPPLIER_ID" nullable="true" originalLength="-1" pattern="" precision="0" type="id_Integer" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SUPPLIER_ID"/>
+      </column>
+      <column comment="" key="false" length="10" name="PO_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PO_NUMBER"/>
+      </column>
+      <column comment="" key="false" length="36" name="SAP_USER" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SAP_USER"/>
+      </column>
+      <column comment="" key="false" length="30" name="COST_CENTER" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="COST_CENTER"/>
+      </column>
+      <column comment="" key="false" length="30" name="G_L_ACCT" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="G_L_ACCT"/>
+      </column>
+      <column comment="" key="false" length="12" name="VALUE_STRING" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="VALUE_STRING"/>
+      </column>
+      <column comment="" key="false" length="3" name="SPECIAL_STOCK" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SPECIAL_STOCK"/>
+      </column>
+      <column comment="" key="false" length="3" name="ITEM_CATEGORY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ITEM_CATEGORY"/>
+      </column>
+      <column comment="" key="false" length="150" name="COMMENTS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="COMMENTS"/>
+      </column>
+      <column comment="" key="false" length="3" name="DRP_PLANNER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DRP_PLANNER_ID"/>
+      </column>
+      <column comment="" key="false" length="3" name="SNP_PLANNER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SNP_PLANNER_ID"/>
+      </column>
+      <column comment="" key="false" length="12" name="ORDER_TYPE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_TYPE_ID"/>
+      </column>
+      <column comment="" key="false" length="6" name="MONTH_ID" nullable="true" originalLength="-1" pattern="" precision="0" type="id_Integer" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MONTH_ID"/>
+      </column>
+      <column comment="" key="false" length="9" name="SKU_ID" nullable="true" originalLength="-1" pattern="" precision="0" type="id_Integer" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SKU_ID"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_MOV_ACTUAL_PRICE" nullable="true" originalLength="-1" pattern="" precision="3" type="id_BigDecimal" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_MOV_ACTUAL_PRICE"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_QUANTITY_VU" nullable="true" originalLength="-1" pattern="" precision="3" type="id_BigDecimal" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_QUANTITY_VU"/>
+      </column>
+      <column comment="" key="false" length="48" name="REFERENCE_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="REFERENCE_NUMBER"/>
+      </column>
+      <column comment="" key="false" length="4" name="IND_SHELF_LIFE" nullable="true" originalLength="-1" pattern="" precision="0" type="id_Integer" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="IND_SHELF_LIFE"/>
+      </column>
+      <column comment="" key="false" length="20" name="SO_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SO_NUMBER"/>
+      </column>
+      <column comment="" key="false" length="4" name="SALES_ORDER_TYPE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SALES_ORDER_TYPE_ID"/>
+      </column>
+      <column comment="" key="false" length="-1" name="DATE_ID" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" type="id_Date" usefulColumn="false">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_ID"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_MATERIAL_COST_LC" nullable="true" originalLength="-1" pattern="" precision="3" type="id_BigDecimal" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_MATERIAL_COST_LC"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_MATERIAL_COST_GC" nullable="true" originalLength="-1" pattern="" precision="3" type="id_BigDecimal" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_MATERIAL_COST_GC"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_DELIVERY_COST_LC" nullable="true" originalLength="-1" pattern="" precision="3" type="id_BigDecimal" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_DELIVERY_COST_LC"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_DELIVERY_COST_GC" nullable="true" originalLength="-1" pattern="" precision="3" type="id_BigDecimal" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_DELIVERY_COST_GC"/>
+      </column>
+      <column comment="" key="false" length="6" name="CURRENCY_ID_LC" nullable="true" originalLength="-1" pattern="" precision="0" type="id_Integer" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CURRENCY_ID_LC"/>
+      </column>
+      <column comment="" key="false" length="6" name="CURRENCY_ID_GC" nullable="true" originalLength="-1" pattern="" precision="0" type="id_Integer" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CURRENCY_ID_GC"/>
+      </column>
+      <column comment="" key="false" length="9" name="F_EXCHANGE_RATE_GC" nullable="true" originalLength="-1" pattern="" precision="5" type="id_BigDecimal" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_EXCHANGE_RATE_GC"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_MOV_ACTUAL_PRICE_LC" nullable="true" originalLength="-1" pattern="" precision="3" type="id_BigDecimal" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_MOV_ACTUAL_PRICE_LC"/>
+      </column>
+      <column comment="" key="false" length="13" name="F_MOV_ACTUAL_PRICE_GC" nullable="true" originalLength="-1" pattern="" precision="3" type="id_BigDecimal" usefulColumn="false">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="F_MOV_ACTUAL_PRICE_GC"/>
+      </column>
+      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" type="id_Date" usefulColumn="false">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LOAD_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+  </node>
+  <connection connectorName="TABLE" label="DWH.FACT_WASTE_DECLAR" lineStyle="9" metaname="table1" offsetLabelX="0" offsetLabelY="0" source="tELTInput_1" target="tELTMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table1"/>
+  </connection>
+  <connection connectorName="TABLE" label="FACT_SUPPLY_WASTE" lineStyle="9" metaname="table5" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tELTMap_1" target="tELTOutput_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table5"/>
+  </connection>
+  <connection connectorName="TABLE" label="FACT_SUPPLY_WASTE" lineStyle="9" metaname="table3" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tELTMap_1" target="tELTOutput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table3"/>
+  </connection>
+  <connection connectorName="TABLE" label="ODS.ODS_CMN_MATERIAL_VALUATION_EXT" lineStyle="9" metaname="table1" offsetLabelX="0" offsetLabelY="0" source="tELTInput_2" target="tELTMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table1"/>
+  </connection>
+  <connection connectorName="TABLE" label="ODS.ODS_ITEM" lineStyle="9" metaname="table1" offsetLabelX="0" offsetLabelY="0" source="tELTInput_3" target="tELTMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table1"/>
+  </connection>
+  <connection connectorName="TABLE" label="ODS.ODS_UNIT_CONVERSION" lineStyle="9" metaname="table1" offsetLabelX="0" offsetLabelY="0" source="tELTInput_4" target="tELTMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table1"/>
+  </connection>
+  <connection connectorName="TABLE" label="ODS.ODS_SUPPLY_MATLOC" lineStyle="9" metaname="table1" offsetLabelX="0" offsetLabelY="0" source="tELTInput_13" target="tELTMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table1"/>
+  </connection>
+  <connection connectorName="TABLE" label="DWH.FACT_DELIVERY_LINE_AGG" lineStyle="9" metaname="table2" offsetLabelX="-16" offsetLabelY="-9" source="tELTInput_14" target="tELTMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table2"/>
+  </connection>
+  <connection connectorName="TABLE" label="ODS.ODS_OTC_SO_HEADER" lineStyle="9" metaname="table2" offsetLabelX="0" offsetLabelY="0" source="tELTInput_6" target="tELTMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table2"/>
+  </connection>
+  <connection connectorName="TABLE" label="ODS.DIM_SKU" lineStyle="9" metaname="table2" offsetLabelX="0" offsetLabelY="0" source="tELTInput_7" target="tELTMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table2"/>
+  </connection>
+  <connection connectorName="TABLE" label="ODS.DIM_SUPPLIER" lineStyle="9" metaname="table2" offsetLabelX="0" offsetLabelY="0" source="tELTInput_8" target="tELTMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table2"/>
+  </connection>
+  <connection connectorName="TABLE" label="ODS.DIM_CURRENCY" lineStyle="9" metaname="table2" offsetLabelX="0" offsetLabelY="0" source="tELTInput_9" target="tELTMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table2"/>
+  </connection>
+  <connection connectorName="TABLE" label="ODS.DIM_MATERIAL" lineStyle="9" metaname="table2" offsetLabelX="0" offsetLabelY="0" source="tELTInput_10" target="tELTMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table2"/>
+  </connection>
+  <connection connectorName="TABLE" label="ODS.DWL_PLANT_PEAK" lineStyle="9" metaname="table2" offsetLabelX="0" offsetLabelY="0" source="tELTInput_11" target="tELTMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table2"/>
+  </connection>
+  <connection connectorName="TABLE" label="ODS.DWL_DATE" lineStyle="9" metaname="table2" offsetLabelX="-11" offsetLabelY="12" source="tELTInput_12" target="tELTMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table2"/>
+  </connection>
+  <connection connectorName="TABLE" label="DWH.FACT_SUPPLY_WASTE" lineStyle="9" metaname="table6" offsetLabelX="0" offsetLabelY="0" source="tELTInput_15" target="tELTMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table6"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d0431978-1097-4d42-ab4a-55273baca936"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TB7dwvpo3gDmN8K0rKLvs1G22ByoZ5DkG5gU8zkkOdGU7N2MNA7WuiDWbuej8FNfHqux7S3JeosT&#13;
+Mlrb7y39Yg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1aae91e2-7e75-4206-8fc7-3272694c635d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Q/vjrlYyunKJ2Xny2iUU1dP1uVrOxdjt5cSYD5IRCqQHkI+/W57ingfL8iYfK/HbsOgDzZhh6f60&#13;
+4tu4ioli3g==</DigestValue></Reference></SignedInfo><SignatureValue>b0IF+PJH/TB5CmoqPOwJBagrzjK000ekA6akI+MOpgRw0biUxHTpdWGWBVS+QutGkxeiVw7+gEJB&#13;
+IWUNea7AxCXH60FO/3jWQtBOX61sTP7y0c0221wAdwquVJLS2O9DQRbu8sEE6g+2tDCfPCGHzvsf&#13;
+EJScf7bxShe5ehl/GSrdx6f8nc/3OYBUrIZS3x6eAcPyNaOLKjpfqMzFHQ3ekSODErXCtVmJqz2U&#13;
+SJ1Pb1VSOLhr3FAEmXKgi/wPZB3SHBV4wQPqO15Q790S/dqYvgUJi7H2xdwdWU9IJIK/qXsGyQzl&#13;
+2t7taFTnsStfiCi/nCAtbn8PtTlYLLg2GhY5jw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh&#13;
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB&#13;
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2&#13;
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl&#13;
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx&#13;
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B&#13;
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ&#13;
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF&#13;
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG&#13;
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM&#13;
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA&#13;
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw&#13;
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/&#13;
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG&#13;
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13;
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1aae91e2-7e75-4206-8fc7-3272694c635d" Target="#_d0431978-1097-4d42-ab4a-55273baca936"><Timestamp>2024-02-06 14:23:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
