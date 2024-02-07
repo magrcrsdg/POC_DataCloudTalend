@@ -37,20 +37,10 @@
           <initialValue language="COLUMN_DEF" xmi:id="_gpgaIL9MEe6fYIbtfrMGCw" xsi:type="relational:TdExpression"/>
           <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_gpgaIb9MEe6fYIbtfrMGCw"/>
         </feature>
-        <feature label="ts_update" length="35" name="ts_update" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMPTZ" talendType="id_Date" xmi:id="_gpgaIr9MEe6fYIbtfrMGCw" xsi:type="relational:TdColumn">
-          <taggedValue tag="Comment" value="" xmi:id="_gpgaI79MEe6fYIbtfrMGCw"/>
-          <initialValue language="COLUMN_DEF" xmi:id="_gpgaJL9MEe6fYIbtfrMGCw" xsi:type="relational:TdExpression"/>
-          <sqlDataType javaDataType="93" name="TIMESTAMPTZ" nullable="columnNullable" numericPrecision="6" numericPrecisionRadix="10" xmi:id="_gpgaJb9MEe6fYIbtfrMGCw"/>
-        </feature>
         <feature label="st_active" length="38" name="st_active" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_gpgaJr9MEe6fYIbtfrMGCw" xsi:type="relational:TdColumn">
           <taggedValue tag="Comment" value="" xmi:id="_gpgaJ79MEe6fYIbtfrMGCw"/>
           <initialValue language="COLUMN_DEF" xmi:id="_gpgaKL9MEe6fYIbtfrMGCw" xsi:type="relational:TdExpression"/>
           <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_gpgaKb9MEe6fYIbtfrMGCw"/>
-        </feature>
-        <feature label="ioc_uk_currency" length="100" name="ioc_uk_currency" sourceType="VARCHAR" talendType="id_String" xmi:id="_gpgaKr9MEe6fYIbtfrMGCw" xsi:type="relational:TdColumn">
-          <taggedValue tag="Comment" value="" xmi:id="_gpgaK79MEe6fYIbtfrMGCw"/>
-          <initialValue language="COLUMN_DEF" xmi:id="_gpgaLL9MEe6fYIbtfrMGCw" xsi:type="relational:TdExpression"/>
-          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_gpgaLb9MEe6fYIbtfrMGCw"/>
         </feature>
       </ownedElement>
       <ownedElement id="_gyKm0L9MEe6fYIbtfrMGCw" label="ioc_mdm_material" name="ioc_mdm_material" tableType="TABLE" xmi:id="_gyLN4L9MEe6fYIbtfrMGCw" xsi:type="relational:TdTable">
@@ -74,20 +64,10 @@
           <initialValue language="COLUMN_DEF" xmi:id="_gyLN779MEe6fYIbtfrMGCw" xsi:type="relational:TdExpression"/>
           <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_gyLN8L9MEe6fYIbtfrMGCw"/>
         </feature>
-        <feature label="ts_update" length="35" name="ts_update" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMPTZ" talendType="id_Date" xmi:id="_gyLN8b9MEe6fYIbtfrMGCw" xsi:type="relational:TdColumn">
-          <taggedValue tag="Comment" value="" xmi:id="_gyLN8r9MEe6fYIbtfrMGCw"/>
-          <initialValue language="COLUMN_DEF" xmi:id="_gyLN879MEe6fYIbtfrMGCw" xsi:type="relational:TdExpression"/>
-          <sqlDataType javaDataType="93" name="TIMESTAMPTZ" nullable="columnNullable" numericPrecision="6" numericPrecisionRadix="10" xmi:id="_gyLN9L9MEe6fYIbtfrMGCw"/>
-        </feature>
         <feature label="st_active" length="38" name="st_active" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_gyLN9b9MEe6fYIbtfrMGCw" xsi:type="relational:TdColumn">
           <taggedValue tag="Comment" value="" xmi:id="_gyLN9r9MEe6fYIbtfrMGCw"/>
           <initialValue language="COLUMN_DEF" xmi:id="_gyLN979MEe6fYIbtfrMGCw" xsi:type="relational:TdExpression"/>
           <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_gyLN-L9MEe6fYIbtfrMGCw"/>
-        </feature>
-        <feature label="ioc_uk_material" length="100" name="ioc_uk_material" sourceType="VARCHAR" talendType="id_String" xmi:id="_gyLN-b9MEe6fYIbtfrMGCw" xsi:type="relational:TdColumn">
-          <taggedValue tag="Comment" value="" xmi:id="_gyLN-r9MEe6fYIbtfrMGCw"/>
-          <initialValue language="COLUMN_DEF" xmi:id="_gyLN-79MEe6fYIbtfrMGCw" xsi:type="relational:TdExpression"/>
-          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_gyLN_L9MEe6fYIbtfrMGCw"/>
         </feature>
       </ownedElement>
       <ownedElement id="_hHfWkL9MEe6fYIbtfrMGCw" label="ioc_mdm_sku" name="ioc_mdm_sku" tableType="TABLE" xmi:id="_hHfWkb9MEe6fYIbtfrMGCw" xsi:type="relational:TdTable">
@@ -95,11 +75,6 @@
           <taggedValue tag="Comment" value="" xmi:id="_hHfWk79MEe6fYIbtfrMGCw"/>
           <initialValue language="COLUMN_DEF" xmi:id="_hHfWlL9MEe6fYIbtfrMGCw" xsi:type="relational:TdExpression"/>
           <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_hHfWlb9MEe6fYIbtfrMGCw"/>
-        </feature>
-        <feature label="ioc_entity_id" length="20" name="ioc_entity_id" sourceType="VARCHAR" talendType="id_String" xmi:id="_hHfWlr9MEe6fYIbtfrMGCw" xsi:type="relational:TdColumn">
-          <taggedValue tag="Comment" value="" xmi:id="_hHfWl79MEe6fYIbtfrMGCw"/>
-          <initialValue language="COLUMN_DEF" xmi:id="_hHfWmL9MEe6fYIbtfrMGCw" xsi:type="relational:TdExpression"/>
-          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_hHfWmb9MEe6fYIbtfrMGCw"/>
         </feature>
         <feature label="ioc_sku_id" length="25" name="ioc_sku_id" sourceType="VARCHAR" talendType="id_String" xmi:id="_hHfWmr9MEe6fYIbtfrMGCw" xsi:type="relational:TdColumn">
           <taggedValue tag="Comment" value="" xmi:id="_hHfWm79MEe6fYIbtfrMGCw"/>
@@ -115,21 +90,6 @@
           <taggedValue tag="Comment" value="" xmi:id="_hHfWo79MEe6fYIbtfrMGCw"/>
           <initialValue language="COLUMN_DEF" xmi:id="_hHfWpL9MEe6fYIbtfrMGCw" xsi:type="relational:TdExpression"/>
           <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_hHfWpb9MEe6fYIbtfrMGCw"/>
-        </feature>
-        <feature label="ts_update" length="35" name="ts_update" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMPTZ" talendType="id_Date" xmi:id="_hHfWpr9MEe6fYIbtfrMGCw" xsi:type="relational:TdColumn">
-          <taggedValue tag="Comment" value="" xmi:id="_hHfWp79MEe6fYIbtfrMGCw"/>
-          <initialValue language="COLUMN_DEF" xmi:id="_hHfWqL9MEe6fYIbtfrMGCw" xsi:type="relational:TdExpression"/>
-          <sqlDataType javaDataType="93" name="TIMESTAMPTZ" nullable="columnNullable" numericPrecision="6" numericPrecisionRadix="10" xmi:id="_hHfWqb9MEe6fYIbtfrMGCw"/>
-        </feature>
-        <feature label="mdm_sku_id" length="9" name="mdm_sku_id" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_hHfWqr9MEe6fYIbtfrMGCw" xsi:type="relational:TdColumn">
-          <taggedValue tag="Comment" value="" xmi:id="_hHfWq79MEe6fYIbtfrMGCw"/>
-          <initialValue language="COLUMN_DEF" xmi:id="_hHfWrL9MEe6fYIbtfrMGCw" xsi:type="relational:TdExpression"/>
-          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_hHfWrb9MEe6fYIbtfrMGCw"/>
-        </feature>
-        <feature label="ioc_uk_sku" length="100" name="ioc_uk_sku" sourceType="VARCHAR" talendType="id_String" xmi:id="_hHfWrr9MEe6fYIbtfrMGCw" xsi:type="relational:TdColumn">
-          <taggedValue tag="Comment" value="" xmi:id="_hHfWr79MEe6fYIbtfrMGCw"/>
-          <initialValue language="COLUMN_DEF" xmi:id="_hHfWsL9MEe6fYIbtfrMGCw" xsi:type="relational:TdExpression"/>
-          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_hHfWsb9MEe6fYIbtfrMGCw"/>
         </feature>
       </ownedElement>
       <ownedElement id="_hegIYL9MEe6fYIbtfrMGCw" label="ioc_mdm_supplier" name="ioc_mdm_supplier" tableType="TABLE" xmi:id="_hegvcL9MEe6fYIbtfrMGCw" xsi:type="relational:TdTable">
@@ -153,31 +113,21 @@
           <initialValue language="COLUMN_DEF" xmi:id="_hegvf79MEe6fYIbtfrMGCw" xsi:type="relational:TdExpression"/>
           <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_hegvgL9MEe6fYIbtfrMGCw"/>
         </feature>
-        <feature label="ts_update" length="35" name="ts_update" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMPTZ" talendType="id_Date" xmi:id="_hegvgb9MEe6fYIbtfrMGCw" xsi:type="relational:TdColumn">
-          <taggedValue tag="Comment" value="" xmi:id="_hegvgr9MEe6fYIbtfrMGCw"/>
-          <initialValue language="COLUMN_DEF" xmi:id="_hegvg79MEe6fYIbtfrMGCw" xsi:type="relational:TdExpression"/>
-          <sqlDataType javaDataType="93" name="TIMESTAMPTZ" nullable="columnNullable" numericPrecision="6" numericPrecisionRadix="10" xmi:id="_hegvhL9MEe6fYIbtfrMGCw"/>
-        </feature>
         <feature label="st_active" length="38" name="st_active" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_hegvhb9MEe6fYIbtfrMGCw" xsi:type="relational:TdColumn">
           <taggedValue tag="Comment" value="" xmi:id="_hegvhr9MEe6fYIbtfrMGCw"/>
           <initialValue language="COLUMN_DEF" xmi:id="_hegvh79MEe6fYIbtfrMGCw" xsi:type="relational:TdExpression"/>
           <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_hegviL9MEe6fYIbtfrMGCw"/>
         </feature>
-        <feature label="ioc_uk_supplier" length="100" name="ioc_uk_supplier" sourceType="VARCHAR" talendType="id_String" xmi:id="_hegvib9MEe6fYIbtfrMGCw" xsi:type="relational:TdColumn">
-          <taggedValue tag="Comment" value="" xmi:id="_hegvir9MEe6fYIbtfrMGCw"/>
-          <initialValue language="COLUMN_DEF" xmi:id="_hegvi79MEe6fYIbtfrMGCw" xsi:type="relational:TdExpression"/>
-          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_hegvjL9MEe6fYIbtfrMGCw"/>
-        </feature>
       </ownedElement>
     </ownedElement>
   </orgomg.cwm.resource.relational:Catalog>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3e8c1a7a-9207-45c4-8ad7-8503764924a7"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>trHuXFxlNNAOJ8+FjTV35rlLcas4Ge3XzENni2NWv4NHCPxKoXNB3JVnRSc+eTQvtJw5imfem51k&#13;
-ob6V1kiAyg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6ff87a1d-08d1-41b7-b851-b8a8f21c11b7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>MENJA8Dmb/Zq8pQLVL2hq9m+YI8xilCZbt5mtQRVwt5to88kBukJDL1oLkoAJXWJKBlQCKATDIDQ&#13;
-DPV4gVm6og==</DigestValue></Reference></SignedInfo><SignatureValue>l14stkPjK4c54a3hACKEt2q+3iU8brtlzjpvtIrnXcuTw03wEAGG7IiWO3t80Dc3xhVSetV2gTAF&#13;
-sHlm8xzkHpW4hWANFo8A7Ss/in/PxwEBopV4wGbRYKLZSo+kNo+2Ssl55sZN7nYkBLywvLE/6qXT&#13;
-ERwuawhhRT5g1z5hHIcGKIcwbthzWwa/eFJdwP018yRY7zjVzDYpm1GdUMjIgtpbCV3pO+YSX3kb&#13;
-R1LT2dQShHUv0OAJTEq9IG8OgDI/JURt3yBjt9r1xlbPSixn9goEvCgcVWBgGG6Eg+ecuP7J8/h1&#13;
-vMVeNyxVm9oA1xQDjmF/fPTo0zxuDksENZ5+fg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_df834c61-dde7-470c-abce-3412b089eb43"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>E3W0yUZVxgHmLHS4savgGwB9asBr1t2DoCLuB19wI1q9SzRoZOvqTM4WH6Ogfq1HWWvNq5iKeIIl&#13;
+bDDK5z7wbw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_97cd2f59-dc6f-4105-b44d-f3204dbe3bcc"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>a633k+ZbkuzGBBBOxJD0qI3wF9ATWEolHQXyAE/lVMPsYu44Gu/hnSqCMRuVq+v2/d9M20zA5TLP&#13;
+cMlDKP7alw==</DigestValue></Reference></SignedInfo><SignatureValue>J6GGKa+AtOkmCNGSl5eTwPdweaM4A0ao1/+nXKkJg0Oj03gRwwLIotnRXjHzTCB5byzxvkroUrSm&#13;
+NX8FWQz1Ada1jEVXD9uJX7982Fb/iT5Cj/K+YSwfBKFV0KTkIHjIWEJzCL2oC1lENrnxrY5TpWk9&#13;
+pcFQeV6nDv2O4UsLr7VyREHLpIcdeOhaSSggcGl5YANGa1fr6zuxkFpTYuCPDqDGabZKbhgVg0k9&#13;
+W6iZ7e7XZlS4Y/GHm5zyaIMs+eO5zbeChcRpyvjLng/dX1+wGU9l5Z/xz9cDEBKC/K7ekBK1c0x/&#13;
+imok0OW7r4jaAOcq/uGS+HrEP5+/dJQ8JpgwFg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -199,4 +149,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6ff87a1d-08d1-41b7-b851-b8a8f21c11b7" Target="#_3e8c1a7a-9207-45c4-8ad7-8503764924a7"><Timestamp>2024-01-30 08:49:50</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_97cd2f59-dc6f-4105-b44d-f3204dbe3bcc" Target="#_df834c61-dde7-470c-abce-3412b089eb43"><Timestamp>2024-02-07 12:23:53</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
