@@ -1,27 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<recyclebin:RecycleBin xmlns:recyclebin="http://www.talend.org/recyclebin">
-  <deletedFolders>process/STG/ORACLE</deletedFolders>
-  <deletedItems id="_V4AsQLk_Ee6bDNtISHemVg" path="" type="JDBC"/>
-  <deletedItems id="_FHWAcL6aEe6VvpxUd_Akig" path="" type="METADATA_CONNECTIONS"/>
-  <deletedItems id="_rS1Q0LnIEe6Qju78O6nonw" path="" type="METADATA_CONNECTIONS"/>
-  <deletedItems id="_Otk6cLBuEe6YYJKXyxxKAg" path="" type="PROCESS"/>
-  <deletedItems id="_sVU-QLVXEe6adtHqxHJfjA" path="" type="PROCESS"/>
-  <deletedItems id="_Y2h0ALt9Ee6oN5WCLRuMWg" path="ODS/ORACLE" type="PROCESS"/>
-  <deletedItems id="_bSKG8LuTEe6oN5WCLRuMWg" path="ODS/ORACLE" type="PROCESS"/>
-  <deletedItems id="_aHVIILoKEe6H2tT7rm3hlw" path="ODS/SAP" type="PROCESS"/>
-  <deletedItems id="_d7dhELoKEe6H2tT7rm3hlw" path="ODS/SAP" type="PROCESS"/>
-  <deletedItems id="_hfbXELoKEe6H2tT7rm3hlw" path="ODS/SAP" type="PROCESS"/>
-  <deletedItems id="_kiYKsLoKEe6H2tT7rm3hlw" path="ODS/SAP" type="PROCESS"/>
-  <deletedItems id="_nTRlALoKEe6H2tT7rm3hlw" path="ODS/SAP" type="PROCESS"/>
-  <deletedItems id="_wB1jILwkEe6jl_HxQBZtkw" path="ODS/SAP" type="PROCESS"/>
-  <deletedItems id="_yuHLELxDEe6e8vVwfCtsOw" path="ODS/SAP/copy_stg_to_ods_DIM_AUFK" type="PROCESS"/>
-  <deletedItems id="_J4QRcLoKEe6H2tT7rm3hlw" path="ODS/SAP/copy_stg_to_ods_DIM_MARA" type="PROCESS"/>
-  <deletedItems id="_GlQUoLxEEe6e8vVwfCtsOw" path="ODS/SAP/copy_stg_to_ods_FACT_EKPO" type="PROCESS"/>
-  <deletedItems id="_8T-SELxDEe6e8vVwfCtsOw" path="ODS/SAP/copy_stg_to_ods_FACT_MKPF" type="PROCESS"/>
-  <deletedItems id="_-ZZGcLxDEe6e8vVwfCtsOw" path="ODS/SAP/copy_stg_to_ods_FACT_MSEG" type="PROCESS"/>
-  <deletedItems id="_M1LakLxEEe6e8vVwfCtsOw" path="ODS/SAP/copy_stg_to_ods_FACT_ZZZE_MOV_COST" type="PROCESS"/>
-  <deletedItems id="_ANsF4LnkEe6H2tT7rm3hlw" path="STG" type="PROCESS"/>
-  <deletedItems id="_EvQJoLlBEe6bDNtISHemVg" path="STG" type="PROCESS"/>
-  <deletedItems id="_FqIW8LkUEe6bUq7R4o9rXA" path="STG/SAP" type="PROCESS"/>
-  <deletedItems id="_oXdNYLnfEe6H2tT7rm3hlw" path="" type="snowflake"/>
-</recyclebin:RecycleBin>
+<recyclebin:RecycleBin xmlns:recyclebin="http://www.talend.org/recyclebin"/>
