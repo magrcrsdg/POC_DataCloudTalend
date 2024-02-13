@@ -552,6 +552,10 @@
         <DBMapperTableEntries name="PK_FACT_M_SUPPLY_WASTE"/>
         <DBMapperTableEntries name="LOAD_DATE"/>
       </InputTables>
+      <InputTables alias="DATES_FILTER" joinType="INNER_JOIN" name="DATES_FILTER" tableName="CNF.DATES_FACT_M_SUPPLY_WASTE_VIEW">
+        <DBMapperTableEntries expression="SUPPLY_WASTE.DATE_POSITION" join="true" name="DATE_FROM" operator="&lt;="/>
+        <DBMapperTableEntries expression="SUPPLY_WASTE.DATE_POSITION" join="true" name="DATE_TO" operator="&gt;"/>
+      </InputTables>
       <OutputTables name="table1" tableName="FACT_M_SUPPLY_WASTE">
         <DBMapperTableEntries expression="M_SUPPLY_WASTE.PK_FACT_M_SUPPLY_WASTE" name="PK_FACT_M_SUPPLY_WASTE"/>
       </OutputTables>
@@ -564,7 +568,7 @@
         <DBMapperTableEntries expression="sum(SUPPLY_WASTE.F_QUANTITY_PARALLEL)" name="F_QUANTITY_PARALLEL"/>
         <DBMapperTableEntries expression="SUPPLY_WASTE.PARALLEL_UNIT_ID" name="PARALLEL_UNIT_ID"/>
         <DBMapperTableEntries expression="sum(SUPPLY_WASTE.F_MATERIAL_COST)" name="F_MATERIAL_COST"/>
-        <DBMapperTableEntries expression="coalesce(nullif(right(SUPPLY_WASTE.BATCH_ID,6),''),0)" name="SUPPLIER_BATCH_ID"/>
+        <DBMapperTableEntries expression="0" name="SUPPLIER_BATCH_ID"/>
         <DBMapperTableEntries expression="sum(SUPPLY_WASTE.F_QUANTITY_ENTRY)" name="F_QUANTITY_ENTRY"/>
         <DBMapperTableEntries expression="SUPPLY_WASTE.ENTRY_UNIT_ID" name="ENTRY_UNIT_ID"/>
         <DBMapperTableEntries expression="SUPPLY_WASTE.SHIP_TO" name="SHIP_TO"/>
@@ -949,6 +953,29 @@
       </column>
     </metadata>
   </node>
+  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_3"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_OvDMwLrEEe6H2tT7rm3hlw - DATES_FACT_M_SUPPLY_WASTE_VIEW"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;DATES_FACT_M_SUPPLY_WASTE_VIEW&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;CNF&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="&quot;DATES_FACT_M_SUPPLY_WASTE_VIEW&quot;"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="DATES_FACT_M_SUPPLY_WASTE_VIEW" name="table3">
+      <column comment="" key="false" length="-1" name="DATE_FROM" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_FROM"/>
+        <additionalField key="di.date.timestamp" value="true"/>
+        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
+      </column>
+      <column comment="" key="false" length="-1" name="DATE_TO" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_TO"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+  </node>
   <connection connectorName="TABLE" label="DWH.FACT_SUPPLY_WASTE_AGG_TOT" lineStyle="9" metaname="table1" offsetLabelX="0" offsetLabelY="0" source="tELTInput_1" target="tELTMap_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table1"/>
   </connection>
@@ -961,18 +988,21 @@
   <connection connectorName="TABLE" label="DWH.FACT_M_SUPPLY_WASTE" lineStyle="9" metaname="table1" offsetLabelX="0" offsetLabelY="0" source="tELTInput_2" target="tELTMap_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table1"/>
   </connection>
+  <connection connectorName="TABLE" label="CNF.DATES_FACT_M_SUPPLY_WASTE_VIEW" lineStyle="9" metaname="table3" offsetLabelX="0" offsetLabelY="0" source="tELTInput_3" target="tELTMap_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table3"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c70833cf-32cc-4118-a99f-50372f3d7a9a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SGJmpVaGc00q6dY47kmqdBJMVXAT/hRUfqzhDL5Rh4NmUaTbin1iXfb80+uYJG7fRG1s2ErQZdr5&#13;
-YEEfNA3HUg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_36cc86ae-aac2-4339-bcc3-2f02d6fe208f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VgXou6j4iIEUt2n1/mBtsLPa6p2E7ogy1HNytnLSPrEAfd92yX+b2HHHtK3ouuqp3/bZ61B81anJ&#13;
-W+DwMxKjRQ==</DigestValue></Reference></SignedInfo><SignatureValue>ArocKBOXgDZsWE2sXzr/RE7SdmI1rvpwUpGraD2pHQVYQxl5RtYLJH4bFCYj8JGvkOP1u1RkfctX&#13;
-ci/2+SLZSPWSSf766xzqQRh6GDLLFqV2OpU0PrgCs3sSKrivFw3cg+EFtVgzBenFbarQ4h6Pt0ee&#13;
-8VcRoP3IL+RMvPIrSMvN6aMyL+WoNDokyeVcN4juhz7nhCGJYcHHiaCr7ZB3P/fpclI0z8bJUjXf&#13;
-L213UAKZVgD+unhXmkzsEz3LQ5a2t0LyH7XE8hQk1NcjiPBa2Q5tW/IEBvBv1B5BXC720tXTSBN5&#13;
-O8U0M8lOfvYaSyyJYQsvucwKOTPaw/PQrYHR4w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_bf09a985-1086-494c-9483-3c9e1e492d8b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZDSDz1S7TQEFV+jwgGu47wI8iKRbP1e/csXrPIMhvO6Rh6gRBTuD51mkvR8usTrROT2Jd1V33uu5&#13;
+yIkMtwpMAQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2997a7f4-7a6c-4fa7-9057-f6b4943cc0ef"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NS88bh7OPbDRrADgl5ow0Fs7dNGlhQKdf/2T9R6MTuXrDzOVu2YnLQ9IuTwSjI/y3zI9XEmsIHpt&#13;
+r1/mBilCVg==</DigestValue></Reference></SignedInfo><SignatureValue>J4n6N/44wOjy1igmEG+oO6qUnlAfLj3/ivnHHlfT3kbzrYdpdI1PHwv90VplCYTZid+EVnu1ufPw&#13;
+By0og8N2maqbfYyiaw9/yp3mKb9dmkRrEE2FZC77Uvs7St71E+WW1z9zAZjicXshHYYVHRpEBxkO&#13;
+A00xLOvW0c5bEwKTaNS2UFqDScb3b2RiRgw5ZlI2yr0Na4XtoH6zDTNFDFb4dbuDZZexOgqZZTz/&#13;
+9CL5JuMLinuF2OGFWLJS3SyjXIPwoXwU6vt5dSTHDY/Nx1VWLAwXLDJsIpRP7YPFGpr8LzEvj3zq&#13;
+hSuKDCaWP17PsqgNuc61LsCsyLc/n2XR/c/Jdw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -994,4 +1024,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_36cc86ae-aac2-4339-bcc3-2f02d6fe208f" Target="#_c70833cf-32cc-4118-a99f-50372f3d7a9a"><Timestamp>2024-02-07 10:40:57</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2997a7f4-7a6c-4fa7-9057-f6b4943cc0ef" Target="#_bf09a985-1086-494c-9483-3c9e1e492d8b"><Timestamp>2024-02-12 15:26:17</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
