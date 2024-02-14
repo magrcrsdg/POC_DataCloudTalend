@@ -2,8 +2,8 @@
   <context confirmationNeeded="false" hide="false" name="Default"/>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="1088"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="960"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="544"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="480"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -684,13 +684,6 @@
         <DBMapperTableEntries name="PK_DWL_PLANT_PEAK"/>
         <DBMapperTableEntries name="LOAD_DATE"/>
       </InputTables>
-      <InputTables alias="DATE" joinType="LEFT_OUTER_JOIN" name="DATE" tableName="ODS.DWL_DATE">
-        <DBMapperTableEntries expression="TO_DATE(WASTE_DECLAR.DATE_POSITION, 'YYYYMMDD') " join="true" name="DATE_ID" operator="="/>
-        <DBMapperTableEntries name="MONTH_ID"/>
-        <DBMapperTableEntries name="WEEK_ID"/>
-        <DBMapperTableEntries expression="" name="PK_DWL_DATE" operator=""/>
-        <DBMapperTableEntries name="LOAD_DATE"/>
-      </InputTables>
       <InputTables alias="SUPPLY_WASTE" joinType="LEFT_OUTER_JOIN" name="SUPPLY_WASTE" tableName="DWH.FACT_SUPPLY_WASTE">
         <DBMapperTableEntries expression="WASTE_DECLAR.DOCUMENT_NUMBER" join="true" name="DOCUMENT_NUMBER" operator="="/>
         <DBMapperTableEntries expression="WASTE_DECLAR.DOCUMENT_YEAR" join="true" name="DOCUMENT_YEAR" operator="="/>
@@ -699,6 +692,16 @@
         <DBMapperTableEntries expression="WASTE_DECLAR.SAP_ITEM" join="true" name="SAP_ITEM" operator="="/>
         <DBMapperTableEntries expression="WASTE_DECLAR.IOC_ID" join="true" name="IOC_ID" operator="="/>
         <DBMapperTableEntries name="PK_FACT_SUPPLY_WASTE"/>
+      </InputTables>
+      <InputTables alias="DATE" joinType="LEFT_OUTER_JOIN" name="DATE" tableName="ODS.DIM_DATE">
+        <DBMapperTableEntries expression="TO_DATE(WASTE_DECLAR.DATE_POSITION, 'YYYYMMDD') " join="true" name="DATE_ID" operator="="/>
+        <DBMapperTableEntries expression="" name="MONTH_ID" operator=""/>
+        <DBMapperTableEntries expression="" name="WEEK_ID" operator=""/>
+        <DBMapperTableEntries name="PK_DIM_DATE"/>
+      </InputTables>
+      <InputTables alias="FILTER_DATE" joinType="INNER_JOIN" name="FILTER_DATE" tableName="CNF.DATES_FACT_SUPPLY_WASTE_VIEW">
+        <DBMapperTableEntries expression="TO_DATE(WASTE_DECLAR.DATE_POSITION, 'YYYYMMDD') " join="true" name="DATE_FROM" operator="&lt;="/>
+        <DBMapperTableEntries expression="TO_DATE(WASTE_DECLAR.DATE_POSITION, 'YYYYMMDD') " join="true" name="DATE_TO" operator="&gt;"/>
       </InputTables>
       <OutputTables name="table5" tableName="FACT_SUPPLY_WASTE">
         <DBMapperTableEntries expression="SUPPLY_WASTE.PK_FACT_SUPPLY_WASTE " name="PK_FACT_SUPPLY_WASTE"/>
@@ -713,22 +716,22 @@
         <DBMapperTableEntries expression="WASTE_DECLAR.MOVEMENT_TYPE" name="MOVEMENT_TYPE_ID"/>
         <DBMapperTableEntries expression="MAT.MDM_MATERIAL_ID" name="MATERIAL_ID"/>
         <DBMapperTableEntries expression="TRIM(WASTE_DECLAR.PLANT)" name="PLANT_PEAK_ID"/>
-        <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then WASTE_DECLAR.QUANTITY  * (-1)&#13;&#10;Else WASTE_DECLAR.QUANTITY&#13;&#10;End " name="F_QUANTITY"/>
+        <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then (WASTE_DECLAR.QUANTITY  * (-1))&#13;&#10;Else WASTE_DECLAR.QUANTITY&#13;&#10;End " name="F_QUANTITY"/>
         <DBMapperTableEntries expression="WASTE_DECLAR.UNIT_MEASURE" name="BASE_UNIT_ID"/>
-        <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then WASTE_DECLAR.QUANTITY_UNIT  * (-1)&#13;&#10;Else WASTE_DECLAR.QUANTITY_UNIT&#13;&#10;End " name="F_QUANTITY_PARALLEL"/>
+        <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then (WASTE_DECLAR.QUANTITY_UNIT  * (-1))&#13;&#10;Else WASTE_DECLAR.QUANTITY_UNIT&#13;&#10;End " name="F_QUANTITY_PARALLEL"/>
         <DBMapperTableEntries expression="WASTE_DECLAR.UNIT_MEASURE_UNIT" name="PARALLEL_UNIT_ID"/>
-        <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then WASTE_DECLAR.MATERIAL_COST   * (-1)&#13;&#10;Else WASTE_DECLAR.MATERIAL_COST &#13;&#10;End " name="F_MATERIAL_COST"/>
+        <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then (WASTE_DECLAR.MATERIAL_COST   * (-1))&#13;&#10;Else WASTE_DECLAR.MATERIAL_COST &#13;&#10;End " name="F_MATERIAL_COST"/>
         <DBMapperTableEntries expression="CURRENCY.MDM_CURRENCY_ID" name="CURRENCY_ID"/>
         <DBMapperTableEntries expression="WASTE_DECLAR.STORAGE_LOCATION_ID" name="STORAGE_LOCATION_ID"/>
         <DBMapperTableEntries expression="WASTE_DECLAR.BATCH_ID" name="BATCH_ID"/>
-        <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then WASTE_DECLAR.QUANTITY_ENTRY  * (-1)&#13;&#10;Else WASTE_DECLAR.QUANTITY_ENTRY&#13;&#10;End " name="F_QUANTITY_ENTRY"/>
+        <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then (WASTE_DECLAR.QUANTITY_ENTRY  * (-1))&#13;&#10;Else WASTE_DECLAR.QUANTITY_ENTRY&#13;&#10;End " name="F_QUANTITY_ENTRY"/>
         <DBMapperTableEntries expression="WASTE_DECLAR.UNIT_MEASURE_ENTRY" name="ENTRY_UNIT_ID"/>
         <DBMapperTableEntries expression="Case&#13;&#10;When WASTE_DECLAR.SHIP_TO=' ' Then '0'&#13;&#10;Else  COALESCE(NULLIF(TRIM(WASTE_DECLAR.SHIP_TO), ''), '0')&#13;&#10;End " name="SHIP_TO"/>
         <DBMapperTableEntries expression="Case&#13;&#10;When WASTE_DECLAR.SOLD_TO=' ' Then '0'&#13;&#10;Else  COALESCE(NULLIF(TRIM(WASTE_DECLAR.SOLD_TO), ''), '0')&#13;&#10;End " name="SOLD_TO"/>
-        <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then WASTE_DECLAR.DELIVERY_COST   * (-1)&#13;&#10;Else WASTE_DECLAR.DELIVERY_COST &#13;&#10;End " name="DELIVERY_COST"/>
+        <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then (WASTE_DECLAR.DELIVERY_COST   * (-1))&#13;&#10;Else WASTE_DECLAR.DELIVERY_COST &#13;&#10;End " name="DELIVERY_COST"/>
         <DBMapperTableEntries expression="PLANT_PEAK.COMPANY_ID" name="COMPANY_ID"/>
         <DBMapperTableEntries expression="ITEM.TIMESTAMP" name="TIMESTAMP"/>
-        <DBMapperTableEntries expression="COALESCE(&#13;&#10;    CASE&#13;&#10;      WHEN WASTE_DECLAR.UNIT_MEASURE = 'KG' THEN&#13;&#10;        CASE&#13;&#10;          WHEN WASTE_DECLAR.SIGNS = 'S' THEN WASTE_DECLAR.QUANTITY * (-1)&#13;&#10;          ELSE WASTE_DECLAR.QUANTITY&#13;&#10;        END&#13;&#10;      ELSE&#13;&#10;        CASE&#13;&#10;          WHEN WASTE_DECLAR.UNIT_MEASURE_UNIT = 'KG' THEN&#13;&#10;            CASE&#13;&#10;              WHEN WASTE_DECLAR.SIGNS = 'S' THEN WASTE_DECLAR.QUANTITY_UNIT * (-1)&#13;&#10;              ELSE WASTE_DECLAR.QUANTITY_UNIT&#13;&#10;            END&#13;&#10;          ELSE&#13;&#10;            CASE&#13;&#10;              WHEN WASTE_DECLAR.SIGNS = 'S' THEN WASTE_DECLAR.QUANTITY * (-1)&#13;&#10;              ELSE WASTE_DECLAR.QUANTITY&#13;&#10;            END * COALESCE(UNIT_CONV.CONVERSION_BA, 0)&#13;&#10;        END&#13;&#10;    END,&#13;&#10;    0&#13;&#10;  ) " name="F_QUANTITY_KG"/>
+        <DBMapperTableEntries expression="CASE&#13;&#10;    WHEN WASTE_DECLAR.UNIT_MEASURE = 'KG' THEN&#13;&#10;        CASE&#13;&#10;            WHEN WASTE_DECLAR.SIGNS = 'S' THEN -1 * WASTE_DECLAR.QUANTITY&#13;&#10;            ELSE WASTE_DECLAR.QUANTITY&#13;&#10;        END&#13;&#10;    ELSE&#13;&#10;        CASE&#13;&#10;            WHEN WASTE_DECLAR.UNIT_MEASURE_UNIT = 'KG' THEN&#13;&#10;                CASE&#13;&#10;                    WHEN WASTE_DECLAR.SIGNS = 'S' THEN -1 * WASTE_DECLAR.QUANTITY_UNIT&#13;&#10;                    ELSE WASTE_DECLAR.QUANTITY_UNIT&#13;&#10;                END&#13;&#10;            ELSE&#13;&#10;                WASTE_DECLAR.QUANTITY * COALESCE(UNIT_CONV.CONVERSION_BA, 0) * CASE WHEN WASTE_DECLAR.SIGNS = 'S' THEN -1 ELSE 1 END&#13;&#10;        END&#13;&#10;END " name="F_QUANTITY_KG"/>
         <DBMapperTableEntries expression="WASTE_DECLAR.REASON_CODE" name="REASON_ID"/>
         <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'H' Then WASTE_DECLAR.MATERIAL_COST   * (-1)&#13;&#10;Else WASTE_DECLAR.MATERIAL_COST &#13;&#10;End " name="F_MATERIAL_COST_2"/>
         <DBMapperTableEntries expression="WASTE_DECLAR.SW_PURCHASE_ORDER" name="SW_PURCHASE_ORDER"/>
@@ -748,17 +751,17 @@
         <DBMapperTableEntries expression="DATE.MONTH_ID" name="MONTH_ID"/>
         <DBMapperTableEntries expression="SKU.IOC_MDM_SKU_ID " name="SKU_ID"/>
         <DBMapperTableEntries expression="MAT_VAL_EXT.REAL_PRICE_LC / NULLIF(MAT_VAL_EXT.PRICE_UNIT, 0) " name="F_MOV_ACTUAL_PRICE"/>
-        <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then WASTE_DECLAR.QUANTITY  * (-1)&#13;&#10;Else WASTE_DECLAR.QUANTITY&#13;&#10;End) * COALESCE(UNIT_CONV_BU_TO_VU.CONVERSION_BA, 0) " name="F_QUANTITY_VU"/>
+        <DBMapperTableEntries expression="(Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then (WASTE_DECLAR.QUANTITY  * (-1))&#13;&#10;Else WASTE_DECLAR.QUANTITY&#13;&#10;End) * COALESCE(UNIT_CONV_BU_TO_VU.CONVERSION_BA, 0) " name="F_QUANTITY_VU"/>
         <DBMapperTableEntries expression="WASTE_DECLAR.REFERENCE_NUMBER" name="REFERENCE_NUMBER"/>
         <DBMapperTableEntries expression="WASTE_DECLAR.IND_SHELF_LIFE" name="IND_SHELF_LIFE"/>
         <DBMapperTableEntries expression="SO_HEADER.SALES_ORDER" name="SO_NUMBER"/>
         <DBMapperTableEntries expression="SO_HEADER.DOCUMENT_TYPE_ID" name="SALES_ORDER_TYPE_ID"/>
         <DBMapperTableEntries expression="WASTE_DECLAR.IOC_ID" name="IOC_ID"/>
         <DBMapperTableEntries expression="WASTE_DECLAR.DATE_POSITION" name="DATE_ID"/>
-        <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then WASTE_DECLAR.MATERIAL_COST_LC   * (-1)&#13;&#10;Else WASTE_DECLAR.MATERIAL_COST_LC &#13;&#10;End " name="F_MATERIAL_COST_LC"/>
-        <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then WASTE_DECLAR.MATERIAL_COST_GC   * (-1)&#13;&#10;Else WASTE_DECLAR.MATERIAL_COST_GC &#13;&#10;End " name="F_MATERIAL_COST_GC"/>
-        <DBMapperTableEntries expression="case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then WASTE_DECLAR.DELIVERY_COST_LC   * (-1)&#13;&#10;Else WASTE_DECLAR.DELIVERY_COST_LC&#13;&#10;End " name="F_DELIVERY_COST_LC"/>
-        <DBMapperTableEntries expression="case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then WASTE_DECLAR.DELIVERY_COST_GC   * (-1)&#13;&#10;Else WASTE_DECLAR.DELIVERY_COST_GC&#13;&#10;End " name="F_DELIVERY_COST_GC"/>
+        <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then (WASTE_DECLAR.MATERIAL_COST_LC   * (-1))&#13;&#10;Else WASTE_DECLAR.MATERIAL_COST_LC &#13;&#10;End " name="F_MATERIAL_COST_LC"/>
+        <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then (WASTE_DECLAR.MATERIAL_COST_GC   * (-1))&#13;&#10;Else WASTE_DECLAR.MATERIAL_COST_GC &#13;&#10;End " name="F_MATERIAL_COST_GC"/>
+        <DBMapperTableEntries expression="case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then (WASTE_DECLAR.DELIVERY_COST_LC   * (-1))&#13;&#10;Else WASTE_DECLAR.DELIVERY_COST_LC&#13;&#10;End " name="F_DELIVERY_COST_LC"/>
+        <DBMapperTableEntries expression="case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then (WASTE_DECLAR.DELIVERY_COST_GC   * (-1))&#13;&#10;Else WASTE_DECLAR.DELIVERY_COST_GC&#13;&#10;End " name="F_DELIVERY_COST_GC"/>
         <DBMapperTableEntries expression="CURRENCY_LC.MDM_CURRENCY_ID" name="CURRENCY_ID_LC"/>
         <DBMapperTableEntries expression="CURRENCY_GC.MDM_CURRENCY_ID" name="CURRENCY_ID_GC"/>
         <DBMapperTableEntries expression="WASTE_DECLAR.F_EXCHANGE_RATE_GC" name="F_EXCHANGE_RATE_GC"/>
@@ -766,6 +769,7 @@
         <DBMapperTableEntries expression="CASE &#13;&#10;WHEN MAT_VAL_EXT.EX_RATE_LC_GC = 0 THEN 0&#13;&#10;WHEN MAT_VAL_EXT.EX_RATE_LC_GC &lt; 0 THEN MAT_VAL_EXT.REAL_PRICE_LC / abs(MAT_VAL_EXT.EX_RATE_LC_GC)&#13;&#10;ELSE MAT_VAL_EXT.REAL_PRICE_LC *  MAT_VAL_EXT.EX_RATE_LC_GC&#13;&#10;END&#13;&#10;/&#13;&#10;NULLIF(MAT_VAL_EXT.PRICE_UNIT, 0) " name="F_MOV_ACTUAL_PRICE_GC"/>
         <DBMapperTableEntries expression="HASH(&#13;&#10;  TO_VARIANT(WASTE_DECLAR.DOCUMENT_NUMBER) ||&#13;&#10;  TO_VARIANT(WASTE_DECLAR.DOCUMENT_YEAR)  ||&#13;&#10;  TO_VARIANT(WASTE_DECLAR.DOCUMENT_POSITION) ||&#13;&#10;  TO_VARIANT(PLANT_PEAK.COMPANY_ID) ||&#13;&#10;  TO_VARIANT(WASTE_DECLAR.SAP_ITEM) ||&#13;&#10;  TO_VARIANT(WASTE_DECLAR.IOC_ID) &#13;&#10;) " name="PK_FACT_SUPPLY_WASTE"/>
         <DBMapperTableEntries expression="current_date()" name="LOAD_DATE"/>
+        <FilterEntries expression="LENGTH(WASTE_DECLAR.SHIP_TO) &lt; 11 and LENGTH(WASTE_DECLAR.SOLD_TO) &lt; 11" filterKind="WHERE_FILTER" name="newFilter1"/>
       </OutputTables>
     </nodeData>
   </node>
@@ -1538,38 +1542,6 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="896">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_12"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_qxbG4LoKEe6H2tT7rm3hlw - DWL_DATE"/>
-    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;DWL_DATE&quot;"/>
-    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;ODS&quot;"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
-    <elementParameter field="TEXT" name="LABEL" value="&quot;DWL_DATE&quot;"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="TABLE" label="DWL_DATE" name="table2">
-      <column comment="" key="false" length="-1" name="DATE_ID" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" type="id_Date" usefulColumn="true">
-        <additionalField key="di.date.date" value="true"/>
-        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_ID"/>
-        <additionalField key="di.column.logicalType" value="date"/>
-      </column>
-      <column comment="" key="false" length="6" name="MONTH_ID" nullable="true" originalLength="-1" pattern="" precision="0" type="id_Integer" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="MONTH_ID"/>
-      </column>
-      <column comment="" key="false" length="6" name="WEEK_ID" nullable="true" originalLength="-1" pattern="" precision="0" type="id_Integer" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="WEEK_ID"/>
-      </column>
-      <column comment="" key="true" length="100" name="PK_DWL_DATE" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PK_DWL_DATE"/>
-      </column>
-      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" type="id_Date" usefulColumn="true">
-        <additionalField key="di.date.date" value="true"/>
-        <additionalField key="AVRO_TECHNICAL_KEY" value="LOAD_DATE"/>
-        <additionalField key="di.column.logicalType" value="date"/>
-      </column>
-    </metadata>
-  </node>
   <node componentName="tELTOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="992" posY="-416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTOutput_2"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
@@ -1802,6 +1774,56 @@
       </column>
     </metadata>
   </node>
+  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="896">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_5"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_qxbG4LoKEe6H2tT7rm3hlw - DIM_DATE"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;DIM_DATE&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;ODS&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="&quot;DIM_DATE&quot;"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="DIM_DATE" name="table4">
+      <column comment="" key="false" length="-1" name="DATE_ID" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_ID"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="16777216" name="MONTH_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MONTH_ID"/>
+      </column>
+      <column comment="" key="false" length="16777216" name="WEEK_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="WEEK_ID"/>
+      </column>
+      <column comment="" key="false" length="19" name="PK_DIM_DATE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PK_DIM_DATE"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="992">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_12"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_OvDMwLrEEe6H2tT7rm3hlw - DATES_FACT_SUPPLY_WASTE_VIEW"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;DATES_FACT_SUPPLY_WASTE_VIEW&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;CNF&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="&quot;DATES_FACT_SUPPLY_WASTE_VIEW&quot;"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="DATES_FACT_SUPPLY_WASTE_AGR_VIEW" name="table7">
+      <column comment="" key="false" length="-1" name="DATE_FROM" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_FROM"/>
+        <additionalField key="di.date.timestamp" value="true"/>
+        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
+      </column>
+      <column comment="" key="false" length="-1" name="DATE_TO" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_TO"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+  </node>
   <connection connectorName="TABLE" label="DWH.FACT_WASTE_DECLAR" lineStyle="9" metaname="table1" offsetLabelX="0" offsetLabelY="0" source="tELTInput_1" target="tELTMap_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table1"/>
   </connection>
@@ -1844,24 +1866,27 @@
   <connection connectorName="TABLE" label="ODS.DWL_PLANT_PEAK" lineStyle="9" metaname="table2" offsetLabelX="0" offsetLabelY="0" source="tELTInput_11" target="tELTMap_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table2"/>
   </connection>
-  <connection connectorName="TABLE" label="ODS.DWL_DATE" lineStyle="9" metaname="table2" offsetLabelX="-11" offsetLabelY="12" source="tELTInput_12" target="tELTMap_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table2"/>
-  </connection>
   <connection connectorName="TABLE" label="DWH.FACT_SUPPLY_WASTE" lineStyle="9" metaname="table6" offsetLabelX="0" offsetLabelY="0" source="tELTInput_15" target="tELTMap_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table6"/>
+  </connection>
+  <connection connectorName="TABLE" label="ODS.DIM_DATE" lineStyle="9" metaname="table4" offsetLabelX="0" offsetLabelY="0" source="tELTInput_5" target="tELTMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table4"/>
+  </connection>
+  <connection connectorName="TABLE" label="CNF.DATES_FACT_SUPPLY_WASTE_VIEW" lineStyle="9" metaname="table7" offsetLabelX="0" offsetLabelY="0" source="tELTInput_12" target="tELTMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table7"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5da8a225-57a5-45f7-8546-ee8aa5223bea"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>o21pPH5I94TjNu1E0syhuPzFEVn45vOpRxg+M/NDu1YEAH4cG9L/DmDeBISfUGtDY9M7Ca65JGua&#13;
-wU9c0Ip53g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_307e200b-5e89-46d5-90ae-8e67951d2a9f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZXfb2VqdFY6ZmjBRgdKyAc2Bzo5dSm11g5pZkeRkwzXR+ax2xBdfHP5Gf1ZdSo9tGkEBZjgeVVb6&#13;
-qGf2HIDTsQ==</DigestValue></Reference></SignedInfo><SignatureValue>Juar8bXooKJFPxKZvKiYl6CMUDjkNR03SJ9QrCPezAFn41It0ORoYkOZBWwJhR4W8ENqEtLOl0sv&#13;
-DwSt4Z2rwVrvQM1Mcl3oyAYtDC1CqVtpkM6LblJSB6ZT7zmXtW6bE6BVjqwJIVg380MISkcfORU8&#13;
-IjegEcmBKoyiOCkv6ml7QDpmwvZgyVBR7Gaz2+7DcZGh2VZ0c0pnGtExq2jq94aifzI3zcEG0N3V&#13;
-IE7A3RAi2VUo8Y6hLS5QHtVYpaTEYHYtdnXxJS2oqSWQd8Ff/Uhpeh56tH6mZriF29XCq0y9mV+m&#13;
-ftdHA0QkAKR9sNCysyqBvse3ctSc1A727Olb/Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3c1d4aee-11b4-4a19-8531-5a38445b2b90"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LZX+3wWf38SGGIM6L2+UNHGZoiMhBRJOhdz9+MXnfJE4FYAO3lCyzZuxU1M9wGZuCP78empcXgtf&#13;
+mG2UHdj4QA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_68dff528-8e8e-4a3b-b7dd-cb5587a93234"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>uAimriYqqaQnkLhjO42wZjNui+0bkhzHBI226hwlXB/DCqqVJSqPSbsD+TENgnTvuxy0RNFYdOcT&#13;
+NNxBEFg3nw==</DigestValue></Reference></SignedInfo><SignatureValue>G4Q19jEo2/qCb8EnB0bImExanL5r4tVyb0KCKT2s+MbTO8KNXzeQt5FTJ4orckUr3Au7+wxdkzPc&#13;
+qCQ3ANb2AgLLtUxQn3h0Ft2/wKTkb1adT+XCUwkiy+n8XGoMGlpT8ucnh1pKBvKQC/k9c9GlZeWC&#13;
+iP+b50+VvM0NJwphpw8PRahR7zb+lAyD93hqZK4Rotz+AcRa5qTpfzQiBY2gsn7ydNk3QIcb5RFD&#13;
+SLXfHTp1A2Uujf8tP41bw2ru7YG2Fo76CozR3QePy7lSG6eYj4w0pB4EzmmV9/Kyzf9qG3+JcJWH&#13;
+gwuokT21PARNcGB8BULxNoh9F1ieG0SGE1cA2Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1883,4 +1908,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_307e200b-5e89-46d5-90ae-8e67951d2a9f" Target="#_5da8a225-57a5-45f7-8546-ee8aa5223bea"><Timestamp>2024-02-06 16:52:49</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_68dff528-8e8e-4a3b-b7dd-cb5587a93234" Target="#_3c1d4aee-11b4-4a19-8531-5a38445b2b90"><Timestamp>2024-02-12 16:29:20</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

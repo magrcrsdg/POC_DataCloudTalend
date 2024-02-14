@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <recyclebin:RecycleBin xmlns:recyclebin="http://www.talend.org/recyclebin">
-  <deletedFolders>process/ODS/STRATIO/copy_stg_to_ods_DIM_CURRENCY</deletedFolders>
-  <deletedFolders>process/ODS/STRATIO/copy_stg_to_ods_DIM_MATERIAL</deletedFolders>
-  <deletedFolders>process/ODS/STRATIO/copy_stg_to_ods_DIM_SKU</deletedFolders>
-  <deletedFolders>process/ODS/STRATIO/copy_stg_to_ods_DIM_SUPPLIER</deletedFolders>
-  <deletedItems id="_tCtWUL-XEe6fYIbtfrMGCwdoc" path="ODS/STRATIO/copy_stg_to_ods_DIM_MATERIAL" type="JOB_DOC"/>
-  <deletedItems id="_0ieu0L98Ee6fYIbtfrMGCw" path="ODS/STRATIO/copy_stg_to_ods_DIM_CURRENCY" type="PROCESS"/>
-  <deletedItems id="_tCtWUL-XEe6fYIbtfrMGCw" path="ODS/STRATIO/copy_stg_to_ods_DIM_MATERIAL" type="PROCESS"/>
-  <deletedItems id="_6advsL-ZEe6fYIbtfrMGCw" path="ODS/STRATIO/copy_stg_to_ods_DIM_SKU" type="PROCESS"/>
-  <deletedItems id="_-CFrwL-bEe6fYIbtfrMGCw" path="ODS/STRATIO/copy_stg_to_ods_DIM_SUPPLIER" type="PROCESS"/>
+  <deletedFolders>process/TEST</deletedFolders>
+  <deletedItems id="_4MmfgMZ0Ee6IPK7Wz-r8Qw" path="TEST" type="PROCESS"/>
 </recyclebin:RecycleBin>

@@ -499,6 +499,10 @@
         <DBMapperTableEntries name="PK_FACT_SUPPLY_WASTE_UPD"/>
         <DBMapperTableEntries name="LOAD_DATE"/>
       </InputTables>
+      <InputTables alias="FILTER_dATES" joinType="INNER_JOIN" name="FILTER_dATES" tableName="CNF.DATES_FACT_SUPPLY_WASTE_UPD_VIEW">
+        <DBMapperTableEntries expression="SUPPLY_WASTE.DATE_POSITION" join="true" name="DATE_FROM" operator="&lt;="/>
+        <DBMapperTableEntries expression="SUPPLY_WASTE.DATE_POSITION" join="true" name="DATE_TO" operator="&gt;"/>
+      </InputTables>
       <OutputTables name="table2" tableName="FACT_SUPPLY_WASTE_UPD">
         <DBMapperTableEntries expression="SUPPLY_WASTE_UPD.PK_FACT_SUPPLY_WASTE_UPD" name="PK_FACT_SUPPLY_WASTE_UPD"/>
       </OutputTables>
@@ -804,6 +808,29 @@
       </column>
     </metadata>
   </node>
+  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_4"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_OvDMwLrEEe6H2tT7rm3hlw - DATES_FACT_SUPPLY_WASTE_UPD_VIEW"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;DATES_FACT_SUPPLY_WASTE_UPD_VIEW&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;CNF&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="&quot;DATES_FACT_SUPPLY_WASTE_UPD_VIEW&quot;"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="DATES_FACT_SUPPLY_WASTE_UPD_VIEW" name="table4">
+      <column comment="" key="false" length="-1" name="DATE_FROM" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_FROM"/>
+        <additionalField key="di.date.timestamp" value="true"/>
+        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
+      </column>
+      <column comment="" key="false" length="-1" name="DATE_TO" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_TO"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+  </node>
   <connection connectorName="TABLE" label="DWH.FACT_SUPPLY_WASTE_AGG_TOT" lineStyle="9" metaname="table1" offsetLabelX="0" offsetLabelY="0" source="tELTInput_1" target="tELTMap_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table1"/>
   </connection>
@@ -819,18 +846,21 @@
   <connection connectorName="TABLE" label="ODS.DWL_BATCH" lineStyle="9" metaname="table2" offsetLabelX="0" offsetLabelY="0" source="tELTInput_3" target="tELTMap_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table2"/>
   </connection>
+  <connection connectorName="TABLE" label="CNF.DATES_FACT_SUPPLY_WASTE_UPD_VIEW" lineStyle="9" metaname="table4" offsetLabelX="0" offsetLabelY="0" source="tELTInput_4" target="tELTMap_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table4"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b05fcbe5-acc8-415f-9535-0706fdbe4727"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Nw00rToWgT8WRyFJgQOF4UUUpWwrddle7WkkY1rkoOmCtGDf8sD/AjkRd/hZGgeDq4cWH0r++8O/&#13;
-nUzxdHGQiQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e8a1e843-9697-4f2a-a42e-6fd03841327b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>c/NetL9dvT6WH6CSXH7f5M6PJF2uErXgNzZ6e8rk3/LPouQYVRYWDCS5PYdXRVqfITKee44ZJzip&#13;
-AXd0hnIMeQ==</DigestValue></Reference></SignedInfo><SignatureValue>jsMhiwx1cuxgrWKUyJbrntiJULQIMbg0zk+Rb+ud7ol/mn/8mAp+aknyeGRCTldYdDtsFqxsVXk7&#13;
-Vp3yetQZT351LnKAF1eU6AW5QJZ1MXt9CTBDYgWOJTowfDC54Fdtjw6FcuQDP2vspW7LnmjHWhVZ&#13;
-CB/f2+MkX9tiwPRqj2wfmnmt/NYVjps/VYU1yZt7+42mhaCWRi0WhGs4cuzFCjPh24lx9WH0Iiij&#13;
-lb3i9giTPkVkt/vSBmY1mMrs6jCmq+1ZwyO71dGt645cwmy9N4gwmBbT0FWLhQ2L8PSz9Q7bFKc7&#13;
-O4NnyUpi5xI8EJvDW0PegpnhHEjgI+rxWiC+rw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1758cbef-088c-42e2-959d-ae5037ee6c44"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TurchXTC5qSF4JwfyTLP8vhE6UtpY2eBo5q2GEwSVysztrg3qvWYfoQLE5tCMe35jubhTgE2onsE&#13;
+QHTWiUukcw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fced2570-7aec-4e6b-bcde-36f757d1a985"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>apOHI9TDNLoCOzkLTfQnjw7jPIIL3o9yhSgrrl8jlCKGAPwVZbGa7DrCawsLye0r57LZ9XEP3tCV&#13;
+796gIQVjRA==</DigestValue></Reference></SignedInfo><SignatureValue>Ogsn05okPMkwPG5W6OCghQoFNKTAGXw9Uvk7nadYYRxwPYT27lcsbRzFjiy/DqPYkTELdTQtdxfY&#13;
+NL8LCHDUkl4Hl9x8jbPeszduE7nWDKSuqjoxcq/JVj+1m9MjoYwBwnejWnVdZBkSkQUzCZPxnFuV&#13;
+u4s97qRlY7xpno6D75b8f2NcrureWbVuhezitHJEBAFKHw4+dWyojkasLn9kGhDuZ+7ChKt9HFiQ&#13;
+awH1Kic/nKxrk3oWKCZkPRFzG7UEiaKII+Oxu7KjbQFFUXgxx8Ng+Afl5vgnNmGa40sDcPlaam9d&#13;
+Gp05vwOmRlHIL2yYhQqOUfhmc87sxPQKPTk8eA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -852,4 +882,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e8a1e843-9697-4f2a-a42e-6fd03841327b" Target="#_b05fcbe5-acc8-415f-9535-0706fdbe4727"><Timestamp>2024-02-06 17:25:44</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fced2570-7aec-4e6b-bcde-36f757d1a985" Target="#_1758cbef-088c-42e2-959d-ae5037ee6c44"><Timestamp>2024-02-12 14:32:12</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

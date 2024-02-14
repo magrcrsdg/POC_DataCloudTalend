@@ -2,8 +2,8 @@
   <context confirmationNeeded="false" hide="false" name="Default"/>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="1152"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="832"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="576"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="416"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -660,6 +660,10 @@
         <DBMapperTableEntries expression="SUPPLY_WASTE.PK_FACT_SUPPLY_WASTE" join="true" name="PK_FACT_SUPPLY_WASTE_AGG_TOT" operator="="/>
         <DBMapperTableEntries name="LOAD_DATE"/>
       </InputTables>
+      <InputTables alias="DATES_FILTER" joinType="INNER_JOIN" name="DATES_FILTER" tableName="CNF.DATES_FACT_SUPPLY_WASTE_AGR_VIEW">
+        <DBMapperTableEntries expression="SUPPLY_WASTE.DATE_POSITION" join="true" name="DATE_FROM" operator="&lt;="/>
+        <DBMapperTableEntries expression="SUPPLY_WASTE.DATE_POSITION" join="true" name="DATE_TO" operator="&gt;"/>
+      </InputTables>
       <OutputTables name="table2" tableName="FACT_SUPPLY_WASTE_AGG_TOT">
         <DBMapperTableEntries expression="SUPPLY_WASTE_AGG.PK_FACT_SUPPLY_WASTE_AGG_TOT " name="PK_FACT_SUPPLY_WASTE_AGG_TOT"/>
         <FilterEntries expression="SUPPLY_WASTE_AGG.PK_FACT_SUPPLY_WASTE_AGG_TOT  is not null " filterKind="WHERE_FILTER" name="newFilter9"/>
@@ -1304,6 +1308,29 @@
       </column>
     </metadata>
   </node>
+  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-480" posY="-96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_2"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_OvDMwLrEEe6H2tT7rm3hlw - DATES_FACT_SUPPLY_WASTE_AGR_VIEW"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;DATES_FACT_SUPPLY_WASTE_AGR_VIEW&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;CNF&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="snowflake_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="&quot;DATES_FACT_SUPPLY_WASTE_AGR_VIEW&quot;"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="DATES_FACT_SUPPLY_WASTE_AGR_VIEW" name="table3">
+      <column comment="" key="false" length="-1" name="DATE_FROM" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_FROM"/>
+        <additionalField key="di.date.timestamp" value="true"/>
+        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
+      </column>
+      <column comment="" key="false" length="-1" name="DATE_TO" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_TO"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+  </node>
   <connection connectorName="TABLE" label="DWH.FACT_SUPPLY_WASTE" lineStyle="9" metaname="table6" offsetLabelX="0" offsetLabelY="0" source="tELTInput_15" target="tELTMap_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table6"/>
   </connection>
@@ -1316,18 +1343,21 @@
   <connection connectorName="TABLE" label="DWH.FACT_SUPPLY_WASTE_AGG_TOT" lineStyle="9" metaname="table1" offsetLabelX="0" offsetLabelY="0" source="tELTInput_1" target="tELTMap_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table1"/>
   </connection>
+  <connection connectorName="TABLE" label="CNF.DATES_FACT_SUPPLY_WASTE_AGR_VIEW" lineStyle="9" metaname="table3" offsetLabelX="0" offsetLabelY="0" source="tELTInput_2" target="tELTMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table3"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_15"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_35af3b43-7a49-4f7a-8e3c-5036b00f7ea3"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tWJTosDRTX7WmuX/nemKti8B22pCGTj+/tOglfWlh2WsfHKJLppkbhm8Hxbqqh/eh6Yi6H1Qn1GP&#13;
-Xtm17D/qlw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ba3053e0-3352-460d-892a-08da9632b16b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sW0NqYc+5poSs7FVnt7vjYPA6Yw4chCmVriO03sW08BGeGzHEPsU+bN9McbmvAcRgczPgRvOZpMw&#13;
-qOJ7G0YPOw==</DigestValue></Reference></SignedInfo><SignatureValue>oRwWUhe18CYTdAHTUX8g1Ya6m3AnOXEbW2AouZ4t0JY9pzkYYhbs9QN9RR16mXUswqqTGO4e/yv1&#13;
-1pL6V4FqO2o763Rhk9X1KojUKaqSLvygbj2X+zaS9813ihwnGes3QiL3/VBJ7au75pk+QCR5rt38&#13;
-m0nQZvV6gO7VKC65EfEDrCP15le7KGm+U8glJiWVYIwjBUgeT/VYv59Ks1lh0lwNEcIIcZXjLFlA&#13;
-LfEk8cmx+QI8sVGwKsfUn4MCLwIdADNqB+8wzql0Jfug8HwizhqZ6LwbolFZdMgtLhHuGGwYvj6r&#13;
-ZMgU6JmaMJDdWPRgAcajv+jTZnNFa27fOimPSQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_07d42fc6-5692-4c3b-a420-b5126578c6e4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZNm/Zp9dfl13eES/+PZtj3QxpeCqLEJu+H27CQLvSZYPQ4BDvSsyGCerMVzuIoMOE5O6BWH/aYzP&#13;
+zB6ZmwUyZA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ddea1a2a-94c6-4efc-9ab3-1ca8f96e0fa0"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3CZZrouXRlm4WLPEnG2+/rpHg15U0N9OT1vajRWJCLP1e6xXXDqcSNkd35Nj5bFxVJGBUPINP8pg&#13;
+yG708on1fw==</DigestValue></Reference></SignedInfo><SignatureValue>ZxlQyx5ws1b17PRTZHfHHj0/3sdZd6ABG+HYBsafSOq6vpw/zclgjrZgIf1OGIAc2SCoCJ8JtK6n&#13;
+bpvwBkD7QjtX/e5OzhDKoVsqW/6z6PqvazfatDmqzEy1+JXsVonuWbnLEnxqAEcwIxmmRS7oh/Qm&#13;
+FdxBPRoZ6F51ugXTlhQ5qmoFVOvePaMW1/DxWfYwMbfrXDXfwR7K1/H2d9YJgQtbqa6Rcx+ShgLa&#13;
+5DDE13jCvb6+yCKmLWdtzTUbNgTPhKHqPrEIUJrzKGPVDimTlKixE3IPrD+atGpxQxIEl0fthV2E&#13;
+HzoaNqYqr4Hay+T/924nT/mFE6Zi7tGYq/GXHA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1349,4 +1379,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ba3053e0-3352-460d-892a-08da9632b16b" Target="#_35af3b43-7a49-4f7a-8e3c-5036b00f7ea3"><Timestamp>2024-02-06 14:24:53</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ddea1a2a-94c6-4efc-9ab3-1ca8f96e0fa0" Target="#_07d42fc6-5692-4c3b-a420-b5126578c6e4"><Timestamp>2024-02-12 14:26:42</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
