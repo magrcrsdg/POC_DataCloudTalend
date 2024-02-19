@@ -595,7 +595,7 @@
         <DBMapperTableEntries name="LOAD_DATE"/>
       </InputTables>
       <InputTables alias="SUPPLY_MATLOC" joinType="LEFT_OUTER_JOIN" name="SUPPLY_MATLOC" tableName="ODS.ODS_SUPPLY_MATLOC">
-        <DBMapperTableEntries expression="WASTE_DECLAR.MATERIAL_NUMBER" name="MATNR" operator="="/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.MATERIAL_NUMBER" join="true" name="MATNR" operator="="/>
         <DBMapperTableEntries expression="WASTE_DECLAR.PLANT" join="true" name="LOCNO" operator="="/>
         <DBMapperTableEntries expression="" name="MATID" operator=""/>
         <DBMapperTableEntries expression="" name="LOCID" operator=""/>
@@ -625,8 +625,8 @@
         <DBMapperTableEntries name="LOAD_DATE"/>
       </InputTables>
       <InputTables alias="SKU" joinType="LEFT_OUTER_JOIN" name="SKU" tableName="ODS.DIM_SKU">
-        <DBMapperTableEntries name="IOC_MDM_SKU_ID"/>
-        <DBMapperTableEntries name="IOC_ID"/>
+        <DBMapperTableEntries name="IOC_MDM_SKU_ID" operator=""/>
+        <DBMapperTableEntries expression="999" join="true" name="IOC_ID" operator="="/>
         <DBMapperTableEntries expression="WASTE_DECLAR.MATERIAL_NUMBER" join="true" name="IOC_SKU_ID" operator="="/>
         <DBMapperTableEntries expression="" name="ST_ACTIVE" operator=""/>
         <DBMapperTableEntries name="PK_DIM_SKU"/>
@@ -634,48 +634,48 @@
       </InputTables>
       <InputTables alias="SUPPLIER" joinType="LEFT_OUTER_JOIN" name="SUPPLIER" tableName="ODS.DIM_SUPPLIER">
         <DBMapperTableEntries expression="" name="IOC_MDM_SUPPLIER_ID" operator=""/>
-        <DBMapperTableEntries expression="" name="IOC_ID" operator=""/>
+        <DBMapperTableEntries expression="999" join="true" name="IOC_ID" operator="="/>
         <DBMapperTableEntries expression="WASTE_DECLAR.VENDOR" join="true" name="IOC_SUPPLIER_ID" operator="="/>
         <DBMapperTableEntries name="MDM_SUPPLIER_ID"/>
-        <DBMapperTableEntries expression="" name="ST_ACTIVE" operator=""/>
-        <DBMapperTableEntries name="PK_DIM_SUPPLIER"/>
+        <DBMapperTableEntries expression="1" join="true" name="ST_ACTIVE" operator="="/>
+        <DBMapperTableEntries expression="" name="PK_DIM_SUPPLIER" operator=""/>
         <DBMapperTableEntries name="LOAD_DATE"/>
       </InputTables>
       <InputTables alias="CURRENCY" joinType="LEFT_OUTER_JOIN" name="CURRENCY" tableName="ODS.DIM_CURRENCY">
         <DBMapperTableEntries name="IOC_MDM_CURRENCY_ID"/>
-        <DBMapperTableEntries name="IOC_ID"/>
+        <DBMapperTableEntries expression="999" join="true" name="IOC_ID" operator="="/>
         <DBMapperTableEntries expression="WASTE_DECLAR.CURRENCY_CODE " join="true" name="IOC_CURRENCY_ID" operator="="/>
         <DBMapperTableEntries expression="" name="MDM_CURRENCY_ID" operator=""/>
-        <DBMapperTableEntries name="ST_ACTIVE"/>
+        <DBMapperTableEntries expression="1" join="true" name="ST_ACTIVE" operator="="/>
         <DBMapperTableEntries name="PK_DIM_CURRENCY"/>
         <DBMapperTableEntries name="LOAD_DATE"/>
       </InputTables>
       <InputTables alias="CURRENCY_LC" joinType="LEFT_OUTER_JOIN" name="CURRENCY_LC" tableName="ODS.DIM_CURRENCY">
         <DBMapperTableEntries name="IOC_MDM_CURRENCY_ID"/>
-        <DBMapperTableEntries name="IOC_ID"/>
-        <DBMapperTableEntries expression="WASTE_DECLAR.CURRENCY_CODE " join="true" name="IOC_CURRENCY_ID" operator="="/>
-        <DBMapperTableEntries name="MDM_CURRENCY_ID"/>
-        <DBMapperTableEntries name="ST_ACTIVE"/>
-        <DBMapperTableEntries name="PK_DIM_CURRENCY"/>
+        <DBMapperTableEntries expression="999" join="true" name="IOC_ID" operator="="/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.CURRENCY_CODE_LC " join="true" name="IOC_CURRENCY_ID" operator="="/>
+        <DBMapperTableEntries expression="" name="MDM_CURRENCY_ID" operator=""/>
+        <DBMapperTableEntries expression="1" join="true" name="ST_ACTIVE" operator="="/>
+        <DBMapperTableEntries expression="" name="PK_DIM_CURRENCY" operator=""/>
         <DBMapperTableEntries name="LOAD_DATE"/>
       </InputTables>
       <InputTables alias="CURRENCY_GC" joinType="LEFT_OUTER_JOIN" name="CURRENCY_GC" tableName="ODS.DIM_CURRENCY">
         <DBMapperTableEntries name="IOC_MDM_CURRENCY_ID"/>
-        <DBMapperTableEntries name="IOC_ID"/>
-        <DBMapperTableEntries expression="WASTE_DECLAR.CURRENCY_CODE " join="true" name="IOC_CURRENCY_ID" operator="="/>
+        <DBMapperTableEntries expression="999" name="IOC_ID" operator="="/>
+        <DBMapperTableEntries expression="WASTE_DECLAR.CURRENCY_CODE _GC" join="true" name="IOC_CURRENCY_ID" operator="="/>
         <DBMapperTableEntries name="MDM_CURRENCY_ID"/>
-        <DBMapperTableEntries name="ST_ACTIVE"/>
+        <DBMapperTableEntries expression="1" name="ST_ACTIVE" operator="="/>
         <DBMapperTableEntries name="PK_DIM_CURRENCY"/>
-        <DBMapperTableEntries name="LOAD_DATE"/>
+        <DBMapperTableEntries expression="" name="LOAD_DATE" operator=""/>
       </InputTables>
       <InputTables alias="MAT" joinType="LEFT_OUTER_JOIN" name="MAT" tableName="ODS.DIM_MATERIAL">
         <DBMapperTableEntries name="IOC_MDM_MATERIAL_ID"/>
-        <DBMapperTableEntries name="IOC_ID"/>
+        <DBMapperTableEntries expression="999" name="IOC_ID" operator="="/>
         <DBMapperTableEntries expression="WASTE_DECLAR.MATERIAL_NUMBER" join="true" name="IOC_MATERIAL_ID" operator="="/>
         <DBMapperTableEntries name="MDM_MATERIAL_ID"/>
-        <DBMapperTableEntries name="ST_ACTIVE"/>
+        <DBMapperTableEntries expression="1" name="ST_ACTIVE" operator="="/>
         <DBMapperTableEntries name="PK_DIM_MATERIAL"/>
-        <DBMapperTableEntries name="LOAD_DATE"/>
+        <DBMapperTableEntries expression="" name="LOAD_DATE" operator=""/>
       </InputTables>
       <InputTables alias="PLANT_PEAK" joinType="LEFT_OUTER_JOIN" name="PLANT_PEAK" tableName="ODS.DWL_PLANT_PEAK">
         <DBMapperTableEntries expression="WASTE_DECLAR.PLANT" join="true" name="PLANT_PEAK_ID" operator="="/>
@@ -726,11 +726,11 @@
         <DBMapperTableEntries expression="WASTE_DECLAR.BATCH_ID" name="BATCH_ID"/>
         <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then (WASTE_DECLAR.QUANTITY_ENTRY  * (-1))&#13;&#10;Else WASTE_DECLAR.QUANTITY_ENTRY&#13;&#10;End " name="F_QUANTITY_ENTRY"/>
         <DBMapperTableEntries expression="WASTE_DECLAR.UNIT_MEASURE_ENTRY" name="ENTRY_UNIT_ID"/>
-        <DBMapperTableEntries expression="Case&#13;&#10;When WASTE_DECLAR.SHIP_TO=' ' Then '0'&#13;&#10;Else  COALESCE(NULLIF(TRIM(WASTE_DECLAR.SHIP_TO), ''), '0')&#13;&#10;End " name="SHIP_TO"/>
-        <DBMapperTableEntries expression="Case&#13;&#10;When WASTE_DECLAR.SOLD_TO=' ' Then '0'&#13;&#10;Else  COALESCE(NULLIF(TRIM(WASTE_DECLAR.SOLD_TO), ''), '0')&#13;&#10;End " name="SOLD_TO"/>
+        <DBMapperTableEntries expression="COALESCE(NULLIF(TRIM(WASTE_DECLAR.SHIP_TO), ''), '0') " name="SHIP_TO"/>
+        <DBMapperTableEntries expression="COALESCE(NULLIF(TRIM(WASTE_DECLAR.SOLD_TO), ''), '0') " name="SOLD_TO"/>
         <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then (WASTE_DECLAR.DELIVERY_COST   * (-1))&#13;&#10;Else WASTE_DECLAR.DELIVERY_COST &#13;&#10;End " name="DELIVERY_COST"/>
         <DBMapperTableEntries expression="PLANT_PEAK.COMPANY_ID" name="COMPANY_ID"/>
-        <DBMapperTableEntries expression="ITEM.TIMESTAMP" name="TIMESTAMP"/>
+        <DBMapperTableEntries expression="current_timestamp()" name="TIMESTAMP"/>
         <DBMapperTableEntries expression="CASE&#13;&#10;    WHEN WASTE_DECLAR.UNIT_MEASURE = 'KG' THEN&#13;&#10;        CASE&#13;&#10;            WHEN WASTE_DECLAR.SIGNS = 'S' THEN -1 * WASTE_DECLAR.QUANTITY&#13;&#10;            ELSE WASTE_DECLAR.QUANTITY&#13;&#10;        END&#13;&#10;    ELSE&#13;&#10;        CASE&#13;&#10;            WHEN WASTE_DECLAR.UNIT_MEASURE_UNIT = 'KG' THEN&#13;&#10;                CASE&#13;&#10;                    WHEN WASTE_DECLAR.SIGNS = 'S' THEN -1 * WASTE_DECLAR.QUANTITY_UNIT&#13;&#10;                    ELSE WASTE_DECLAR.QUANTITY_UNIT&#13;&#10;                END&#13;&#10;            ELSE&#13;&#10;                WASTE_DECLAR.QUANTITY * COALESCE(UNIT_CONV.CONVERSION_BA, 0) * CASE WHEN WASTE_DECLAR.SIGNS = 'S' THEN -1 ELSE 1 END&#13;&#10;        END&#13;&#10;END " name="F_QUANTITY_KG"/>
         <DBMapperTableEntries expression="WASTE_DECLAR.REASON_CODE" name="REASON_ID"/>
         <DBMapperTableEntries expression="Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'H' Then WASTE_DECLAR.MATERIAL_COST   * (-1)&#13;&#10;Else WASTE_DECLAR.MATERIAL_COST &#13;&#10;End " name="F_MATERIAL_COST_2"/>
@@ -748,7 +748,7 @@
         <DBMapperTableEntries expression="COALESCE(NULLIF(TRIM(SUPPLY_MATLOC.PLANNER_PPS), ''), '0') " name="DRP_PLANNER_ID"/>
         <DBMapperTableEntries expression="COALESCE(NULLIF(TRIM(SUPPLY_MATLOC.PLANNER_SNP), ''), '0') " name="SNP_PLANNER_ID"/>
         <DBMapperTableEntries expression="WASTE_DECLAR.ORDER_TYPE_ID" name="ORDER_TYPE_ID"/>
-        <DBMapperTableEntries expression="DATE.MONTH_ID" name="MONTH_ID"/>
+        <DBMapperTableEntries expression="coalesce(DATE.MONTH_ID, to_number(to_char(current_date(), 'YYYYMM')), 5,0) " name="MONTH_ID"/>
         <DBMapperTableEntries expression="SKU.IOC_MDM_SKU_ID " name="SKU_ID"/>
         <DBMapperTableEntries expression="MAT_VAL_EXT.REAL_PRICE_LC / NULLIF(MAT_VAL_EXT.PRICE_UNIT, 0) " name="F_MOV_ACTUAL_PRICE"/>
         <DBMapperTableEntries expression="(Case &#13;&#10;When WASTE_DECLAR.SIGNS = 'S' Then (WASTE_DECLAR.QUANTITY  * (-1))&#13;&#10;Else WASTE_DECLAR.QUANTITY&#13;&#10;End) * COALESCE(UNIT_CONV_BU_TO_VU.CONVERSION_BA, 0) " name="F_QUANTITY_VU"/>
@@ -1880,13 +1880,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3c1d4aee-11b4-4a19-8531-5a38445b2b90"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LZX+3wWf38SGGIM6L2+UNHGZoiMhBRJOhdz9+MXnfJE4FYAO3lCyzZuxU1M9wGZuCP78empcXgtf&#13;
-mG2UHdj4QA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_68dff528-8e8e-4a3b-b7dd-cb5587a93234"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>uAimriYqqaQnkLhjO42wZjNui+0bkhzHBI226hwlXB/DCqqVJSqPSbsD+TENgnTvuxy0RNFYdOcT&#13;
-NNxBEFg3nw==</DigestValue></Reference></SignedInfo><SignatureValue>G4Q19jEo2/qCb8EnB0bImExanL5r4tVyb0KCKT2s+MbTO8KNXzeQt5FTJ4orckUr3Au7+wxdkzPc&#13;
-qCQ3ANb2AgLLtUxQn3h0Ft2/wKTkb1adT+XCUwkiy+n8XGoMGlpT8ucnh1pKBvKQC/k9c9GlZeWC&#13;
-iP+b50+VvM0NJwphpw8PRahR7zb+lAyD93hqZK4Rotz+AcRa5qTpfzQiBY2gsn7ydNk3QIcb5RFD&#13;
-SLXfHTp1A2Uujf8tP41bw2ru7YG2Fo76CozR3QePy7lSG6eYj4w0pB4EzmmV9/Kyzf9qG3+JcJWH&#13;
-gwuokT21PARNcGB8BULxNoh9F1ieG0SGE1cA2Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ab574433-7763-467f-8ea0-b13379abab62"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BF9WGM1HIlXxvs2fu2MLKBa0w97/sVtEYq1v1omcrgMMUk1Q6hc4Pokjtl4IPmT7SxqRkmb7bwH3&#13;
+lLY/ZHCp/w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f03c5aaf-0478-4b04-a488-5d216dafd945"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sPxDIwekD0n/HMOcR79/eabq7Ga0mKwvPnVikQ9ybPnRd58mQF7qFGH2ZWqndsikFN/Bz1WvsxpP&#13;
+GxaTgCAWLA==</DigestValue></Reference></SignedInfo><SignatureValue>WFst5NwW7OCAq8+FZzQAOj/d8TPNKcw/pSCE+MD/5ITDs8CL5oDRjmWLNUWJALYlqcNGNeXWejI7&#13;
+w0qT7hfEgIuqba1K6uzUPpNZxTQuavzwWuKYocjD4vO5ygVhp0w89J2MpDsAgRwKCBxaTB5DWZ3x&#13;
+b/IAQtRWr54K37j/XxGtd+0Alnh3hCmZ9Vmy97+lqMhlibNMEjPynRpht3BN8RR8Vu9T6AcJeOl+&#13;
+HkjyGwsi0xqfmwWe8q84UBqfBUO4P3oBds4/f5qdqgM0QU0NaxicytazKhSfkuP+fmD8IPFjRwo4&#13;
+BD/RmBzBxUuT5n3t2nnalivQK3QPk5TjAtsNnw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1908,4 +1908,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_68dff528-8e8e-4a3b-b7dd-cb5587a93234" Target="#_3c1d4aee-11b4-4a19-8531-5a38445b2b90"><Timestamp>2024-02-12 16:29:20</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f03c5aaf-0478-4b04-a488-5d216dafd945" Target="#_ab574433-7763-467f-8ea0-b13379abab62"><Timestamp>2024-02-16 13:17:46</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
