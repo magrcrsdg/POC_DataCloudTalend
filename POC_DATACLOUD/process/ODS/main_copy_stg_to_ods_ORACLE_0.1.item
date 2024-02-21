@@ -226,6 +226,7 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="896" posY="480">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRunJob_10"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" show="false" value=""/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="ext_src_to_ods_DWL_MATERIAL"/>
@@ -284,6 +285,7 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="896" posY="736">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRunJob_12"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" show="false" value=""/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="ext_src_to_ods_ODS_CMN_MATERIAL_VALUATION_EXT"/>
@@ -313,6 +315,7 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="896" posY="864">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRunJob_13"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" show="false" value=""/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="ext_src_to_ods_ODS_ITEM"/>
@@ -342,6 +345,7 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="896" posY="992">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRunJob_14"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" show="false" value=""/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="ext_src_to_ods_ODS_OTC_SO_HEADER"/>
@@ -549,6 +553,7 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="896" posY="1376">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRunJob_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" show="false" value=""/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="ext_src_to_ods_ODS_EXHANGE_RATES"/>
@@ -608,18 +613,22 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobError3"/>
   </connection>
   <connection connectorName="SUBJOB_ERROR" label="OnSubjobError" lineStyle="4" metaname="tRunJob_10" offsetLabelX="0" offsetLabelY="0" source="tRunJob_10" target="tDBClose_5">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobError4"/>
   </connection>
   <connection connectorName="SUBJOB_ERROR" label="OnSubjobError" lineStyle="4" metaname="tRunJob_11" offsetLabelX="0" offsetLabelY="0" source="tRunJob_11" target="tDBClose_6">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobError5"/>
   </connection>
   <connection connectorName="SUBJOB_ERROR" label="OnSubjobError" lineStyle="4" metaname="tRunJob_12" offsetLabelX="0" offsetLabelY="0" source="tRunJob_12" target="tDBClose_7">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobError6"/>
   </connection>
   <connection connectorName="SUBJOB_ERROR" label="OnSubjobError" lineStyle="4" metaname="tRunJob_13" offsetLabelX="0" offsetLabelY="0" source="tRunJob_13" target="tDBClose_8">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobError7"/>
   </connection>
   <connection connectorName="SUBJOB_ERROR" label="OnSubjobError" lineStyle="4" metaname="tRunJob_14" offsetLabelX="0" offsetLabelY="0" source="tRunJob_14" target="tDBClose_9">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobError8"/>
   </connection>
   <connection connectorName="SUBJOB_ERROR" label="OnSubjobError" lineStyle="4" metaname="tRunJob_15" offsetLabelX="0" offsetLabelY="0" source="tRunJob_15" target="tDBClose_10">
@@ -635,6 +644,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
   </connection>
   <connection connectorName="SUBJOB_ERROR" label="OnSubjobError" lineStyle="4" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" source="tRunJob_1" target="tDBClose_12">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobError11"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tWarn_2">
@@ -790,13 +800,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_effce0f7-223d-47fb-a005-a90585a57ff0"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>m3e3b2jWj05pcADM5Tgv8PPubq2LzDBfyNoCeOAY8hOgSrchh+/ZNCI28RSGs3tu2UplkIXlvUnt&#13;
-25Xhc86NVg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5f16a9d7-5cd2-4dbe-9c7f-be682a613e04"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Cs9QYqw1Bz9rVLfsBNExGOOnjpe1ZqnynxLM0H09DmLv0eqIlDSTv68bI6H8BVJS+riur5Rmj0FM&#13;
-iu+PHpKXAQ==</DigestValue></Reference></SignedInfo><SignatureValue>FU9hCdZIG7XSE5LVgf8cJ8dPFC+W5vLpd+eBmdRfBM5Fsem02QS/5shArH4qJPO+rb7+OovEDWX3&#13;
-Iqw8BKYXFrjjOw/zACoWNibichxZTFRawrvG8b+pt3Wsa/peo1qEW+qhoIxcVHAUz660BcDV1yPd&#13;
-1KZf9rwsnnfm3c7bCNsPHXK0P6zN8EN5djDZC65NJi5OuSPpVCYf915aXCxFQhnfcU2wNfzlRKGK&#13;
-JMIGGN7OsGRhbdJrfoNZ7xi+jLBIxYOkEOAtTYfcgWCgelsfWyVxZGrLskivf2o4ki/+jusoNKvM&#13;
-kPS/WhajqVphAF+f5S2aFVwtynqsKX0vDXq6rA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_da382e3e-aa5b-475e-b287-587e0ef4cd28"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tUz3u9OUmPAL9fWlZBfNBLttFTNEamCNS+B9NqaubDD3onRKn3qyh+9y2hPxbt3HSaCfoJoylWQZ&#13;
+dyO4qbeOjA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f4ae32aa-6f14-4f03-9b33-8856c0d4398b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>I0+o0Qf7Zm35aiaLSOlKYU8wscVuy3EOCwq4l1nOvTluXNP+ZSGP6NxBNucaPHHeQsoFpf0IKVLE&#13;
+K/aWIkWpdg==</DigestValue></Reference></SignedInfo><SignatureValue>L+F52x2ZfCT76Zrw8S5jEgZnqcxKBvJSTTpA1FB/s9McvsxxSoFFB8qEmfgfgDunbwRR9vXEY3Bd&#13;
+ezxolMdvrKozHMdTAqeIa3Mi05hwwFrkHl8YzNfKug6gOkcbOk1JG4iQAQPmpdcAoyzVy5UyjJss&#13;
+Hjz8Mu/mLzN1pXx26BQsRVbHu8tbjAXQeMjRgZOFS641zmaH4j7bwDd7xC1SCsO0jgB++n3aMh69&#13;
+ffxz1TVwCHFqKDZMFEp51wQG0VotbtkWO8GuhoM9FORTa08NjYe8amz9L6J3WglMHUjJC5/+QEJL&#13;
+5xbe68ALi2v84CIGqbTgwHHaWyYiX724MnXWAg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -818,4 +828,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5f16a9d7-5cd2-4dbe-9c7f-be682a613e04" Target="#_effce0f7-223d-47fb-a005-a90585a57ff0"><Timestamp>2024-02-08 15:08:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f4ae32aa-6f14-4f03-9b33-8856c0d4398b" Target="#_da382e3e-aa5b-475e-b287-587e0ef4cd28"><Timestamp>2024-02-19 14:35:02</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

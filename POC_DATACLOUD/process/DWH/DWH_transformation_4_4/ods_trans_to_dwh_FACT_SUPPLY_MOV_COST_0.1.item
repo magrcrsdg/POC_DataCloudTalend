@@ -463,7 +463,7 @@
         <DBMapperTableEntries name="PK_FACT_SUPPLY_MOV_COST"/>
         <DBMapperTableEntries name="LOAD_DATE"/>
       </InputTables>
-      <InputTables alias="WASTE_AGR" joinType="LEFT_OUTER_JOIN" name="WASTE_AGR" tableName="DWH.FACT_SUPPLY_WASTE_AGR">
+      <InputTables alias="WASTE_AGR" joinType="INNER_JOIN" name="WASTE_AGR" tableName="DWH.FACT_SUPPLY_WASTE_AGR">
         <DBMapperTableEntries expression="COST.DOCUMENT_NUMBER" join="true" name="DOCUMENT_NUMBER" operator="="/>
         <DBMapperTableEntries expression="COST.DOCUMENT_YEAR" join="true" name="DOCUMENT_YEAR" operator="="/>
         <DBMapperTableEntries expression="TO_DATE(COST.DATE_POSITION, 'YYYYMMDD') " join="true" name="DATE_POSITION" operator="="/>
@@ -484,19 +484,19 @@
       </InputTables>
       <InputTables alias="SUPPLIER" joinType="LEFT_OUTER_JOIN" name="SUPPLIER" tableName="ODS.DIM_SUPPLIER">
         <DBMapperTableEntries name="IOC_MDM_SUPPLIER_ID"/>
-        <DBMapperTableEntries name="IOC_ID"/>
+        <DBMapperTableEntries expression="999" name="IOC_ID" operator="="/>
         <DBMapperTableEntries expression="COST.VENDOR" join="true" name="IOC_SUPPLIER_ID" operator="="/>
         <DBMapperTableEntries expression="" name="MDM_SUPPLIER_ID" operator=""/>
-        <DBMapperTableEntries name="ST_ACTIVE"/>
+        <DBMapperTableEntries expression="1" name="ST_ACTIVE" operator="="/>
         <DBMapperTableEntries name="PK_DIM_SUPPLIER"/>
         <DBMapperTableEntries name="LOAD_DATE"/>
       </InputTables>
-      <InputTables alias="MATERIAL" joinType="LEFT_OUTER_JOIN" name="MATERIAL" tableName="ODS.DIM_MATERIAL">
+      <InputTables alias="MATERIAL" joinType="INNER_JOIN" name="MATERIAL" tableName="ODS.DIM_MATERIAL">
         <DBMapperTableEntries name="IOC_MDM_MATERIAL_ID"/>
-        <DBMapperTableEntries name="IOC_ID"/>
+        <DBMapperTableEntries expression="999" name="IOC_ID" operator="="/>
         <DBMapperTableEntries expression="COST.MATERIAL_NUMBER" join="true" name="IOC_MATERIAL_ID" operator="="/>
         <DBMapperTableEntries expression="" name="MDM_MATERIAL_ID" operator=""/>
-        <DBMapperTableEntries expression="" name="ST_ACTIVE" operator=""/>
+        <DBMapperTableEntries expression="1" name="ST_ACTIVE" operator="="/>
         <DBMapperTableEntries name="PK_DIM_MATERIAL"/>
         <DBMapperTableEntries name="LOAD_DATE"/>
       </InputTables>
@@ -588,12 +588,12 @@
         <DBMapperTableEntries expression="COST.INDUSTRIAL_COST" name="INDUSTRIAL_COST"/>
         <DBMapperTableEntries expression="current_timestamp()" name="TIMESTAMP"/>
         <DBMapperTableEntries expression="WASTE_AGR.F_STANDARD_COST" name="F_STANDARD_COST"/>
-        <DBMapperTableEntries expression="SUPPLIER.IOC_MDM_SUPPLIER_ID" name="SUPPLIER_ID"/>
+        <DBMapperTableEntries expression="coalesce(nullif(SUPPLIER.IOC_MDM_SUPPLIER_ID,''),0) " name="SUPPLIER_ID"/>
         <DBMapperTableEntries expression="COST.COST_CENTER" name="COST_CENTER"/>
         <DBMapperTableEntries expression="COST.REASON_CODE" name="REASON_CODE"/>
         <DBMapperTableEntries expression="COST.SW_PURCHASE_ORDER" name="SW_PURCHASE_ORDER"/>
         <DBMapperTableEntries expression="PLANT_PEAK.COMPANY_ID" name="COMPANY_ID"/>
-        <DBMapperTableEntries expression="Case&#13;&#10;When nvl(Trim(COST.PURCHASE_ORDER),'0') = '0'  Then '0'&#13;&#10;Else PLANT_PEAK.COMPANY_ID||'/'||COST.PURCHASE_ORDER&#13;&#10;End " name="PO_NUMBER"/>
+        <DBMapperTableEntries expression="CASE&#13;&#10;    WHEN COALESCE(NULLIF(TRIM(COST.PURCHASE_ORDER), ''), '0') = '0' THEN '0'&#13;&#10;    ELSE PLANT_PEAK.COMPANY_ID || '/' || COST.PURCHASE_ORDER&#13;&#10;END " name="PO_NUMBER"/>
         <DBMapperTableEntries expression="COST.SAP_ITEM" name="SAP_ITEM"/>
         <DBMapperTableEntries expression="WASTE_AGR.SPECIAL_STOCK" name="SPECIAL_STOCK"/>
         <DBMapperTableEntries expression="WASTE_AGR.ITEM_CATEGORY" name="ITEM_CATEGORY"/>
@@ -1210,13 +1210,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_98908cb6-4cbd-4099-be74-21d07aa81a9c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sQejxCOObVMnmBMmTAzmZFZXmYLvBYmEvLXtN4H5GsgX2GwHvp4n6c3kZTeWPA8NHp9Jo1lR7h7M&#13;
-cPbnQoYXIw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a44baf5d-3d96-4d60-8c12-8ab44aff58e1"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sQVvzdzfEzW/fx6bcCUUVKi+3icNigZFLya2ZXAhbpSOk5wh1oNK7xzu0C2RzakAGM2LjsVWFQvT&#13;
-KSuoRXSfoQ==</DigestValue></Reference></SignedInfo><SignatureValue>fLNRmLMSHCjzLRD9Rtut6+zmJojqrmwn+v42rFF4cxKjze7S7X6IDBb5eEbpkDgt7Ij8XH9MlU5R&#13;
-9E9SBt2PLVdsnTiQJ06hd3lvbDrtXmL489PONPHBub2AqGEDLTTrmPahZZBHX19WBJz/XlFnM0mJ&#13;
-bv6LhttVeujBmI7ot/xk+ytHVpiGaN1ue98IIEpRCVKRinK3ln9zn5fdjDFPhX2i3N0PJlQecfkv&#13;
-E0LxDQxyCae2Nlr1uZlKU0W6TxK6VD2V4TD5BKVeY6WaqulpInP6qHJ84VkzMsdG6LkMo557IIbZ&#13;
-3vh7mVWFfH22bn6/5fbw2DGGlNeFRsk6Kr45kA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_10a4c785-8241-4233-86c3-85a83d807e64"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BKST0lph/xJoMEwfHRICadRXkC1m77+pYEh753Tn/U1SHXN95KAMq3525SwmclLAiP2hARmEwkHd&#13;
+MD11jIEgFg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c514030a-27c8-4fa7-9f01-27c26a0f52b7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>51kDCpwJqN/3t8vDilg/IEGMRF7mW3E8JSMB8E9aWM1NJqhjHGvulxjG9QsaErSJP76c4qv2qaXj&#13;
+lMaWD9rTBQ==</DigestValue></Reference></SignedInfo><SignatureValue>pcBgHDGVhlE12M1lKPQpP2oCdWPZb+emAM/JSeXzc0KcFJf+R/7gneuT99HxXH5cl/mI/WQdOz8f&#13;
+Zut6fqrGRgovdcnXqTEmGw4gq3MEgAx1g/O7qSB9NqPRHEymbW/7UGppx00PQqC63XD/nLMwh1EU&#13;
+WS5AEy2ygNf8R2CLP1IChwRMmKI9JrOlbhC8DhQFFDJqsS0M5MmvE2UG/UHbDSkXM0Uh2vMeJ1Ja&#13;
+cSlarw7WGNvVyAscznDeQHVal/ZouuZJ1nxSGbyxioie1MoDCEv5vRseP/RQAGjl+eKbRSclwlun&#13;
+hwK85ES/avcoFGcWWs/Cx5078db6TQdXEHSZ3A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1238,4 +1238,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a44baf5d-3d96-4d60-8c12-8ab44aff58e1" Target="#_98908cb6-4cbd-4099-be74-21d07aa81a9c"><Timestamp>2024-02-07 10:11:05</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c514030a-27c8-4fa7-9f01-27c26a0f52b7" Target="#_10a4c785-8241-4233-86c3-85a83d807e64"><Timestamp>2024-02-19 07:55:35</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
