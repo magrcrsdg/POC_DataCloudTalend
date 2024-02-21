@@ -372,7 +372,7 @@
     "version" : "Latest",
     "type" : "routine"
   }, {
-    "id" : "_8Z7TMLCJEe6qSuF81liuCg - ODS_EXCHANGE_RATES",
+    "id" : "_8Z7TMLCJEe6qSuF81liuCg - ODS_EXCHANGE_RATES_2",
     "version" : "Latest",
     "type" : "schema"
   }, {
@@ -1385,29 +1385,6 @@
   } ]
 }, {
   "baseItem" : {
-    "id" : "_vh0PsMwREe60IaSeE158ig",
-    "version" : "0.1",
-    "type" : "job"
-  },
-  "relatedItems" : [ {
-    "id" : "POC_DATACLOUD:_YVtvcLxNEe6VvpxUd_Akig",
-    "version" : "Latest",
-    "type" : "job"
-  }, {
-    "id" : "POC_DATACLOUD:_ZOO3gL-dEe6fYIbtfrMGCw",
-    "version" : "Latest",
-    "type" : "job"
-  }, {
-    "id" : "POC_DATACLOUD:_gMJZgMAZEe6fYIbtfrMGCw",
-    "version" : "Latest",
-    "type" : "job"
-  }, {
-    "id" : "POC_DATACLOUD:_sqjrELtwEe6oN5WCLRuMWg",
-    "version" : "Latest",
-    "type" : "job"
-  } ]
-}, {
-  "baseItem" : {
     "id" : "_w9p38LtwEe6oN5WCLRuMWg",
     "version" : "0.1",
     "type" : "job"
@@ -1474,18 +1451,6 @@
     "id" : "_Z3wO4L9LEe6fYIbtfrMGCw",
     "version" : "Latest",
     "type" : "property"
-  }, {
-    "id" : "_oW7-ELnhEe6H2tT7rm3hlw",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
-    "id" : "_Z3wO4L9LEe6fYIbtfrMGCw - ioc_mdm_currency",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
-    "id" : "_oW7-ELnhEe6H2tT7rm3hlw - DIM_CURRENCY",
-    "version" : "Latest",
-    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
