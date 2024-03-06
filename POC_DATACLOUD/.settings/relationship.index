@@ -451,6 +451,10 @@
     "id" : "_mNebINfFEe6c3_8Mtk7lPQ - metadata",
     "version" : "Latest",
     "type" : "schema"
+  }, {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw - FACT_MSEG",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
@@ -686,6 +690,40 @@
     "type" : "property"
   }, {
     "id" : "_HprTsLCLEe6qSuF81liuCg - ZZZE_MOV_COST",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_TdcMUNgBEe6m-ejTzGvP3g",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "POC_DATACLOUD:_U6rmYNgBEe6m-ejTzGvP3g",
+    "version" : "Latest",
+    "type" : "job"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_U6rmYNgBEe6m-ejTzGvP3g",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "built-in",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_kMHwINgBEe6m-ejTzGvP3g - metadata",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_oW7-ELnhEe6H2tT7rm3hlw - FACT_ZZZE_MOV_COST",
     "version" : "Latest",
     "type" : "schema"
   } ]
