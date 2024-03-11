@@ -587,7 +587,7 @@
         <DBMapperTableEntries expression="SUPPLY_WASTE.COST_CENTER" name="COST_CENTER"/>
         <DBMapperTableEntries expression="SUPPLY_WASTE.SPECIAL_STOCK" name="SPECIAL_STOCK"/>
         <DBMapperTableEntries expression="SUPPLY_WASTE.ITEM_CATEGORY" name="ITEM_CATEGORY"/>
-        <DBMapperTableEntries expression="0" name="SUPPLIER_BATCH_ID"/>
+        <DBMapperTableEntries expression="SUPPLY_WASTE.SUPPLIER_ID" name="SUPPLIER_BATCH_ID"/>
         <DBMapperTableEntries expression="SUPPLY_WASTE.ORDER_TYPE_ID" name="ORDER_TYPE_ID"/>
         <DBMapperTableEntries expression="SUPPLY_WASTE.MONTH_ID" name="MONTH_ID"/>
         <DBMapperTableEntries expression="DATE.WEEK_ID" name="WEEK_ID"/>
@@ -605,9 +605,9 @@
         <DBMapperTableEntries expression="SUPPLY_WASTE.CURRENCY_ID_LC" name="CURRENCY_ID_LC"/>
         <DBMapperTableEntries expression="SUPPLY_WASTE.CURRENCY_ID_GC" name="CURRENCY_ID_GC"/>
         <DBMapperTableEntries expression="SUPPLY_WASTE.F_EXCHANGE_RATE_GC" name="F_EXCHANGE_RATE_GC"/>
-        <DBMapperTableEntries expression="hash (&#13;&#10;&#9;TO_VARIANT(DATE.WEEK_ID)&#13;&#10;&#9;|| TO_VARIANT(SUPPLY_WASTE.MONTH_ID)&#13;&#10;&#9;|| TO_VARIANT(SUPPLY_WASTE.IOC_ID)&#13;&#10;) " name="PK_FACT_W_SUPPLY_WASTE"/>
+        <DBMapperTableEntries expression="hash (&#13;&#10;&#9;TO_VARIANT(DATE.WEEK_ID)&#13;&#10;&#9;|| TO_VARIANT(SUPPLY_WASTE.MONTH_ID)&#13;&#10;&#9;|| TO_VARIANT(SUPPLY_WASTE.IOC_ID)&#13;&#10;&#9;|| TO_VARIANT(SUPPLY_WASTE.MOVEMENT_TYPE_ID)&#13;&#10;|| TO_VARIANT(SUPPLY_WASTE.MATERIAL_ID)&#13;&#10;|| TO_VARIANT(SUPPLY_WASTE.PLANT_PEAK_ID)&#13;&#10;|| TO_VARIANT(SUPPLY_WASTE.SHIP_TO)&#13;&#10;) " name="PK_FACT_W_SUPPLY_WASTE"/>
         <DBMapperTableEntries expression="current_date()" name="LOAD_DATE"/>
-        <FilterEntries expression="GROUP BY&#13;&#10;    SUPPLY_WASTE.MOVEMENT_TYPE_ID,&#13;&#10;    SUPPLY_WASTE.MATERIAL_ID,&#13;&#10;    SUPPLY_WASTE.PLANT_PEAK_ID,&#13;&#10;    SUPPLY_WASTE.BASE_UNIT_ID,&#13;&#10;    SUPPLY_WASTE.PARALLEL_UNIT_ID,&#13;&#10;    SUPPLY_WASTE.ENTRY_UNIT_ID,&#13;&#10;    SUPPLY_WASTE.SHIP_TO,&#13;&#10;    SUPPLY_WASTE.SOLD_TO,&#13;&#10;    SUPPLY_WASTE.COMPANY_ID,&#13;&#10;    SUPPLY_WASTE.REASON_ID,&#13;&#10;    SUPPLY_WASTE.SW_PURCHASE_ORDER,&#13;&#10;    SUPPLY_WASTE.SUPPLIER_ID,&#13;&#10;    SUPPLY_WASTE.COST_CENTER,&#13;&#10;    SUPPLY_WASTE.SPECIAL_STOCK,&#13;&#10;    SUPPLY_WASTE.ITEM_CATEGORY,&#13;&#10;    coalesce(nullif(right(SUPPLY_WASTE.BATCH_ID,6),''),0),&#13;&#10;    SUPPLY_WASTE.ORDER_TYPE_ID,&#13;&#10;    DATE.WEEK_ID,&#13;&#10;    SUPPLY_WASTE.SKU_ID,&#13;&#10;    SUPPLY_WASTE.IOC_ID,&#13;&#10;    SUPPLY_WASTE.CURRENCY_ID_LC,&#13;&#10;    SUPPLY_WASTE.CURRENCY_ID_GC,&#13;&#10;    SUPPLY_WASTE.F_EXCHANGE_RATE_GC,&#13;&#10;&#9;SUPPLY_WASTE.MONTH_ID " filterKind="OTHER_FILTER" name="newFilter17"/>
+        <FilterEntries expression="GROUP BY&#13;&#10;    SUPPLY_WASTE.MOVEMENT_TYPE_ID,&#13;&#10;    SUPPLY_WASTE.MATERIAL_ID,&#13;&#10;    SUPPLY_WASTE.PLANT_PEAK_ID,&#13;&#10;    SUPPLY_WASTE.BASE_UNIT_ID,&#13;&#10;    SUPPLY_WASTE.PARALLEL_UNIT_ID,&#13;&#10;    SUPPLY_WASTE.ENTRY_UNIT_ID,&#13;&#10;    SUPPLY_WASTE.SHIP_TO,&#13;&#10;    SUPPLY_WASTE.SOLD_TO,&#13;&#10;    SUPPLY_WASTE.COMPANY_ID,&#13;&#10;    SUPPLY_WASTE.REASON_ID,&#13;&#10;    SUPPLY_WASTE.SW_PURCHASE_ORDER,&#13;&#10;    SUPPLY_WASTE.SUPPLIER_ID,&#13;&#10;    SUPPLY_WASTE.COST_CENTER,&#13;&#10;    SUPPLY_WASTE.SPECIAL_STOCK,&#13;&#10;    SUPPLY_WASTE.ITEM_CATEGORY,&#13;&#10;&#9;IFF(TRIM(IFNULL(right(SUPPLY_WASTE.BATCH_ID,6), '')) = '', '0', TRIM(right(SUPPLY_WASTE.BATCH_ID,6))),&#13;&#10;    SUPPLY_WASTE.ORDER_TYPE_ID,&#13;&#10;    DATE.WEEK_ID,&#13;&#10;    SUPPLY_WASTE.SKU_ID,&#13;&#10;    SUPPLY_WASTE.IOC_ID,&#13;&#10;    SUPPLY_WASTE.CURRENCY_ID_LC,&#13;&#10;    SUPPLY_WASTE.CURRENCY_ID_GC,&#13;&#10;    SUPPLY_WASTE.F_EXCHANGE_RATE_GC,&#13;&#10;&#9;SUPPLY_WASTE.MONTH_ID " filterKind="OTHER_FILTER" name="newFilter17"/>
       </OutputTables>
     </nodeData>
   </node>
@@ -1046,13 +1046,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4e3fa640-4fb2-4600-9d63-956523455869"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fdq85Y5nFyZ1aC31c2tLMFdT+pKUGlKqaxxLGimJOcGIqVL+agx05QPYOdxUiSDxyrKgZ9siSxLd&#13;
-wDpJluOXYw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c448db46-b9e9-43c7-8784-903b8d095817"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>C4yA6urQzJCPvkEST6MBaE061FI3Wk/2n7Gv0d+5O4Lc0qrR87QLnajyJXhryVHupTHtELEaPSie&#13;
-Q4Iau8AE7A==</DigestValue></Reference></SignedInfo><SignatureValue>lzhFudOMnH82j3wPUA7NdkQk0eZ4cKsFPk4VRznzc3UWI94kuTAh9j3wKXnhr/X5Bx8c1pHu5/+j&#13;
-TJqAQdL9zkFpVSQjDQbs/kY5V6fn2CGNKzQxCyVSM4pqMKn7YvZnczVO20lh8jOLmUePrkWPOxNb&#13;
-BT3tAAlu9NgETWnOdJULSuNfUvgJWh5wCZDG/nOCTcNSYwsk/7uUnsTyjq5t0I1p2WpsWq3VzUJC&#13;
-6HCcixBa3WI1NpLyj7zEaG8fQ5S/qHlRtQ2bcjRCwSqQJAfVOzOFb9pWTlJ2gjXolLDTKteYGy2+&#13;
-v3OSyrBEBWrOw+DzvFm0XvJJGlNs+DgeTkOYyg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9629526b-18fa-4171-95c9-60b043dcec6d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gATQRWrLVwIT0hWAz1k25iad4SfF3DejcVdMEE/dXPQ++SAj+CeihU/6FZsKp1dBnj/S6Qd5VQxS&#13;
+Qns/UCKReQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1cac29dd-67e4-4260-8f1a-977eaaff0092"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2ntlQCcwiVsETUIUe/AnS/TrDAsqo5fkP/uenK62vFPNHHjjado/FZt5AX+mkfmN9giOzuuFSGv+&#13;
+i5pe2ss/2w==</DigestValue></Reference></SignedInfo><SignatureValue>ApdxV/8fFI7J2KCayyzbPlOyZqb0a2rgH006hNzz+MD5sUPX+yNHuY4/CMw3zpDQNZP8NEEtdBX+&#13;
+0o0IHBlJIXwUmGt4GUEmkCm7GnnlSMvAkIENijaHviQfa7m+vd7eu2kBEy9eNLRsYig2kQj6OvuS&#13;
+DxHdADlmQfgAnLrfjEQnejnUn0A09Oh4Qihz890KrNPPIyNktpNgA1bMiWSAKJvczp5mCVofR1kF&#13;
+JezbSpZjKuQPqBkFSei/p9CRnbFj+2RzTJhYEals3fyuPhLKsbvGm0Zqu+COA9HZd18JaiBtlG1A&#13;
+qce3qLeMz7kqmYjsYWNObVJz1AUqcnH3qIHMrQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1074,4 +1074,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c448db46-b9e9-43c7-8784-903b8d095817" Target="#_4e3fa640-4fb2-4600-9d63-956523455869"><Timestamp>2024-02-16 13:14:16</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1cac29dd-67e4-4260-8f1a-977eaaff0092" Target="#_9629526b-18fa-4171-95c9-60b043dcec6d"><Timestamp>2024-03-10 18:03:19</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

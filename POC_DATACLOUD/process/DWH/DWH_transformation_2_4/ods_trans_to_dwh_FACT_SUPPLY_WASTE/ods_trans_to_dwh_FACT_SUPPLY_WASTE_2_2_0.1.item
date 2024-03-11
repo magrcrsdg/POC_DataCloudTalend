@@ -2,7 +2,7 @@
   <context confirmationNeeded="false" hide="false" name="Default"/>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="576"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="608"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="416"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
@@ -108,7 +108,7 @@
     <routinesParameter id="_KT11EL9LEe6fYIbtfrMGCw" name="TalendString"/>
     <routinesParameter id="_KUANIL9LEe6fYIbtfrMGCw" name="TalendStringUtil"/>
   </parameters>
-  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-480" posY="-352">
+  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-480" posY="-224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_15"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_1OwocLoKEe6H2tT7rm3hlw - FACT_SUPPLY_WASTE"/>
@@ -310,7 +310,7 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tELTMap" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-160" posY="-224">
+  <node componentName="tELTMap" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-32" posY="-224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTMap_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
@@ -718,7 +718,7 @@
         <DBMapperTableEntries expression="SUPPLY_WASTE.SO_NUMBER" name="SO_NUMBER"/>
         <DBMapperTableEntries expression="SUPPLY_WASTE.SALES_ORDER_TYPE_ID" name="SALES_ORDER_TYPE_ID"/>
         <DBMapperTableEntries expression="999" name="IOC_ID"/>
-        <DBMapperTableEntries expression="current_date()" name="DATE_ID"/>
+        <DBMapperTableEntries expression="SUPPLY_WASTE.DATE_ID " name="DATE_ID"/>
         <DBMapperTableEntries expression="SUPPLY_WASTE.F_MATERIAL_COST_LC" name="F_MATERIAL_COST_LC"/>
         <DBMapperTableEntries expression="SUPPLY_WASTE.F_MATERIAL_COST_GC" name="F_MATERIAL_COST_GC"/>
         <DBMapperTableEntries expression="SUPPLY_WASTE.F_DELIVERY_COST_LC" name="F_DELIVERY_COST_LC"/>
@@ -728,13 +728,13 @@
         <DBMapperTableEntries expression="SUPPLY_WASTE.F_EXCHANGE_RATE_GC" name="F_EXCHANGE_RATE_GC"/>
         <DBMapperTableEntries expression="SUPPLY_WASTE.F_MOV_ACTUAL_PRICE_LC" name="F_MOV_ACTUAL_PRICE_LC"/>
         <DBMapperTableEntries expression="SUPPLY_WASTE.F_MOV_ACTUAL_PRICE_GC" name="F_MOV_ACTUAL_PRICE_GC"/>
-        <DBMapperTableEntries expression="HASH(&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.DOCUMENT_NUMBER) ||&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.DOCUMENT_YEAR)  ||&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.DOCUMENT_POSITION) ||&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.COMPANY_ID) ||&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.SAP_ITEM) ||&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.IOC_ID) &#13;&#10;) " name="PK_FACT_SUPPLY_WASTE_AGG_TOT"/>
+        <DBMapperTableEntries expression="HASH(&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.DOCUMENT_NUMBER) ||&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.DOCUMENT_YEAR)  ||&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.DOCUMENT_POSITION) ||&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.COMPANY_ID) ||&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.SAP_ITEM) ||&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.IOC_ID) ||&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.SO_NUMBER)&#13;&#10;) " name="PK_FACT_SUPPLY_WASTE_AGG_TOT"/>
         <DBMapperTableEntries expression="current_date()" name="LOAD_DATE"/>
-        <FilterEntries expression="GROUP BY&#13;&#10;    SUPPLY_WASTE.DOCUMENT_NUMBER,&#13;&#10;    SUPPLY_WASTE.DOCUMENT_YEAR,&#13;&#10;    SUPPLY_WASTE.DOCUMENT_POSITION,&#13;&#10;    SUPPLY_WASTE.ORDER_NUMBER,&#13;&#10;    SUPPLY_WASTE.DATE_POSITION,&#13;&#10;    SUPPLY_WASTE.MOVEMENT_TYPE_ID,&#13;&#10;    SUPPLY_WASTE.MATERIAL_ID,&#13;&#10;    SUPPLY_WASTE.PLANT_PEAK_ID,&#13;&#10;    SUPPLY_WASTE.F_QUANTITY,&#13;&#10;    SUPPLY_WASTE.BASE_UNIT_ID,&#13;&#10;    SUPPLY_WASTE.F_QUANTITY_PARALLEL,&#13;&#10;    SUPPLY_WASTE.PARALLEL_UNIT_ID,&#13;&#10;    SUPPLY_WASTE.F_MATERIAL_COST,&#13;&#10;    SUPPLY_WASTE.CURRENCY_ID,&#13;&#10;    SUPPLY_WASTE.STORAGE_LOCATION_ID,&#13;&#10;    SUPPLY_WASTE.BATCH_ID,&#13;&#10;    SUPPLY_WASTE.F_QUANTITY_ENTRY,&#13;&#10;    SUPPLY_WASTE.ENTRY_UNIT_ID,&#13;&#10;    SUPPLY_WASTE.SHIP_TO,&#13;&#10;    SUPPLY_WASTE.SOLD_TO,&#13;&#10;    SUPPLY_WASTE.DELIVERY_COST,&#13;&#10;    SUPPLY_WASTE.COMPANY_ID,&#13;&#10;    SUPPLY_WASTE.TIMESTAMP,&#13;&#10;    SUPPLY_WASTE.REASON_ID,&#13;&#10;    SUPPLY_WASTE.F_MATERIAL_COST_2,&#13;&#10;    SUPPLY_WASTE.SW_PURCHASE_ORDER,&#13;&#10;    SUPPLY_WASTE.SUPPLIER_ID,&#13;&#10;    SUPPLY_WASTE.PO_NUMBER,&#13;&#10;    SUPPLY_WASTE.SAP_USER,&#13;&#10;    SUPPLY_WASTE.COST_CENTER,&#13;&#10;    SUPPLY_WASTE.G_L_ACCT,&#13;&#10;    SUPPLY_WASTE.VALUE_STRING,&#13;&#10;    SUPPLY_WASTE.SAP_ITEM,&#13;&#10;    SUPPLY_WASTE.SPECIAL_STOCK,&#13;&#10;    SUPPLY_WASTE.ITEM_CATEGORY,&#13;&#10;    SUPPLY_WASTE.COMMENTS,&#13;&#10;    SUPPLY_WASTE.DRP_PLANNER_ID,&#13;&#10;    SUPPLY_WASTE.SNP_PLANNER_ID,&#13;&#10;    SUPPLY_WASTE.ORDER_TYPE_ID,&#13;&#10;    SUPPLY_WASTE.MONTH_ID,&#13;&#10;    SUPPLY_WASTE.SKU_ID,&#13;&#10;    SUPPLY_WASTE.F_MOV_ACTUAL_PRICE,&#13;&#10;    SUPPLY_WASTE.F_QUANTITY_VU,&#13;&#10;    SUPPLY_WASTE.REFERENCE_NUMBER,&#13;&#10;    SUPPLY_WASTE.IND_SHELF_LIFE,&#13;&#10;    SUPPLY_WASTE.SO_NUMBER,&#13;&#10;    SUPPLY_WASTE.SALES_ORDER_TYPE_ID,&#13;&#10;    SUPPLY_WASTE.F_MATERIAL_COST_LC,&#13;&#10;    SUPPLY_WASTE.F_MATERIAL_COST_GC,&#13;&#10;    SUPPLY_WASTE.F_DELIVERY_COST_LC,&#13;&#10;    SUPPLY_WASTE.F_DELIVERY_COST_GC,&#13;&#10;    SUPPLY_WASTE.CURRENCY_ID_LC,&#13;&#10;    SUPPLY_WASTE.CURRENCY_ID_GC,&#13;&#10;    SUPPLY_WASTE.F_EXCHANGE_RATE_GC,&#13;&#10;    SUPPLY_WASTE.F_MOV_ACTUAL_PRICE_LC,&#13;&#10;    SUPPLY_WASTE.F_MOV_ACTUAL_PRICE_GC, " filterKind="OTHER_FILTER" name="newFilter7"/>
+        <FilterEntries expression="GROUP BY&#13;&#10;    SUPPLY_WASTE.DOCUMENT_NUMBER,&#13;&#10;    SUPPLY_WASTE.DOCUMENT_YEAR,&#13;&#10;    SUPPLY_WASTE.DOCUMENT_POSITION,&#13;&#10;    SUPPLY_WASTE.ORDER_NUMBER,&#13;&#10;    SUPPLY_WASTE.DATE_POSITION,&#13;&#10;    SUPPLY_WASTE.MOVEMENT_TYPE_ID,&#13;&#10;    SUPPLY_WASTE.MATERIAL_ID,&#13;&#10;    SUPPLY_WASTE.PLANT_PEAK_ID,&#13;&#10;    SUPPLY_WASTE.F_QUANTITY,&#13;&#10;    SUPPLY_WASTE.BASE_UNIT_ID,&#13;&#10;    SUPPLY_WASTE.F_QUANTITY_PARALLEL,&#13;&#10;    SUPPLY_WASTE.PARALLEL_UNIT_ID,&#13;&#10;    SUPPLY_WASTE.F_MATERIAL_COST,&#13;&#10;    SUPPLY_WASTE.CURRENCY_ID,&#13;&#10;    SUPPLY_WASTE.STORAGE_LOCATION_ID,&#13;&#10;    SUPPLY_WASTE.BATCH_ID,&#13;&#10;    SUPPLY_WASTE.F_QUANTITY_ENTRY,&#13;&#10;    SUPPLY_WASTE.ENTRY_UNIT_ID,&#13;&#10;    SUPPLY_WASTE.SHIP_TO,&#13;&#10;    SUPPLY_WASTE.SOLD_TO,&#13;&#10;    SUPPLY_WASTE.DELIVERY_COST,&#13;&#10;    SUPPLY_WASTE.COMPANY_ID,&#13;&#10;    SUPPLY_WASTE.TIMESTAMP,&#13;&#10;    SUPPLY_WASTE.REASON_ID,&#13;&#10;    SUPPLY_WASTE.F_MATERIAL_COST_2,&#13;&#10;    SUPPLY_WASTE.SW_PURCHASE_ORDER,&#13;&#10;    SUPPLY_WASTE.SUPPLIER_ID,&#13;&#10;    SUPPLY_WASTE.PO_NUMBER,&#13;&#10;    SUPPLY_WASTE.SAP_USER,&#13;&#10;    SUPPLY_WASTE.COST_CENTER,&#13;&#10;    SUPPLY_WASTE.G_L_ACCT,&#13;&#10;    SUPPLY_WASTE.VALUE_STRING,&#13;&#10;    SUPPLY_WASTE.SAP_ITEM,&#13;&#10;    SUPPLY_WASTE.SPECIAL_STOCK,&#13;&#10;    SUPPLY_WASTE.ITEM_CATEGORY,&#13;&#10;    SUPPLY_WASTE.COMMENTS,&#13;&#10;    SUPPLY_WASTE.DRP_PLANNER_ID,&#13;&#10;    SUPPLY_WASTE.SNP_PLANNER_ID,&#13;&#10;    SUPPLY_WASTE.ORDER_TYPE_ID,&#13;&#10;    SUPPLY_WASTE.MONTH_ID,&#13;&#10;    SUPPLY_WASTE.SKU_ID,&#13;&#10;    SUPPLY_WASTE.F_MOV_ACTUAL_PRICE,&#13;&#10;    SUPPLY_WASTE.F_QUANTITY_VU,&#13;&#10;    SUPPLY_WASTE.REFERENCE_NUMBER,&#13;&#10;    SUPPLY_WASTE.IND_SHELF_LIFE,&#13;&#10;    SUPPLY_WASTE.SO_NUMBER,&#13;&#10;    SUPPLY_WASTE.SALES_ORDER_TYPE_ID,&#13;&#10;    SUPPLY_WASTE.F_MATERIAL_COST_LC,&#13;&#10;    SUPPLY_WASTE.F_MATERIAL_COST_GC,&#13;&#10;    SUPPLY_WASTE.F_DELIVERY_COST_LC,&#13;&#10;    SUPPLY_WASTE.F_DELIVERY_COST_GC,&#13;&#10;    SUPPLY_WASTE.CURRENCY_ID_LC,&#13;&#10;    SUPPLY_WASTE.CURRENCY_ID_GC,&#13;&#10;    SUPPLY_WASTE.F_EXCHANGE_RATE_GC,&#13;&#10;    SUPPLY_WASTE.F_MOV_ACTUAL_PRICE_LC,&#13;&#10;    SUPPLY_WASTE.F_MOV_ACTUAL_PRICE_GC,&#13;&#10;  SUPPLY_WASTE.IOC_ID,&#13;&#10; SUPPLY_WASTE.DATE_ID " filterKind="OTHER_FILTER" name="newFilter7"/>
       </OutputTables>
     </nodeData>
   </node>
-  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-480" posY="-224">
+  <node componentName="tELTInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-480" posY="-352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTInput_1"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_1OwocLoKEe6H2tT7rm3hlw - FACT_SUPPLY_WASTE_AGG_TOT"/>
@@ -938,7 +938,7 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tELTOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="-224">
+  <node componentName="tELTOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="-224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTOutput_1"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CLOSED_LIST" name="CREATE_TABLE_TYPE" show="false" value="SET"/>
@@ -1278,7 +1278,7 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tELTOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="-352">
+  <node componentName="tELTOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="-352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTOutput_2"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CLOSED_LIST" name="CREATE_TABLE_TYPE" show="false" value="SET"/>
@@ -1351,13 +1351,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_fdb62301-5c78-4818-ad1e-463e345c9efa"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>4RjY/TBieIJ4orTCbPTpM0BQBdS1Mg5NP35RbrLx66TsmgdEt9d53Z3mB2icpKCwCx2wyE/XShwh&#13;
-BcPjK0ffDg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1db72f12-c7f3-4b5e-99d4-e0e85a762163"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ATmYjhJ6OGRhgOGzSqGVshu99w1JZHz5i0kkVSQVl7mr5PQNZS/Rrly8jZ/U6qgloO2f/hiDmPXr&#13;
-NO+dzyKZzg==</DigestValue></Reference></SignedInfo><SignatureValue>OkSx6UlT6wPAwTNknjNLsw5F52iQzgepFnYv0QBbG7MB6n3dFnwjAN5fET+HN+qJ5C/vGalnKTHc&#13;
-vOV577MR5Y53V4OtdRPduDvWIxal/I3SohuBLPSr5f0YGDmrhE5QNMpUNSao+Q79B4xaMqm0pkvh&#13;
-gRevPPH1OisLgGMdS8nz+28wGSQkgmK6ZgufcYwgGpEiEdToen8gcy8840XYKN4OR4EkCHlO23Vn&#13;
-3hzKtgOHR70ilgEy/89+FjBgkF5LlPuYDkTx76yY2gwizgJTKKHN365k52whC7onUp4/W5C/ONMe&#13;
-P0Lej6QtarurgHvCrLKoZPXRHfXCQFMpxYErtw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3c894fda-3f6b-4b03-b4fb-cdc62cabb29b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>MB73+AL0lBgKenh8tK42vb3h5fQ0jwpcy9rlYLWw3/CSPOvBh4mLI8jTrbTCOJt72Zi3F0JgHnEz&#13;
+5/tXedNSVg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_742bfa20-dfb7-47d1-be86-f847832fbe15"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>yFo/E05lUddZv3wN53eJTgCrBaeb0fKF7eFTKxezQMAKABcmPQP2BWaRi24UYoJLHq/MkjqHDhEG&#13;
+Pl4QlEfFmg==</DigestValue></Reference></SignedInfo><SignatureValue>gMD/rSywYY90kRLlr9tfMUUq9XveMABswpGyL6pQeuE20zjHJhId+s78fotkzJYVWpm/cLILfDYm&#13;
+MmOEU2it8w6At/Q9XqddEsf7aH1XVl1NWXSgD7mYzDTAV0+mRDts7B46OEWBGtJ7a1zT8iQlEwZW&#13;
+T+8n7wpt1S7rT4A8irawLrLE32c/cN3GFQpSadqmOio1fsSDxB89rfylHPpjU2xcGllGW+Mrr+SO&#13;
+7nuVWOCLh1H+KKiVaqRGc/UQyoQ0R4PWSaWY93QMnz45wunGKuAkLi/B/xWGFAfXDzKjw8w48K19&#13;
+ulLhH+BJkH0Nj1OeIGMyUALsTWSPbsm1CMmCIA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1379,4 +1379,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1db72f12-c7f3-4b5e-99d4-e0e85a762163" Target="#_fdb62301-5c78-4818-ad1e-463e345c9efa"><Timestamp>2024-02-16 12:38:42</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_742bfa20-dfb7-47d1-be86-f847832fbe15" Target="#_3c894fda-3f6b-4b03-b4fb-cdc62cabb29b"><Timestamp>2024-03-11 12:39:14</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

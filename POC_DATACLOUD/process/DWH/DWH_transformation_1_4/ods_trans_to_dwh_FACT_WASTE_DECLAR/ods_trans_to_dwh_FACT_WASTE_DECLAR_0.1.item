@@ -369,7 +369,6 @@
         <DBMapperTableEntries name="GRUND"/>
         <DBMapperTableEntries name="SAKTO"/>
         <DBMapperTableEntries name="BUSTW"/>
-        <DBMapperTableEntries name="USNAM"/>
         <DBMapperTableEntries name="CWM_MENGE"/>
         <DBMapperTableEntries name="CWM_MEINS"/>
         <DBMapperTableEntries name="PK_FACT_MSEG"/>
@@ -471,7 +470,7 @@
         <DBMapperTableEntries expression="MKPF.MBLNR" name="DOCUMENT_NUMBER"/>
         <DBMapperTableEntries expression="MKPF.MJAHR" name="DOCUMENT_YEAR"/>
         <DBMapperTableEntries expression="MSEG.ZEILE" name="DOCUMENT_POSITION"/>
-        <DBMapperTableEntries expression="COALESCE(IFNULL(TRIM(MSEG.AUFNR),''),'0')" name="ORDER_NUMBER"/>
+        <DBMapperTableEntries expression="IFF(TRIM(IFNULL(MSEG.AUFNR, '')) = '', '0', TRIM(MSEG.AUFNR)) " name="ORDER_NUMBER"/>
         <DBMapperTableEntries expression="MKPF.BUDAT" name="DATE_POSITION"/>
         <DBMapperTableEntries expression="MSEG.BWART" name="MOVEMENT_TYPE"/>
         <DBMapperTableEntries expression="MSEG.MATNR" name="MATERIAL_NUMBER"/>
@@ -482,8 +481,8 @@
         <DBMapperTableEntries expression="MSEG.CWM_MEINS" name="UNIT_MEASURE_UNIT"/>
         <DBMapperTableEntries expression="MSEG.DMBTR" name="MATERIAL_COST"/>
         <DBMapperTableEntries expression="MSEG.WAERS" name="CURRENCY_CODE"/>
-        <DBMapperTableEntries expression="COALESCE(IFNULL(TRIM(MSEG.LGORT),''),'0000')" name="STORAGE_LOCATION_ID"/>
-        <DBMapperTableEntries expression="COALESCE(IFNULL(TRIM(MSEG.CHARG),''),'0')" name="BATCH_ID"/>
+        <DBMapperTableEntries expression="IFF(TRIM(IFNULL(MSEG.LGORT, '')) = '', '0000', TRIM(MSEG.LGORT)) " name="STORAGE_LOCATION_ID"/>
+        <DBMapperTableEntries expression="IFF(TRIM(IFNULL(MSEG.CHARG, '')) = '', '0000', TRIM(MSEG.CHARG)) " name="BATCH_ID"/>
         <DBMapperTableEntries expression="MSEG.ERFMG" name="QUANTITY_ENTRY"/>
         <DBMapperTableEntries expression="MSEG.ERFME" name="UNIT_MEASURE_ENTRY"/>
         <DBMapperTableEntries expression="MSEG.WEMPF" name="SHIP_TO"/>
@@ -498,8 +497,8 @@
         <DBMapperTableEntries expression="MSEG.KOSTL" name="COST_CENTER"/>
         <DBMapperTableEntries expression="MSEG.SAKTO" name="GL_ACCT"/>
         <DBMapperTableEntries expression="MSEG.BUSTW" name="VALUE_STRING"/>
-        <DBMapperTableEntries expression="Case &#13;&#10;When (MSEG.BWART in ('101', '102')  AND nvl(trim(MSEG.EBELN),-1) =  '-1' )  Then 0&#13;&#10;Else 1&#13;&#10;End " name="SW_PURCHASE_ORDER"/>
-        <DBMapperTableEntries expression="COALESCE(IFNULL(TRIM(MSEG.EBELP),''),'0')" name="SAP_ITEM"/>
+        <DBMapperTableEntries expression="Case &#13;&#10;When (MSEG.BWART in ('101', '102')  AND IFF(TRIM(IFNULL(MSEG.EBELN, '')) = '', '-1', TRIM(MSEG.EBELN)) =  '-1' )  Then 0&#13;&#10;Else 1&#13;&#10;End " name="SW_PURCHASE_ORDER"/>
+        <DBMapperTableEntries expression="IFF(TRIM(IFNULL(MSEG.EBELP, '')) = '', '0', TRIM(MSEG.EBELP)) " name="SAP_ITEM"/>
         <DBMapperTableEntries expression="MSEG.SOBKZ" name="SPECIAL_STOCK"/>
         <DBMapperTableEntries expression="EKPO.PSTYP" name="ITEM_CATEGORY"/>
         <DBMapperTableEntries expression="MSEG.SGTXT" name="COMMENTS"/>
@@ -640,109 +639,106 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="TABLE" label="FACT_MSEG" name="table3">
-      <column comment="" key="false" length="50" name="MANDT" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="MANDT" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="MANDT"/>
       </column>
-      <column comment="" key="false" length="50" name="MBLNR" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="MBLNR" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="MBLNR"/>
       </column>
-      <column comment="" key="false" length="50" name="MJAHR" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="MJAHR" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="MJAHR"/>
       </column>
-      <column comment="" key="false" length="50" name="ZEILE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="ZEILE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="ZEILE"/>
       </column>
-      <column comment="" key="false" length="50" name="BWART" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="BWART" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="BWART"/>
       </column>
-      <column comment="" key="false" length="50" name="MATNR" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="MATNR" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="MATNR"/>
       </column>
-      <column comment="" key="false" length="50" name="WERKS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="WERKS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="WERKS"/>
       </column>
-      <column comment="" key="false" length="50" name="LGORT" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="LGORT" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="LGORT"/>
       </column>
-      <column comment="" key="false" length="50" name="CHARG" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="CHARG" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="CHARG"/>
       </column>
-      <column comment="" key="false" length="50" name="SOBKZ" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="SOBKZ" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="SOBKZ"/>
       </column>
-      <column comment="" key="false" length="50" name="LIFNR" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="LIFNR" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="LIFNR"/>
       </column>
-      <column comment="" key="false" length="50" name="KUNNR" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="KUNNR" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="KUNNR"/>
       </column>
-      <column comment="" key="false" length="50" name="SHKZG" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="SHKZG" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="SHKZG"/>
       </column>
-      <column comment="" key="false" length="50" name="WAERS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="WAERS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="WAERS"/>
       </column>
-      <column comment="" key="false" length="38" name="DMBTR" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="38" name="DMBTR" nullable="true" originalLength="-1" pattern="" precision="2" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="DMBTR"/>
       </column>
-      <column comment="" key="false" length="38" name="BNBTR" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="38" name="BNBTR" nullable="true" originalLength="-1" pattern="" precision="2" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="BNBTR"/>
       </column>
-      <column comment="" key="false" length="38" name="MENGE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="38" name="MENGE" nullable="true" originalLength="-1" pattern="" precision="2" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="MENGE"/>
       </column>
-      <column comment="" key="false" length="50" name="MEINS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="MEINS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="MEINS"/>
       </column>
-      <column comment="" key="false" length="38" name="ERFMG" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="38" name="ERFMG" nullable="true" originalLength="-1" pattern="" precision="2" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="ERFMG"/>
       </column>
-      <column comment="" key="false" length="50" name="ERFME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="ERFME" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="ERFME"/>
       </column>
-      <column comment="" key="false" length="50" name="EBELN" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="EBELN" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="EBELN"/>
       </column>
-      <column comment="" key="false" length="50" name="EBELP" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="EBELP" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="EBELP"/>
       </column>
-      <column comment="" key="false" length="50" name="SGTXT" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="SGTXT" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="SGTXT"/>
       </column>
-      <column comment="" key="false" length="50" name="WEMPF" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="WEMPF" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="WEMPF"/>
       </column>
-      <column comment="" key="false" length="50" name="KOSTL" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="KOSTL" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="KOSTL"/>
       </column>
-      <column comment="" key="false" length="50" name="AUFNR" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="AUFNR" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="AUFNR"/>
       </column>
-      <column comment="" key="false" length="50" name="BUKRS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="BUKRS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="BUKRS"/>
       </column>
-      <column comment="" key="false" length="50" name="GRUND" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="GRUND" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="GRUND"/>
       </column>
-      <column comment="" key="false" length="50" name="SAKTO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="SAKTO" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="SAKTO"/>
       </column>
-      <column comment="" key="false" length="50" name="BUSTW" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="BUSTW" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="BUSTW"/>
       </column>
-      <column comment="" key="false" length="50" name="USNAM" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="USNAM"/>
-      </column>
-      <column comment="" key="false" length="38" name="CWM_MENGE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="38" name="CWM_MENGE" nullable="true" originalLength="-1" pattern="" precision="2" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="CWM_MENGE"/>
       </column>
-      <column comment="" key="false" length="50" name="CWM_MEINS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="CWM_MEINS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="CWM_MEINS"/>
       </column>
-      <column comment="" key="false" length="150" name="PK_FACT_MSEG" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="150" name="PK_FACT_MSEG" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="PK_FACT_MSEG"/>
       </column>
-      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" type="id_Date" usefulColumn="true">
         <additionalField key="di.date.date" value="true"/>
         <additionalField key="AVRO_TECHNICAL_KEY" value="LOAD_DATE"/>
         <additionalField key="di.column.logicalType" value="date"/>
@@ -1325,13 +1321,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0c0326d7-6d87-4f56-ac24-27441364ec48"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7ky6QtuyNyJZwXo0iOATP/nUSl28eoSQVHS+aFDe+3Z/uyPDh3kl5Ltt0/URGr8bzZqvBHWo2sfr&#13;
-pjNv5fxv3Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2129f029-377e-4f35-a762-2c32b8cb6b88"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5S16nZdFUMyrPGmKN/q1idzj53G3G+hnODMSfr50ki2NlW9McIjQ9Q7yk2Tiv6H36f/sVQKdtalg&#13;
-lvCVj05Neg==</DigestValue></Reference></SignedInfo><SignatureValue>cjOHwuBj+8l4o3+yDR5YduOyWFU8HOkAXUf3Fos99WWv5ooaWbnEbp7+VZt0+aVCdZ8GVxBHYg/A&#13;
-gyp0By+HCKcV0jyM3s7fWqwIPKY58iM9EjcKNx+bM7fHKM3COeiQthP5AI+sEeuRqsrxhynjiyj1&#13;
-D2dUuYS1kdYTJZ3cbjr0n40RfSQ4HVvql8KO6yRcPtkwB8nA+oVvLMplMqdspSxem1ISeKAnmqIv&#13;
-StCyTDrSkvHvPSU17rA9lfjOzkel3q0fIFMiHqHI6wbNo2y2+BZtgyp2EC1BHVGH9+ClNPGssLp8&#13;
-wvw06msHe3YZseKeirMVRjVlNZdWQz3RzS6+Wg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2bd7a3b6-cbda-417b-b175-112b12caef9f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OWduvsCmo6wh2T0e1cfmmx4BgLXIZrKXPqGbZPwF1QrmwReADuS0f0LilgpJOkyUBeJVJ1XadBKp&#13;
+f4UtDUAbHQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_76e42c52-7eb6-4007-9adf-dadabe510b8e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qvbfFV2ATuvkEZpiBcOFBn3GzLd6WwR27a5x59DqDRqCKbD4g54+NtYLfDRoB3I6ng/E5iIuML2N&#13;
+x6UZWdzKCA==</DigestValue></Reference></SignedInfo><SignatureValue>hJkJRuzVuvj45/aPy4Lgccn5Gu1koRo5zttS3qZyYWoJp6DGbMdhiPbkfVgunOHCf3JjW80XZm3V&#13;
+L3q5LBqrRRbfwyb+rmYNBVXwoCTKsdoJ8Vqm3x+QxM5ywl4LQD2JWigfLFA2IZpmTLhrw19zUruv&#13;
+HHS3z3BfD2SkPal6LBbIilPFXL9TlMc9CefqzYBrwACRfNWMMi8uVf7TzTwE9cwJEsR6MpyVIQpI&#13;
+HA4cAJCw6VJtGPtN2Ak7BWWJMXqlEvWJQx0ObVfps7Zrsffaoc0tTf7jpmm/kMOBJPWm+py1GWSg&#13;
+IDR7G4TGkG5lehHF4qKAkG3T4w8rM3Ir87Jqvw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1353,4 +1349,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2129f029-377e-4f35-a762-2c32b8cb6b88" Target="#_0c0326d7-6d87-4f56-ac24-27441364ec48"><Timestamp>2024-02-19 07:55:32</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_76e42c52-7eb6-4007-9adf-dadabe510b8e" Target="#_2bd7a3b6-cbda-417b-b175-112b12caef9f"><Timestamp>2024-03-11 08:35:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
