@@ -512,7 +512,7 @@
         <DBMapperTableEntries expression="SUPPLY_WASTE.ITEM_CATEGORY" name="ITEM_CATEGORY"/>
         <DBMapperTableEntries expression="sum(SUPPLY_WASTE_AGR.F_STANDARD_COST)" name="F_STANDARD_COST"/>
         <DBMapperTableEntries expression="SUPPLY_WASTE.IOC_ID" name="IOC_ID"/>
-        <DBMapperTableEntries expression="HASH(&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.DOCUMENT_NUMBER) ||&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.DOCUMENT_YEAR)  ||&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.DATE_POSITION) ||&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.SAP_ITEM) ||&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.IOC_ID) ||&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.ORDER_NUMBER&#13;&#10;) " name="PK_FACT_SUPPLY_WASTE_AGR"/>
+        <DBMapperTableEntries expression="HASH(&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.DOCUMENT_NUMBER) ||&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.DOCUMENT_YEAR)  ||&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.DATE_POSITION) ||&#13;&#10;  TO_VARIANT(coalesce(SUPPLY_WASTE.SAP_ITEM,-1)) ||&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.IOC_ID) ||&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.ORDER_NUMBER) ||&#13;&#10;  TO_VARIANT(coalesce(SUPPLY_WASTE.MATERIAL_ID,-1)) ||&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.BATCH_ID) ||&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.PLANT_PEAK_ID) ||&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.MOVEMENT_TYPE_ID) ||&#13;&#10;  TO_VARIANT(SUPPLY_WASTE.storage_location_id) ||&#13;&#10;  TO_VARIANT(coalesce(SUPPLY_WASTE.item_category,'-1')) ||&#13;&#10;  TO_VARIANT(coalesce(SUPPLY_WASTE.special_stock,'-1')) &#13;&#10;) " name="PK_FACT_SUPPLY_WASTE_AGR"/>
         <DBMapperTableEntries expression="current_date()" name="LOAD_DATE"/>
         <FilterEntries expression="GROUP BY &#13;&#10;&#9;SUPPLY_WASTE.DOCUMENT_NUMBER,&#13;&#10;&#9;SUPPLY_WASTE.DOCUMENT_YEAR,&#13;&#10;    SUPPLY_WASTE.DATE_POSITION,&#13;&#10;    SUPPLY_WASTE.MATERIAL_ID,&#13;&#10;    MATERIAL.ITEM_ERP_ID,&#13;&#10;    SUPPLY_WASTE.MOVEMENT_TYPE_ID,&#13;&#10;    SUPPLY_WASTE.PLANT_PEAK_ID,&#13;&#10;    SUPPLY_WASTE.STORAGE_LOCATION_ID,&#13;&#10;    SUPPLY_WASTE.BATCH_ID,&#13;&#10;    SUPPLY_WASTE.ORDER_NUMBER,&#13;&#10;    SUPPLY_WASTE.SAP_ITEM,&#13;&#10;    SUPPLY_WASTE.SPECIAL_STOCK,&#13;&#10;    SUPPLY_WASTE.ITEM_CATEGORY,&#13;&#10;    SUPPLY_WASTE.IOC_ID " filterKind="OTHER_FILTER" name="newFilter19"/>
       </OutputTables>
@@ -805,13 +805,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_fcbf8787-8b5b-4336-9cae-1f1ad4a6695d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SD5MqmBWbLqADt127EGDUDK64st9A2GBwkSqAKVev3z5HEbBDBfrgYy+8YtDIxanboAuqRQTmixo&#13;
-2z3+DcFOGg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_bd3b782f-bf7d-4020-8c4f-4e7850bd0a91"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>h8jHxrZvKtjYAJzkkn9AmdNojF+AIAgFgBL4dlbF3Dfij5xWBJGrXwQdCkvLDW6W9Z8dDApUP0JN&#13;
-7KL7yAgBrg==</DigestValue></Reference></SignedInfo><SignatureValue>lZXVpdYYYD9726qrW5p0ProYLckqbnyJjyiqN/Re7+GVAP+qLXlFpInm90lv+qBZkyPPqwT0A+Pp&#13;
-4YhUyYL17ec/u886+e2rc5kYp1tA7wOgSGEWQjH46Bs9m2bUPwinDdVYEcYcgDFB7wfSfsHqB/PW&#13;
-4a6Q9CAw8oAneWjXfm1+4cM17v8SBnfdQwObv2D8n1VkzSJHJTEDGfEipF5Q4pHo441bHyR3/7Us&#13;
-SSP79OLC8y5fxj1i2w7rcg02Ymf/OdUiHTxN5ch3GzRmv1aFvizioFg49Dj2B8n/Cu2rTv8Kv5dl&#13;
-6hYi9ncClTII95T9H5pMsZbxdhE6nZCkjj7xug==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ba070774-d784-4cdb-92c0-4e76a31c5b25"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Nsg7vbIoQD5o1UbcNZ9Yp9fXTSWSJ1BmSfULoNJFTq05qfKzuLLB2JcrqBmRV7HX+k1J2msJ1Nve&#13;
+L6IF2PqR4A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e9973f5e-fb32-4f73-9626-9f16415ac1e6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0/N1Kn2tYLjUsXNOnj6xdtajyxfRzMMWqhltHH45fEkMKG3NAmhlLfrdUZFsE3M8qRC12JHNhd3T&#13;
+6eJdOX5hBw==</DigestValue></Reference></SignedInfo><SignatureValue>VAVC0S6pfjHSyWFMlnuBSJfvCF9TlNTpeeEkQMjpSMM+Jo2bNkdXY5G5t6LGwpgJK2NWnXD2R/Wq&#13;
+s2YXhrDPMt5wEOfczTRlEb9VQZPrKXem/iLdFFQYCeFt4mVXAUb1BmN1kXeps1OGwvBWosZq6R/O&#13;
+XEp4qkHGOgw/QKwLjFMvX/p/SWSPI68ltHaHFtq6uENlW+JgJp74u0D93+jEQUWA8qJcj0KEDjE5&#13;
+2MdQwZj/5P46ldhxKN6SYvKl0TqPgE3ge3fimLL0IxCjgFayY1fsmzaPB+9BumQaUPZQHoQq5c3s&#13;
+mam5p9Xx+TOpKtc45Cet8kcrEsbEOmIuS0YE9g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -833,4 +833,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_bd3b782f-bf7d-4020-8c4f-4e7850bd0a91" Target="#_fcbf8787-8b5b-4336-9cae-1f1ad4a6695d"><Timestamp>2024-03-10 19:06:08</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e9973f5e-fb32-4f73-9626-9f16415ac1e6" Target="#_ba070774-d784-4cdb-92c0-4e76a31c5b25"><Timestamp>2024-03-11 16:12:45</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

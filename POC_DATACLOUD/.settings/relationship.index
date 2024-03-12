@@ -779,6 +779,21 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_X_ezQOBIEe6go6jASCZTKg",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_1OwocLoKEe6H2tT7rm3hlw - FACT_SUPPLY_WASTE_AGG_TOT",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_1OwocLoKEe6H2tT7rm3hlw - FACT_SUPPLY_WASTE_UPD",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_Y9DNYLtqEe6oN5WCLRuMWg",
     "version" : "0.1",
     "type" : "job"
